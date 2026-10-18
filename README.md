@@ -16,6 +16,7 @@
 - [第二輪啟動與容量實測](docs/ROUND2_PREFLIGHT_RESULTS.md)
 - [L 型時間預算修訂](docs/ROUND2_BUDGET_AMENDMENT.md)
 - [M4 訓練後驗證與合計預算](docs/ROUND2_VALIDATION_WORKFLOW.md)
+- [S 型先驗證的順序修訂](docs/ROUND2_S_FIRST_AMENDMENT.md)
 - [實施方案與階段門檻](docs/PLAN_B.md)
 - [開發與實驗進度](docs/PROGRESS.md)
 - [公開資料與隱私規則](docs/PUBLISHING.md)
