@@ -1,0 +1,101 @@
+{
+  "version": "round3-v1",
+  "seed": 42,
+  "precision": "FP32",
+  "tf32": false,
+  "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+  "baseline_result": "results/b0-val-b1-boundary-r1",
+  "split_file": "configs/round2_splits_v1.json",
+  "split_sha256": "12f86d9aeee601f0766c22c9a65bedd47d000d86af25dc5a420e24ff0642491d",
+  "stage_seconds": {
+    "R3-0": 1800,
+    "R3-1": 10800,
+    "R3-2": 7200,
+    "R3-3": 0,
+    "R3-4": 3600,
+    "R3-5": 7200,
+    "R3-6": 7200
+  },
+  "total_seconds": 37800,
+  "m3": {
+    "grids": [
+      2,
+      3
+    ],
+    "halo_fraction_of_full_image": 0.1,
+    "trigger_median_exemplar_side": 32.0,
+    "trigger_predicted_count": 200,
+    "refine_on_chunk": 800,
+    "relative_threshold": 0.11,
+    "nms_iou": 0.5,
+    "candidate_order": [
+      "m3-v2-g2",
+      "m3-v2-g3"
+    ],
+    "mask_candidate_order": [
+      "b0-refine-off",
+      "b0-refine-on"
+    ],
+    "runs": [
+      "m3-v2-g2",
+      "m3-v2-g3",
+      "m3-v2-branch-only",
+      "m3-v2-repeat-g2",
+      "m3-v2-repeat-g3",
+      "b0-refine-on",
+      "b0-refine-off"
+    ]
+  },
+  "gate_size": 32,
+  "bootstrap_replicates": 2000,
+  "candidate_gate": {
+    "mae_ratio_max": 1.02,
+    "rmse_strictly_lower": true,
+    "dense_mae_strictly_lower": true
+  },
+  "tta": {
+    "candidate_order": [
+      "T2",
+      "T4"
+    ],
+    "scales": [
+      1.0,
+      0.8
+    ],
+    "control_repeats": 4,
+    "density_tolerance": 1e-06
+  },
+  "m4_v3": {
+    "grid": 8,
+    "features": [
+      "log1p_mass",
+      "log_exemplar_side_original",
+      "log_mean_box_side_original_or_exemplar",
+      "mass_per_canvas_pixel"
+    ],
+    "l2": 1.0,
+    "link": "unclipped_poisson_log_offset",
+    "reduction": "mean_positive_mass_cells",
+    "gain_bounds": [
+      0.5,
+      2.0
+    ],
+    "maxiter": 1000,
+    "ftol": 1e-12,
+    "gtol": 1e-08,
+    "tie": "global",
+    "selection": "inner_category_twofold_only"
+  },
+  "stop": {
+    "memory_allocated_mib": 40000,
+    "variant_timeout_seconds": 5400
+  },
+  "final_test": {
+    "enabled": false,
+    "requires_human_blind_labels": true,
+    "rmse_ratio_max": 0.98,
+    "rmse_image_paired_ci_upper_strict_max": 0,
+    "dense_mae_ratio_max": 0.95,
+    "mae_ratio_max": 1.02
+  }
+}
