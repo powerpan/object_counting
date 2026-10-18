@@ -101,6 +101,7 @@ def main():
                   'largest_improvements': changes[:10], 'largest_regressions': changes[-10:][::-1],
                   'pseudo_candidates': len(pseudo),
                   'pseudo_candidates_with_annotation_inside': sum(p['annotated_points_inside'] > 0 for p in pseudo),
+                  'pseudo_candidates_with_multiple_annotations_inside': sum(p['annotated_points_inside'] > 1 for p in pseudo),
                   'pseudo_support_is_only_a_proxy': True,
                   'mean_backbone_passes': statistics.mean(r['detail']['backbone_passes'] for r in rows),
                   'mean_decoder_passes': statistics.mean(r['detail']['decoder_passes'] for r in rows),
