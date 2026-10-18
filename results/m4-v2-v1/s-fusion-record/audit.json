@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "stage": "s-fusion-record",
+  "source_and_config_hashes_verified": true,
+  "n": 1286,
+  "folds_maps_metrics_verified": true,
+  "coefficients_reproduced_with_registered_optimizer": true,
+  "candidate_eligible": false,
+  "files_sha256": {
+    "protocol.json": "0cb6837e1b14e768b12fcf5b9e2cc4601bfe7a921c4a2d8d998981a4bc13aab0",
+    "summary.json": "b32bce6a5a2cda114c01b957b198f9b7fb5e60bf4716d3e607f945b224bfa53f",
+    "folds.json": "b48eaeb51b6eb9caeac52f8c0909de4e3cb8d82fcea30f83522d2f2d6a135537",
+    "predictions.jsonl": "647f89688a612dbe3b05cf36f94a81381cbe3d84121dc48ab293e7f32e482f02"
+  },
+  "audit_code_sha256": "668aa94a89cde7e2e08d4a7d7ef0059240db6cdb8c1279120a450801cc983680",
+  "elapsed_seconds": 22.162126064300537
+}

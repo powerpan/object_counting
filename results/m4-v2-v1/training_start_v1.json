@@ -1,0 +1,46 @@
+{
+  "status": "running",
+  "verified_utc": "2026-10-18T09:38:07Z",
+  "started_utc": "2026-10-18T09:35:33Z",
+  "training_and_controller_identity_verified": true,
+  "code_receipt_verified": true,
+  "code_commit": "b38088bf2473a2540e29acda9e6af90eccd5d59e",
+  "registration_commit": "6ea52eaaceeabefb9cf975fcffc156200a1b159b",
+  "batch_size": 8,
+  "seed": 42,
+  "current_progress": {
+    "epoch": 1,
+    "batch": 50,
+    "batches": 420,
+    "loss": 0.06325723230838776,
+    "loss_terms": {
+      "pixel_mse": 0.015166009776294231,
+      "count_term": 0.04707270488142967,
+      "negative_term": 0.001018519513309002,
+      "negative_mass": 0.005298404023051262,
+      "raw_count": 20.500049591064453,
+      "clamped_count": 20.505348205566406
+    },
+    "lr": 1.1904761904761905e-05,
+    "elapsed_seconds": 90.57752321474254,
+    "peak_allocated_mib": 26073.8134765625
+  },
+  "completed_epochs": 0,
+  "formal_val_completed": false,
+  "budget_settled_before_active_training_seconds": 18225.17042643577,
+  "budget_active": {
+    "id": "m4v2-train-seed42",
+    "limit_seconds": 25200.0,
+    "started_utc": "2026-10-18T09:35:33Z"
+  },
+  "remaining_before_active_training_seconds": 89774.82957356423,
+  "baseline_holdout": {
+    "status": "complete",
+    "n": 396,
+    "mae": 6.537878787878788,
+    "rmse": 16.520189667999176,
+    "frozen_state_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+    "source_predictions_sha256": "6f906110f646b7f5455fae039367d21f6e68f3755eb8ca0db02996c7be48fea3",
+    "elapsed_seconds": 59.85686860606074
+  }
+}

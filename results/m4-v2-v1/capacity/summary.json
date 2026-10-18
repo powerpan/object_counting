@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "selected_batch": 8,
+  "records": [
+    {
+      "batch_size": 4,
+      "steps": 4,
+      "losses": [
+        0.0019034948199987411,
+        0.047405906021595,
+        0.017412884160876274,
+        0.08467894792556763
+      ],
+      "seconds": 2.8821709025651217,
+      "peak_allocated_mib": 13248.96826171875,
+      "peak_reserved_mib": 16210.0,
+      "projected_batch8_mib": 30064.837695312497
+    },
+    {
+      "batch_size": 8,
+      "steps": 4,
+      "losses": [
+        0.009085211902856827,
+        0.04590475559234619,
+        0.021107526496052742,
+        0.05827557295560837
+      ],
+      "seconds": 5.299146680161357,
+      "peak_allocated_mib": 26074.5458984375,
+      "peak_reserved_mib": 32442.0,
+      "projected_batch8_mib": null
+    }
+  ],
+  "frozen_state_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "elapsed_seconds": 11.75303571484983
+}

@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "n": 396,
+  "mae": 6.537878787878788,
+  "rmse": 16.520189667999176,
+  "frozen_state_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "source_predictions_sha256": "6f906110f646b7f5455fae039367d21f6e68f3755eb8ca0db02996c7be48fea3",
+  "elapsed_seconds": 59.85686860606074
+}

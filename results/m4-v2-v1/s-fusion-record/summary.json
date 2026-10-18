@@ -1,0 +1,91 @@
+{
+  "status": "complete",
+  "overall": {
+    "n": 1286,
+    "mae": 9.456194675274945,
+    "rmse": 33.25240040733487,
+    "truth_total": 82042,
+    "truth_min": 7,
+    "truth_median": 27.0,
+    "truth_mean": 63.79626749611197,
+    "truth_max": 2092,
+    "game1": 12.066931802677885,
+    "game2": 16.01569959317419
+  },
+  "groups": {
+    "<50": {
+      "n": 888,
+      "mae": 2.5235186281407858,
+      "rmse": 5.323539894343673,
+      "truth_total": 18939,
+      "truth_min": 7,
+      "truth_median": 18.0,
+      "truth_mean": 21.3277027027027,
+      "truth_max": 49,
+      "game1": 4.1714623553035715,
+      "game2": 7.037089696594895
+    },
+    "50-299": {
+      "n": 359,
+      "mae": 15.386237780755547,
+      "rmse": 29.802333463601226,
+      "truth_total": 39921,
+      "truth_min": 50,
+      "truth_median": 93,
+      "truth_mean": 111.20055710306407,
+      "truth_max": 298,
+      "game1": 18.501481120529718,
+      "game2": 24.24889770246077
+    },
+    ">=300": {
+      "n": 39,
+      "mae": 112.72108839290561,
+      "rmse": 166.25099843829375,
+      "truth_total": 23182,
+      "truth_min": 301,
+      "truth_median": 458,
+      "truth_mean": 594.4102564102565,
+      "truth_max": 2092,
+      "game1": 132.6098462683082,
+      "game2": 144.66409618108526
+    }
+  },
+  "candidate_eligible": false,
+  "purpose": "fixed S-only historical record; never final candidate",
+  "width_selection_performed": false,
+  "paired_vs_b0": {
+    "image": {
+      "unit": "image",
+      "units": 1286,
+      "replicates": 2000,
+      "seed": 42,
+      "mae_delta": 0.06661458196234721,
+      "mae_delta_95ci": [
+        -0.06480386937060466,
+        0.19513340104491225
+      ],
+      "rmse_delta": -0.010642381202977447,
+      "rmse_delta_95ci": [
+        -0.16332302246319372,
+        0.11609120358640918
+      ]
+    },
+    "class": {
+      "unit": "class",
+      "units": 29,
+      "replicates": 2000,
+      "seed": 42,
+      "mae_delta": 0.06661458196234721,
+      "mae_delta_95ci": [
+        -0.11229016115643195,
+        0.2678368490782031
+      ],
+      "rmse_delta": -0.010642381202977447,
+      "rmse_delta_95ci": [
+        -0.14315472985640093,
+        0.10136105510578369
+      ]
+    }
+  },
+  "elapsed_seconds": 21.078285600990057
+}

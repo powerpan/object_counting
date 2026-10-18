@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "stage": "baseline-holdout",
+  "source_and_config_hashes_verified": true,
+  "n": 396,
+  "official_counts_and_reference_metrics_recomputed": true,
+  "files_sha256": {
+    "protocol.json": "aaead0ce8eac2d9359e5147d142f0209745b582663ac2337441f13ed8b9b08ab",
+    "summary.json": "38065bcc5efeab474955a73670838c9f685271069612a631d67b3ab38fa04832",
+    "predictions.jsonl": "6f906110f646b7f5455fae039367d21f6e68f3755eb8ca0db02996c7be48fea3"
+  },
+  "audit_code_sha256": "668aa94a89cde7e2e08d4a7d7ef0059240db6cdb8c1279120a450801cc983680",
+  "elapsed_seconds": 1.4940638206899166
+}

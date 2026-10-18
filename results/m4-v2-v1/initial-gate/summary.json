@@ -1,0 +1,243 @@
+{
+  "status": "passed",
+  "n": 32,
+  "rows": [
+    {
+      "image": "190.jpg",
+      "prediction": 9.000000005085028,
+      "B0_count": 9,
+      "absolute_difference": 5.085027510176587e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "191.jpg",
+      "prediction": 13.999999990916407,
+      "B0_count": 14,
+      "absolute_difference": 9.083592544811836e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "192.jpg",
+      "prediction": 18.00000001470272,
+      "B0_count": 18,
+      "absolute_difference": 1.4702720818604575e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "195.jpg",
+      "prediction": 10.000000003512639,
+      "B0_count": 10,
+      "absolute_difference": 3.5126390685036313e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "216.jpg",
+      "prediction": 38.9999999858324,
+      "B0_count": 39,
+      "absolute_difference": 1.4167596873448929e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "219.jpg",
+      "prediction": 49.999999995037214,
+      "B0_count": 50,
+      "absolute_difference": 4.96278573791642e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "221.jpg",
+      "prediction": 42.99999999582582,
+      "B0_count": 43,
+      "absolute_difference": 4.174182777205715e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "224.jpg",
+      "prediction": 19.999999994202796,
+      "B0_count": 20,
+      "absolute_difference": 5.797204494228936e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "194.jpg",
+      "prediction": 85.00000000091592,
+      "B0_count": 85,
+      "absolute_difference": 9.159180081041995e-10,
+      "bitwise_equal": true
+    },
+    {
+      "image": "196.jpg",
+      "prediction": 86.00000000048351,
+      "B0_count": 86,
+      "absolute_difference": 4.83510120830033e-10,
+      "bitwise_equal": true
+    },
+    {
+      "image": "197.jpg",
+      "prediction": 82.00000003576915,
+      "B0_count": 82,
+      "absolute_difference": 3.57691476438049e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "198.jpg",
+      "prediction": 66.00000003072347,
+      "B0_count": 66,
+      "absolute_difference": 3.0723469990334706e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "214.jpg",
+      "prediction": 60.9999999528099,
+      "B0_count": 61,
+      "absolute_difference": 4.7190098939609015e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "215.jpg",
+      "prediction": 222.99999995021867,
+      "B0_count": 223,
+      "absolute_difference": 4.978133461008838e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "217.jpg",
+      "prediction": 61.99999998996063,
+      "B0_count": 62,
+      "absolute_difference": 1.0039372000392177e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "218.jpg",
+      "prediction": 51.99999999924927,
+      "B0_count": 52,
+      "absolute_difference": 7.507310328946915e-10,
+      "bitwise_equal": true
+    },
+    {
+      "image": "809.jpg",
+      "prediction": 323.00000013894885,
+      "B0_count": 323,
+      "absolute_difference": 1.3894884887122316e-07,
+      "bitwise_equal": true
+    },
+    {
+      "image": "820.jpg",
+      "prediction": 457.00000022471227,
+      "B0_count": 457,
+      "absolute_difference": 2.2471226657216903e-07,
+      "bitwise_equal": true
+    },
+    {
+      "image": "830.jpg",
+      "prediction": 583.999999619964,
+      "B0_count": 584,
+      "absolute_difference": 3.8003599911462516e-07,
+      "bitwise_equal": true
+    },
+    {
+      "image": "840.jpg",
+      "prediction": 803.0000000157083,
+      "B0_count": 803,
+      "absolute_difference": 1.570833774167113e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "851.jpg",
+      "prediction": 347.0000000961752,
+      "B0_count": 347,
+      "absolute_difference": 9.617519936000463e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "865.jpg",
+      "prediction": 787.0000001712945,
+      "B0_count": 787,
+      "absolute_difference": 1.7129445950558875e-07,
+      "bitwise_equal": true
+    },
+    {
+      "image": "935.jpg",
+      "prediction": 1807.9999999130023,
+      "B0_count": 1808,
+      "absolute_difference": 8.699771569808945e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "949.jpg",
+      "prediction": 1149.9999998747896,
+      "B0_count": 1150,
+      "absolute_difference": 1.2521036296675447e-07,
+      "bitwise_equal": true
+    },
+    {
+      "image": "7656.jpg",
+      "prediction": 634.0000000215264,
+      "B0_count": 634,
+      "absolute_difference": 2.1526375348912552e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "1956.jpg",
+      "prediction": 1084.0000000658542,
+      "B0_count": 1084,
+      "absolute_difference": 6.58542376186233e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "220.jpg",
+      "prediction": 53.0000000107558,
+      "B0_count": 53,
+      "absolute_difference": 1.0755798030004371e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "222.jpg",
+      "prediction": 66.00000000456885,
+      "B0_count": 66,
+      "absolute_difference": 4.568846634356305e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "226.jpg",
+      "prediction": 66.0000000030811,
+      "B0_count": 66,
+      "absolute_difference": 3.081098043367092e-09,
+      "bitwise_equal": true
+    },
+    {
+      "image": "227.jpg",
+      "prediction": 24.00000001501124,
+      "B0_count": 24,
+      "absolute_difference": 1.501123847447161e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "228.jpg",
+      "prediction": 40.00000001439484,
+      "B0_count": 40,
+      "absolute_difference": 1.4394842651199724e-08,
+      "bitwise_equal": true
+    },
+    {
+      "image": "229.jpg",
+      "prediction": 24.99999998518038,
+      "B0_count": 25,
+      "absolute_difference": 1.4819619309491827e-08,
+      "bitwise_equal": true
+    }
+  ],
+  "maximum_count_difference": 3.8003599911462516e-07,
+  "parameters": 2144705,
+  "frozen_state_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "inputs": {
+    "status": "passed",
+    "verified_files": 3664,
+    "train_images": 3659,
+    "train_manifest_sha256": "59da470843c3dd9aa17b930b8471019dec03a332ffab8e26582096f5d636d17d",
+    "fsc_checkpoint_sha256": "945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b",
+    "sam2_sha256": "d0bb7f236400a49669ffdd1be617959a8b1d1065081789d7bbff88eded3a8071"
+  },
+  "elapsed_seconds": 14.179015507921576,
+  "peak_allocated_mib": 4725.64599609375
+}
