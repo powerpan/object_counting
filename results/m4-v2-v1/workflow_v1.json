@@ -1,0 +1,26 @@
+{
+  "state": "negative_safety_stop",
+  "stage": "seed42-training-reviewed",
+  "started_utc": "2026-10-18T09:32:21Z",
+  "completed": [
+    "m4v2-cpu-tests",
+    "m4v2-initial-gate",
+    "m4v2-audit-initial-gate",
+    "m4v2-s-dense-check",
+    "m4v2-audit-s-dense-check",
+    "m4v2-s-fusion-record",
+    "m4v2-audit-s-fusion-record",
+    "m4v2-capacity",
+    "m4v2-baseline-holdout",
+    "m4v2-audit-baseline-holdout",
+    "m4v2-train-seed42",
+    "m4v2-audit-train-seed42"
+  ],
+  "automatic_retry": false,
+  "registration_commit": "6ea52eaaceeabefb9cf975fcffc156200a1b159b",
+  "code_commit": "b38088bf2473a2540e29acda9e6af90eccd5d59e",
+  "updated_utc": "2026-10-18T11:48:01Z",
+  "spent_seconds": 26172.42143335566,
+  "remaining_seconds": 81827.57856664434,
+  "all_work_complete": false
+}

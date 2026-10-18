@@ -1,0 +1,12 @@
+{
+  "status": "negative_safety_stop",
+  "epoch": 10,
+  "next_batch": 0,
+  "global_step": 4200,
+  "best_epoch": 2,
+  "elapsed_seconds": 7939.32546146214,
+  "best_holdout_rmse": 16.38262153799644,
+  "peak_allocated_mib": 26073.81396484375,
+  "updated_utc": "2026-10-18T11:47:55Z",
+  "automatic_retry": false
+}

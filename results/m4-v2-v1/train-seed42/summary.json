@@ -1,0 +1,10 @@
+{
+  "status": "negative_safety_stop",
+  "complete_epochs": 10,
+  "epoch10_rmse": 17.084974496017335,
+  "baseline_rmse": 16.520189667999176,
+  "candidate_eligible": false,
+  "best_sha256": "39999a6979292591675a7addb98867862bbeaab74e227ed0816583e90e42550a",
+  "last_sha256": "cc15da536f931332f7ee75e8488f1f3baae05e0af7a35b6266259a474d38a9bb",
+  "elapsed_seconds": 7939.395513366908
+}

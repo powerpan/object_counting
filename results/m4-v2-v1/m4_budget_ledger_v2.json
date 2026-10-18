@@ -1,0 +1,150 @@
+{
+  "version": "round2-m4-ledger-v1",
+  "cap_seconds": 108000,
+  "state": "open",
+  "active": null,
+  "automatic_retry": false,
+  "scope": "Prior S/L/preflight and validation imported once; all v2 work accounted sequentially",
+  "entries": [
+    {
+      "id": "round2-through-L-cancellation",
+      "outcome": "imported",
+      "elapsed_seconds": 18032.695445628837,
+      "evidence": {
+        "results/round2-v1/m4_budget_ledger_v1.json": "0bf0f0d434e6c057680f2f438452d0845345a10ed4f8f2d822a08bbc58945976"
+      }
+    },
+    {
+      "id": "m4v2-cpu-tests",
+      "limit_seconds": 600.0,
+      "started_utc": "2026-10-18T09:32:21Z",
+      "elapsed_seconds": 4.271439014002681,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/cpu-tests.json": "e277be0853a6ec1198220644215c924b7fa12620723959fafcfc83de83ac4d45"
+      },
+      "finished_utc": "2026-10-18T09:32:25Z"
+    },
+    {
+      "id": "m4v2-initial-gate",
+      "limit_seconds": 1800.0,
+      "started_utc": "2026-10-18T09:32:25Z",
+      "elapsed_seconds": 17.84318824671209,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/initial-gate/summary.json": "7919cde4894efc8dbb9ab677658123b06e3348e6b39a01f5c41e3fe6091a1dab"
+      },
+      "finished_utc": "2026-10-18T09:32:43Z"
+    },
+    {
+      "id": "m4v2-audit-initial-gate",
+      "limit_seconds": 5400.0,
+      "started_utc": "2026-10-18T09:32:43Z",
+      "elapsed_seconds": 4.12203480489552,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/initial-gate/audit.json": "fd6f305fd747a4ba4e4050c9a82b9f6c3e9f8214fbfd7da1cc871b5b806a87cf"
+      },
+      "finished_utc": "2026-10-18T09:32:47Z"
+    },
+    {
+      "id": "m4v2-s-dense-check",
+      "limit_seconds": 1800.0,
+      "started_utc": "2026-10-18T09:32:47Z",
+      "elapsed_seconds": 28.608311261981726,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/s-dense-check/summary.json": "560299ed00f2f3082273030eeb8c023a67ffd953addfbba34937f9d88a3ec60c"
+      },
+      "finished_utc": "2026-10-18T09:33:16Z"
+    },
+    {
+      "id": "m4v2-audit-s-dense-check",
+      "limit_seconds": 5400.0,
+      "started_utc": "2026-10-18T09:33:16Z",
+      "elapsed_seconds": 4.6747073866426945,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/s-dense-check/audit.json": "b5cf38c180e9eb147903d3ddea972443fae4405fbfa5ba7183b8f6b325e6378e"
+      },
+      "finished_utc": "2026-10-18T09:33:20Z"
+    },
+    {
+      "id": "m4v2-s-fusion-record",
+      "limit_seconds": 1800.0,
+      "started_utc": "2026-10-18T09:33:20Z",
+      "elapsed_seconds": 24.863736514002085,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/s-fusion-record/summary.json": "b32bce6a5a2cda114c01b957b198f9b7fb5e60bf4716d3e607f945b224bfa53f"
+      },
+      "finished_utc": "2026-10-18T09:33:45Z"
+    },
+    {
+      "id": "m4v2-audit-s-fusion-record",
+      "limit_seconds": 5400.0,
+      "started_utc": "2026-10-18T09:33:45Z",
+      "elapsed_seconds": 25.118634216487408,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/s-fusion-record/audit.json": "db600695be8a0c83b3b82dd98d13599c463cdfd3629a83ae2a04739d9e2f14de"
+      },
+      "finished_utc": "2026-10-18T09:34:10Z"
+    },
+    {
+      "id": "m4v2-capacity",
+      "limit_seconds": 1800.0,
+      "started_utc": "2026-10-18T09:34:10Z",
+      "elapsed_seconds": 15.237310664728284,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/capacity/summary.json": "5dab4140adcf641757476f331192f534b519ebdf76f5d78afa6fb7d8a5adc183"
+      },
+      "finished_utc": "2026-10-18T09:34:26Z"
+    },
+    {
+      "id": "m4v2-baseline-holdout",
+      "limit_seconds": 5400.0,
+      "started_utc": "2026-10-18T09:34:26Z",
+      "elapsed_seconds": 63.461038663983345,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/baseline-holdout/summary.json": "38065bcc5efeab474955a73670838c9f685271069612a631d67b3ab38fa04832"
+      },
+      "finished_utc": "2026-10-18T09:35:29Z"
+    },
+    {
+      "id": "m4v2-audit-baseline-holdout",
+      "limit_seconds": 5400.0,
+      "started_utc": "2026-10-18T09:35:29Z",
+      "elapsed_seconds": 4.274580033496022,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/baseline-holdout/audit.json": "b083a8c87b9b01df0ac44b74075506d542f47f54f1d81cc914db28ae4cc8d52c"
+      },
+      "finished_utc": "2026-10-18T09:35:33Z"
+    },
+    {
+      "id": "m4v2-train-seed42",
+      "limit_seconds": 25200.0,
+      "started_utc": "2026-10-18T09:35:33Z",
+      "elapsed_seconds": 7942.977437680587,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/train-seed42/summary.json": "f9cb5b4deee5657c285774528a62ec57268e428b112cbc84eaba4b7493efe1ab"
+      },
+      "finished_utc": "2026-10-18T11:47:56Z"
+    },
+    {
+      "id": "m4v2-audit-train-seed42",
+      "limit_seconds": 5400.0,
+      "started_utc": "2026-10-18T11:47:56Z",
+      "elapsed_seconds": 4.27356923930347,
+      "outcome": "passed",
+      "evidence": {
+        "results/m4-v2-v1/train-seed42/audit.json": "0e179df2961b33fafa07df73d66f5308a9ae3f38a4a9b6f7c6602a01c70f2117"
+      },
+      "finished_utc": "2026-10-18T11:48:01Z"
+    }
+  ]
+}
