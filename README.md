@@ -16,6 +16,7 @@ M4-v3 CPU 校正及獨立核算已完成。區域／global 折外 MAE 分別為 
 
 - [M4-v3 CPU 校正結果](docs/ROUND3_CALIBRATION_RESULTS.md)
 - [第三輪組合執行口徑](docs/ROUND3_COMBINATION_EXECUTION.md)
+- [既有輸出組合開跑前核對](docs/ROUND3_COMBINATION_ASSEMBLY.md)
 - [M4-v3 校正開跑前實作核對](docs/ROUND3_CALIBRATION_EXECUTION.md)
 - [TTA 完整驗證結果](docs/ROUND3_TTA_RESULTS.md)
 - [TTA 前置核驗結果](docs/ROUND3_TTA_PREFLIGHT_RESULTS.md)

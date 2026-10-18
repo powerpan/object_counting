@@ -1,0 +1,8 @@
+{
+  "state": "awaiting_combination_implementation",
+  "completed_utc": "2026-10-18T14:43:02Z",
+  "cpu_wall_seconds": 1.7347253749612719,
+  "gpu_seconds": 0,
+  "automatic_retry": false,
+  "instance_policy": "keep_running"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "verified_utc": "2026-10-18T14:43:02Z",
+  "module_choices_and_admission_independently_recomputed": true,
+  "routing_and_missing_variants_independently_recomputed": true,
+  "files_sha256": {
+    "plan_protocol_v1.json": "2760df57f21a65e461fcbec44712b2713885ece8424673c522bd95f71cafac9a",
+    "plan_v1.json": "3dfacca27e9eedbb137a80c2e55b521942666d6ba37e5cd7ad61af9d63e2dc2c"
+  }
+}
