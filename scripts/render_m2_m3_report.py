@@ -55,12 +55,26 @@ def main():
         if method in completed:
             a = completed[method][1]
             lines += ['', f"{LABELS[method]} 共選出 {a['pseudo_candidates']} 個候選示例，其中 {a['pseudo_candidates_with_annotation_inside']} 個框含至少一個官方目標點，{a['pseudo_candidates_with_multiple_annotations_inside']} 個含多個點。這是候選品質的代理檢查，不等同人工確認語意正確；多物件框可能混淆示例，不能直接當成可靠單一物件。"]
+    if (root / 'figures/m2-case-3481.png').exists():
+        lines += ['', '以 `3481.jpg` 為例，真值 431 個，B0 預測 316，M2 預測 29。一個通過篩選的增補框包住了 67 個標註點；高外觀相似度仍可能選到整段圖案。這是事後診斷，沒有據此更動本輪參數。下圖只畫標註點、示例框及檢測中心，沒有使用資料集原圖。', '',
+                  '![M2 多物件示例失敗案例](../results/m2-m3-v1/figures/m2-case-3481.png)']
     lines += ['', '各組最大改善／退步案例及類別、完整密度分組指標與區間保存在對應 `analysis.json`／`summary.json`。推論策略的輸入沒有真值；目標點只在推論結束後作計分與候選品質檢查。', '',
               '## 可核對證據', '',
               '原模型與新介面在涵蓋三種密度的 32 張圖上，原始框、objectness、SAM 分數逐位元相同；最終框與保存的 B0 相同。每一個完整實驗又逐圖核對第一輪框與 B0 完全一致。密度／幾何及統計共 11 項 CPU 測試通過；完整輸出再次對照原始真值、指標和檔案雜湊。', '']
     for method in completed:
         path = '../results/m2-m3-v1/val-' + method
         lines.append(f'- {LABELS[method]}：[摘要]({path}/summary.json)、[獨立核算與配對區間]({path}/analysis.json)、[逐圖預測]({path}/predictions.jsonl)、[執行設定]({path}/protocol.json)')
+    contrast_file = root / 'contrasts.json'
+    if contrast_file.exists():
+        contrasts = json.loads(contrast_file.read_text())['contrasts']
+        if contrasts:
+            lines += ['', '## 與對照組的直接比較', '',
+                      '| 比較（前者 − 後者） | MAE 差值 | 圖片配對 95% 區間 | 類別配對 95% 區間 |',
+                      '|---|---:|---|---|']
+            for key, values in contrasts.items():
+                left, right = key.split('_vs_')
+                lines.append(f"| {LABELS[left]} − {LABELS[right]} | {values['image']['mae_delta']:+.3f} | {interval(values['image']['mae_delta_95ci'])} | {interval(values['class']['mae_delta_95ci'])} |")
+            lines += ['', '對照組控制示例數或推論次數，仍有特徵和遮罩候選數差異；完整配對資料見 [contrasts.json](../results/m2-m3-v1/contrasts.json)。']
     lines += ['', '方法、事前規則與限制見 [M2／M3 規則](M2_M3_PROTOCOL.md)，原基準見 [B0 結果](B0_RESULTS.md)。未以不佳結果為由修改閾值，也未選取部分圖片作為正式結果。']
     (repo / 'docs/M2_M3_RESULTS.md').write_text('\n'.join(lines) + '\n')
 

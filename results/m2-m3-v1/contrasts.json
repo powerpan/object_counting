@@ -1,6 +1,42 @@
 {
   "completed_variants": [
-    "m2"
+    "m2",
+    "m2-repeat"
   ],
-  "contrasts": {}
+  "contrasts": {
+    "m2_vs_m2-repeat": {
+      "image": {
+        "unit": "image",
+        "units": 1286,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.9276827371695179,
+        "mae_delta_95ci": [
+          0.2681959564541213,
+          1.7053460342146187
+        ],
+        "rmse_delta": 3.907550282685328,
+        "rmse_delta_95ci": [
+          0.9566763052448781,
+          8.033147522100526
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.9276827371695179,
+        "mae_delta_95ci": [
+          0.09353290308127944,
+          2.539364606651741
+        ],
+        "rmse_delta": 3.907550282685328,
+        "rmse_delta_95ci": [
+          0.2488564240246413,
+          9.237359449174322
+        ]
+      }
+    }
+  }
 }
