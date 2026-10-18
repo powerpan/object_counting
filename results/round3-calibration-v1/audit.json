@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "verified_utc": "2026-10-18T14:34:52Z",
+  "inputs_and_features_independently_reconstructed": true,
+  "fold_local_selection_and_admission_reproduced": true,
+  "coefficients_refit_with_same_fixed_optimizer": true,
+  "objective_prediction_maps_metrics_independently_recomputed": true,
+  "paired_intervals_recomputed_with_registered_statistics": true,
+  "maximum_map_mass_error": 2.2737367544323206e-13,
+  "gpu_seconds": 0,
+  "files_sha256": {
+    "protocol.json": "3fabb595b9129c735de3462f96250ca281d57ffc42036b63cdb4130ceff8597c",
+    "input_cells.jsonl": "9527d354060e167f281fd50fb67023e7764f3680ee98a5d336bd7f80d030a2bc",
+    "models.json": "f001b0a1b3512964410c882e9f9acdeaee706382ec2078a7a4946da4ba032f3f",
+    "summary.json": "a19fd5232e3941e0ccd0e24d984e30de6cad3399c2ded84a0b0899b2ca72735e",
+    "regional.jsonl": "f0f3b019db515446732a6cfbbd18d4508597c5ccddae4f5ba8de27c4c77a989c",
+    "global.jsonl": "ef41fbb834c7a88ae6592546b092f3e7b44bf933669319ef55f23e4e79aa61b0",
+    "selected.jsonl": "ef41fbb834c7a88ae6592546b092f3e7b44bf933669319ef55f23e4e79aa61b0",
+    "admitted.jsonl": "ef7473388e11fe8145251a425639fb48a791c60a7a50d231cfd4fc013cac0e58"
+  },
+  "scope": "development_only_no_test"
+}

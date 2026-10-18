@@ -1,0 +1,8 @@
+{
+  "state": "awaiting_publication",
+  "completed_utc": "2026-10-18T14:34:52Z",
+  "cpu_wall_seconds": 12.674183124909177,
+  "gpu_seconds": 0,
+  "automatic_retry": false,
+  "instance_policy": "keep_running"
+}
