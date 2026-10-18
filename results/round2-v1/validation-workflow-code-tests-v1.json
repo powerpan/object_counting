@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "tests_run": 35,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 3.7183703184127808,
+  "scope": "CPU implementation tests only; no model-accuracy or real validation claim",
+  "cuda_visible_devices": "",
+  "python": "3.10.8",
+  "source_commits": {
+    "round2_code_receipt": "f5f83bcc00563265a5aacb4995526a23bf365855",
+    "round2_budget_receipt": "6984b205e3aa4f50042143449091cd87c66c9c0d",
+    "round2_analysis_receipt": "408f3e8fa5b29cdf0a112939c38aa2a8e878d8a4",
+    "round2_validation_workflow_receipt": "a16c38391d29f358084c358b7ad6caa913cbec0a"
+  },
+  "finished_utc": "2026-10-18T04:54:58Z"
+}
