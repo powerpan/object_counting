@@ -26,7 +26,11 @@ def fit_gate(features, m1, m4, truth, config):
     if not len(x) or len(x) != len(truth) or not all(np.isfinite(a).all() for a in (x, m1, m4, truth)):
         raise ValueError('Invalid fitting arrays')
     mean, std = x.mean(0), x.std(0)
-    std[std == 0] = 1
+    # Repeated decimal values can have a tiny nonzero np.std because their
+    # floating-point mean is not exact. The protocol defines constant columns
+    # by their observations, not by whether that numerical residual is zero.
+    constant = np.all(x == x[0], axis=0)
+    std[constant | (std == 0)] = 1
     z = np.column_stack([np.ones(len(x)), (x-mean)/std])
     delta = m1-m4
     def objective(beta):

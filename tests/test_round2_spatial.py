@@ -46,6 +46,14 @@ class SpatialTests(unittest.TestCase):
         self.assertEqual(before,repr(model))
         self.assertEqual(model['std'],[1.]*6)
 
+    def test_decimal_constant_features_use_unit_scale_despite_roundoff(self):
+        config = {'l2':.001,'max_iterations':1000,'ftol':1e-12,'gtol':1e-8}
+        x = np.full((2,8,8,6),.1)
+        m1 = np.full((2,8,8),10.);m4 = np.zeros_like(m1)
+        model = fit_gate(x,m1,m4,np.full_like(m1,3.),config)
+        self.assertEqual(model['std'],[1.]*6)
+        np.testing.assert_allclose(gate_weights(x,model),.3,atol=1e-6)
+
 
 if __name__ == '__main__':
     unittest.main()
