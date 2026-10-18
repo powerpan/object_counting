@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "fold_local_choices_reproduced": true,
+  "selected_rows_and_metrics_reproduced": true,
+  "summary_sha256": "0e21a8c02ac418f61ea4120fa6dfcfec1c55ec199b8669a0c8bb0be584e1c202",
+  "scope": "development_only_no_test",
+  "raw_variant_audits": {
+    "m3-v2-g2": "f301d75546aa3452cddec40e535c1c066fd8d70b83c224961c72a44560573fb6",
+    "m3-v2-g3": "9955e1d8bd860568d7c48af67fd7f026f4a84d1128d2d805a9cc6dddd842a9d3",
+    "m3-v2-branch-only": "15992f6b4b59becb9fb7840b3710b3b2db82220ec966a53d312bb4bfe4e17b0d",
+    "m3-v2-repeat-g2": "3bd2c6613f2f0a24508dc34db2d403a8c9f5384e390ba64110ee7d63c24e64e9",
+    "m3-v2-repeat-g3": "775981b301d8e7290d5e9709015fb2a9b30c963173a808e33c13c3baf9f85e4f",
+    "b0-refine-on": "c50108fe24dee4604f3d07b21d022d47b3039bb83d883fe2c504ab5f785fd419",
+    "b0-refine-off": "e1499848dce3888055d0573b02bf5268c01ef565a95eaf64f9212c9e8057ab16"
+  }
+}

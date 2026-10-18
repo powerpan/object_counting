@@ -1,0 +1,806 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "variant": "m3-v2-g2",
+  "annotation_and_spatial_reconstruction": "passed",
+  "files_sha256": {
+    "protocol.json": "536f1013a441adbc7cf02898de47d88c483350ef680c12ca9dde55edfcf24f5a",
+    "summary.json": "8dce87689aadbc6a918936268fc31cb856a23fdd6af4a593a4c25df8eb528a57",
+    "predictions.jsonl": "68068ba87c2b89c1d414f9e4abe7f09ab7ffd59a327466fb936cbbc7bb5063b0"
+  },
+  "metrics": {
+    "overall": {
+      "n": 1286,
+      "mae": 8.756609642301711,
+      "rmse": 29.196883555120394,
+      "truth_total": 82042,
+      "truth_min": 7,
+      "truth_median": 27.0,
+      "truth_mean": 63.79626749611197,
+      "truth_max": 2092,
+      "game1": 10.983309588486742,
+      "game2": 14.609678058410086
+    },
+    "<50": {
+      "n": 888,
+      "mae": 2.255630630630631,
+      "rmse": 5.108617520716634,
+      "truth_total": 18939,
+      "truth_min": 7,
+      "truth_median": 18.0,
+      "truth_mean": 21.3277027027027,
+      "truth_max": 49,
+      "game1": 3.864958715010535,
+      "game2": 6.473132625268096
+    },
+    "50-299": {
+      "n": 359,
+      "mae": 15.272980501392757,
+      "rmse": 30.437890548763324,
+      "truth_total": 39921,
+      "truth_min": 50,
+      "truth_median": 93,
+      "truth_mean": 111.20055710306407,
+      "truth_max": 298,
+      "game1": 18.153580940935157,
+      "game2": 23.476892512606717
+    },
+    ">=300": {
+      "n": 39,
+      "mae": 96.7948717948718,
+      "rmse": 137.7925791608346,
+      "truth_total": 23182,
+      "truth_min": 301,
+      "truth_median": 458,
+      "truth_mean": 594.4102564102565,
+      "truth_max": 2092,
+      "game1": 107.05941625817624,
+      "game2": 118.24871281670487
+    }
+  },
+  "per_class": {
+    "ants": {
+      "n": 22,
+      "mae": 9.909090909090908,
+      "rmse": 19.842562151276553,
+      "truth_total": 823,
+      "truth_min": 8,
+      "truth_median": 19.5,
+      "truth_mean": 37.40909090909091,
+      "truth_max": 238,
+      "game1": 10.945447327034875,
+      "game2": 12.513870476284357
+    },
+    "birds": {
+      "n": 87,
+      "mae": 14.551724137931034,
+      "rmse": 43.918943102246786,
+      "truth_total": 10595,
+      "truth_min": 7,
+      "truth_median": 47,
+      "truth_mean": 121.7816091954023,
+      "truth_max": 2092,
+      "game1": 18.449329206345208,
+      "game2": 22.94077580167799
+    },
+    "books": {
+      "n": 76,
+      "mae": 25.43421052631579,
+      "rmse": 67.21460132723357,
+      "truth_total": 7053,
+      "truth_min": 8,
+      "truth_median": 42.5,
+      "truth_mean": 92.80263157894737,
+      "truth_max": 1022,
+      "game1": 30.836103468450833,
+      "game2": 38.390128289250995
+    },
+    "bottle caps": {
+      "n": 122,
+      "mae": 9.598360655737705,
+      "rmse": 29.602973931241614,
+      "truth_total": 13419,
+      "truth_min": 8,
+      "truth_median": 50.0,
+      "truth_mean": 109.99180327868852,
+      "truth_max": 1229,
+      "game1": 11.243507859125097,
+      "game2": 15.580462666188742
+    },
+    "bullets": {
+      "n": 11,
+      "mae": 0.7272727272727273,
+      "rmse": 1.2792042981336627,
+      "truth_total": 217,
+      "truth_min": 8,
+      "truth_median": 19,
+      "truth_mean": 19.727272727272727,
+      "truth_max": 40,
+      "game1": 4.688695633318829,
+      "game2": 8.998987974579808
+    },
+    "camels": {
+      "n": 14,
+      "mae": 9.071428571428571,
+      "rmse": 13.296078906418774,
+      "truth_total": 265,
+      "truth_min": 8,
+      "truth_median": 14.0,
+      "truth_mean": 18.928571428571427,
+      "truth_max": 58,
+      "game1": 10.300770929910996,
+      "game2": 11.894101758919987
+    },
+    "chairs": {
+      "n": 72,
+      "mae": 16.375,
+      "rmse": 35.244187858110415,
+      "truth_total": 5923,
+      "truth_min": 8,
+      "truth_median": 57.5,
+      "truth_mean": 82.26388888888889,
+      "truth_max": 301,
+      "game1": 20.222919402621173,
+      "game2": 25.47268439350882
+    },
+    "chicken wings": {
+      "n": 157,
+      "mae": 0.7070063694267515,
+      "rmse": 1.3983611882267233,
+      "truth_total": 2928,
+      "truth_min": 8,
+      "truth_median": 17,
+      "truth_mean": 18.64968152866242,
+      "truth_max": 52,
+      "game1": 2.2165855595788084,
+      "game2": 5.3973281878962505
+    },
+    "donuts tray": {
+      "n": 73,
+      "mae": 0.3287671232876712,
+      "rmse": 1.0068260178089292,
+      "truth_total": 1000,
+      "truth_min": 8,
+      "truth_median": 12,
+      "truth_mean": 13.698630136986301,
+      "truth_max": 54,
+      "game1": 1.859571059910476,
+      "game2": 4.4312002520466915
+    },
+    "flamingos": {
+      "n": 102,
+      "mae": 3.0588235294117645,
+      "rmse": 7.502940599995366,
+      "truth_total": 3313,
+      "truth_min": 8,
+      "truth_median": 17.0,
+      "truth_mean": 32.48039215686274,
+      "truth_max": 402,
+      "game1": 4.278229264106521,
+      "game2": 6.280776098652608
+    },
+    "flower pots": {
+      "n": 12,
+      "mae": 11.583333333333334,
+      "rmse": 16.028620235898867,
+      "truth_total": 498,
+      "truth_min": 18,
+      "truth_median": 32.5,
+      "truth_mean": 41.5,
+      "truth_max": 76,
+      "game1": 12.831093701986148,
+      "game2": 16.110716276570862
+    },
+    "flowers": {
+      "n": 2,
+      "mae": 1,
+      "rmse": 1.4142135623730951,
+      "truth_total": 62,
+      "truth_min": 20,
+      "truth_median": 31.0,
+      "truth_mean": 31,
+      "truth_max": 42,
+      "game1": 3.759367822958069,
+      "game2": 6.206146142324391
+    },
+    "fresh cut": {
+      "n": 11,
+      "mae": 7.636363636363637,
+      "rmse": 10.539967224375467,
+      "truth_total": 900,
+      "truth_min": 20,
+      "truth_median": 64,
+      "truth_mean": 81.81818181818181,
+      "truth_max": 177,
+      "game1": 11.301495489567708,
+      "game2": 18.542443607468968
+    },
+    "grapes": {
+      "n": 155,
+      "mae": 7.780645161290322,
+      "rmse": 20.897291073092426,
+      "truth_total": 11447,
+      "truth_min": 11,
+      "truth_median": 53,
+      "truth_mean": 73.85161290322581,
+      "truth_max": 757,
+      "game1": 9.62963177123721,
+      "game2": 12.830738947500294
+    },
+    "horses": {
+      "n": 23,
+      "mae": 5.130434782608695,
+      "rmse": 8.032542507228628,
+      "truth_total": 405,
+      "truth_min": 8,
+      "truth_median": 13,
+      "truth_mean": 17.608695652173914,
+      "truth_max": 65,
+      "game1": 6.322336374801726,
+      "game2": 7.764636027504567
+    },
+    "kiwis": {
+      "n": 25,
+      "mae": 1.88,
+      "rmse": 3.1432467291003423,
+      "truth_total": 734,
+      "truth_min": 8,
+      "truth_median": 24,
+      "truth_mean": 29.36,
+      "truth_max": 87,
+      "game1": 2.966336841260546,
+      "game2": 6.4444887067979675
+    },
+    "milk cartons": {
+      "n": 14,
+      "mae": 7.928571428571429,
+      "rmse": 9.543135154205277,
+      "truth_total": 1010,
+      "truth_min": 22,
+      "truth_median": 66.0,
+      "truth_mean": 72.14285714285714,
+      "truth_max": 185,
+      "game1": 12.555687997991809,
+      "game2": 20.973842415079627
+    },
+    "oyster shells": {
+      "n": 9,
+      "mae": 2.4444444444444446,
+      "rmse": 4.0,
+      "truth_total": 169,
+      "truth_min": 9,
+      "truth_median": 12,
+      "truth_mean": 18.77777777777778,
+      "truth_max": 49,
+      "game1": 3.248803710944367,
+      "game2": 6.160483029948307
+    },
+    "oysters": {
+      "n": 4,
+      "mae": 2.25,
+      "rmse": 2.958039891549808,
+      "truth_total": 42,
+      "truth_min": 8,
+      "truth_median": 9.0,
+      "truth_mean": 10.5,
+      "truth_max": 16,
+      "game1": 3.2685101399377396,
+      "game2": 5.427306144346881
+    },
+    "peaches": {
+      "n": 36,
+      "mae": 2.2222222222222223,
+      "rmse": 4.377975178854566,
+      "truth_total": 1536,
+      "truth_min": 8,
+      "truth_median": 34.5,
+      "truth_mean": 42.666666666666664,
+      "truth_max": 133,
+      "game1": 3.9311375755086266,
+      "game2": 7.60189273937074
+    },
+    "pills": {
+      "n": 55,
+      "mae": 3.8363636363636364,
+      "rmse": 9.422410423125188,
+      "truth_total": 2897,
+      "truth_min": 9,
+      "truth_median": 28,
+      "truth_mean": 52.67272727272727,
+      "truth_max": 283,
+      "game1": 5.52333203521337,
+      "game2": 8.26566019693928
+    },
+    "polka dots": {
+      "n": 53,
+      "mae": 29.92452830188679,
+      "rmse": 52.178214206082686,
+      "truth_total": 9940,
+      "truth_min": 9,
+      "truth_median": 103,
+      "truth_mean": 187.54716981132074,
+      "truth_max": 885,
+      "game1": 33.71120516358564,
+      "game2": 37.22423987766644
+    },
+    "prawn crackers": {
+      "n": 2,
+      "mae": 0.5,
+      "rmse": 0.7071067811865476,
+      "truth_total": 21,
+      "truth_min": 8,
+      "truth_median": 10.5,
+      "truth_mean": 10.5,
+      "truth_max": 13,
+      "game1": 0.9838174665338604,
+      "game2": 2.5457132013868486
+    },
+    "sausages": {
+      "n": 5,
+      "mae": 3.4,
+      "rmse": 5.916079783099616,
+      "truth_total": 179,
+      "truth_min": 10,
+      "truth_median": 25,
+      "truth_mean": 35.8,
+      "truth_max": 104,
+      "game1": 6.295043739969034,
+      "game2": 9.181528201479038
+    },
+    "seagulls": {
+      "n": 78,
+      "mae": 1.9487179487179487,
+      "rmse": 3.9742762605123207,
+      "truth_total": 1719,
+      "truth_min": 7,
+      "truth_median": 14.0,
+      "truth_mean": 22.03846153846154,
+      "truth_max": 119,
+      "game1": 2.7740596196692846,
+      "game2": 4.301717821652994
+    },
+    "shallots": {
+      "n": 4,
+      "mae": 1.75,
+      "rmse": 3.5,
+      "truth_total": 75,
+      "truth_min": 7,
+      "truth_median": 18.5,
+      "truth_mean": 18.75,
+      "truth_max": 31,
+      "game1": 3.1513088912215577,
+      "game2": 5.542827184756254
+    },
+    "shirts": {
+      "n": 20,
+      "mae": 41.3,
+      "rmse": 81.64802508328049,
+      "truth_total": 2752,
+      "truth_min": 9,
+      "truth_median": 38.0,
+      "truth_mean": 137.6,
+      "truth_max": 1231,
+      "game1": 44.590914965774196,
+      "game2": 49.431556939014044
+    },
+    "skateboard": {
+      "n": 19,
+      "mae": 6.052631578947368,
+      "rmse": 11.137891702604554,
+      "truth_total": 689,
+      "truth_min": 8,
+      "truth_median": 26,
+      "truth_mean": 36.26315789473684,
+      "truth_max": 127,
+      "game1": 7.772007172471687,
+      "game2": 12.43494360931748
+    },
+    "toilet paper rolls": {
+      "n": 23,
+      "mae": 7.782608695652174,
+      "rmse": 20.083521257163955,
+      "truth_total": 1431,
+      "truth_min": 8,
+      "truth_median": 18,
+      "truth_mean": 62.21739130434783,
+      "truth_max": 907,
+      "game1": 10.497765959263058,
+      "game2": 14.942093709734136
+    }
+  },
+  "candidate_gate": true,
+  "paired_vs_b0": {
+    "overall": {
+      "image": {
+        "unit": "image",
+        "units": 1286,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.6329704510108864,
+        "mae_delta_95ci": [
+          -1.602954898911353,
+          0.2543157076205285
+        ],
+        "rmse_delta": -4.0661592334174514,
+        "rmse_delta_95ci": [
+          -12.074598820765473,
+          3.261124524003305
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.6329704510108864,
+        "mae_delta_95ci": [
+          -1.5599067358517746,
+          0.04429300825559623
+        ],
+        "rmse_delta": -4.0661592334174514,
+        "rmse_delta_95ci": [
+          -12.518452620985405,
+          3.045078914569565
+        ]
+      }
+    },
+    "<50": {
+      "image": {
+        "unit": "image",
+        "units": 888,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.038288288288288286,
+        "mae_delta_95ci": [
+          -0.10247747747747747,
+          0.006756756756756757
+        ],
+        "rmse_delta": -0.10300756518853316,
+        "rmse_delta_95ci": [
+          -0.2989985636760163,
+          0.005224698640154435
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.038288288288288286,
+        "mae_delta_95ci": [
+          -0.11254531555387429,
+          0.017236873591012666
+        ],
+        "rmse_delta": -0.10300756518853316,
+        "rmse_delta_95ci": [
+          -0.3109651684761189,
+          0.020792266614920025
+        ]
+      }
+    },
+    "50-299": {
+      "image": {
+        "unit": "image",
+        "units": 359,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.3649025069637883,
+        "mae_delta_95ci": [
+          -1.0974930362116992,
+          0.36497214484679624
+        ],
+        "rmse_delta": 0.30235641002110114,
+        "rmse_delta_95ci": [
+          -1.8293383573169524,
+          2.9120211624713828
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 23,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.3649025069637883,
+        "mae_delta_95ci": [
+          -1.215008211678832,
+          0.4068532250470806
+        ],
+        "rmse_delta": 0.30235641002110114,
+        "rmse_delta_95ci": [
+          -1.8842333327939993,
+          2.686635257970191
+        ]
+      }
+    },
+    ">=300": {
+      "image": {
+        "unit": "image",
+        "units": 39,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -16.641025641025642,
+        "mae_delta_95ci": [
+          -45.35961538461538,
+          11.235256410256385
+        ],
+        "rmse_delta": -28.055977027465048,
+        "rmse_delta_95ci": [
+          -74.32724350480115,
+          20.982576828844795
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 9,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -16.641025641025642,
+        "mae_delta_95ci": [
+          -67.3529411764706,
+          5.4792410714285715
+        ],
+        "rmse_delta": -28.055977027465048,
+        "rmse_delta_95ci": [
+          -100.527599382772,
+          20.905797929865845
+        ]
+      }
+    }
+  },
+  "localization": {
+    "micro_f1": 0.8823075039092673,
+    "image_macro_f1": 0.9142507502463445
+  },
+  "inference_seconds_mean": 0.19178800784995775,
+  "diagnostics": {
+    "triggered_images": 135,
+    "tiled_images": 135,
+    "cross_tile_removed": 80,
+    "cases": [
+      {
+        "image": "865.jpg",
+        "truth": 1022,
+        "prediction": 569,
+        "detail": {
+          "base_count": 787,
+          "base_scale": 1.78397212543554,
+          "base_refinement": {
+            "requested": "auto",
+            "pre_refinement_candidates": 1017,
+            "refinement_executed": false
+          },
+          "triggered": true,
+          "tiling_applied": true,
+          "backbone_passes": 5,
+          "decoder_passes": 5,
+          "median_exemplar_side_model_pixels": 26.218957901000977,
+          "tiles": [
+            {
+              "core": [
+                0,
+                0,
+                287,
+                192
+              ],
+              "crop": [
+                0,
+                0,
+                345,
+                231
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 223,
+              "refinement_executed": false,
+              "maximum_objectness": 0.759857714176178,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 150,
+              "owned_count": 101
+            },
+            {
+              "core": [
+                287,
+                0,
+                574,
+                192
+              ],
+              "crop": [
+                229,
+                0,
+                574,
+                231
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 298,
+              "refinement_executed": false,
+              "maximum_objectness": 0.7477400302886963,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 198,
+              "owned_count": 122
+            },
+            {
+              "core": [
+                0,
+                192,
+                287,
+                384
+              ],
+              "crop": [
+                0,
+                153,
+                345,
+                384
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 360,
+              "refinement_executed": false,
+              "maximum_objectness": 0.7558965086936951,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 243,
+              "owned_count": 186
+            },
+            {
+              "core": [
+                287,
+                192,
+                574,
+                384
+              ],
+              "crop": [
+                229,
+                153,
+                574,
+                384
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 343,
+              "refinement_executed": false,
+              "maximum_objectness": 0.849717378616333,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 238,
+              "owned_count": 160
+            }
+          ],
+          "cross_tile_removed": 0,
+          "grid": 2,
+          "threshold_scope": "all_tiles",
+          "global_maximum_objectness": 0.849717378616333,
+          "pre_merge_count": 569
+        }
+      },
+      {
+        "image": "3665.jpg",
+        "truth": 907,
+        "prediction": 958,
+        "detail": {
+          "base_count": 1179,
+          "base_scale": 2.5098039215686274,
+          "base_refinement": {
+            "requested": "auto",
+            "pre_refinement_candidates": 1210,
+            "refinement_executed": false
+          },
+          "triggered": true,
+          "tiling_applied": true,
+          "backbone_passes": 5,
+          "decoder_passes": 5,
+          "median_exemplar_side_model_pixels": 15.873407363891602,
+          "tiles": [
+            {
+              "core": [
+                0,
+                0,
+                204,
+                192
+              ],
+              "crop": [
+                0,
+                0,
+                245,
+                231
+              ],
+              "scale": 4.179591836734694,
+              "valid_width": 1024,
+              "valid_height": 965,
+              "requested": "off",
+              "pre_refinement_candidates": 300,
+              "refinement_executed": false,
+              "maximum_objectness": 1.0155277252197266,
+              "threshold_maximum": 1.0256930589675903,
+              "post_threshold_count": 286,
+              "owned_count": 88
+            },
+            {
+              "core": [
+                204,
+                0,
+                408,
+                192
+              ],
+              "crop": [
+                163,
+                0,
+                408,
+                231
+              ],
+              "scale": 4.179591836734694,
+              "valid_width": 1024,
+              "valid_height": 965,
+              "requested": "off",
+              "pre_refinement_candidates": 535,
+              "refinement_executed": false,
+              "maximum_objectness": 1.000886082649231,
+              "threshold_maximum": 1.0256930589675903,
+              "post_threshold_count": 520,
+              "owned_count": 247
+            },
+            {
+              "core": [
+                0,
+                192,
+                204,
+                384
+              ],
+              "crop": [
+                0,
+                153,
+                245,
+                384
+              ],
+              "scale": 4.179591836734694,
+              "valid_width": 1024,
+              "valid_height": 965,
+              "requested": "off",
+              "pre_refinement_candidates": 405,
+              "refinement_executed": false,
+              "maximum_objectness": 1.0170471668243408,
+              "threshold_maximum": 1.0256930589675903,
+              "post_threshold_count": 389,
+              "owned_count": 206
+            },
+            {
+              "core": [
+                204,
+                192,
+                408,
+                384
+              ],
+              "crop": [
+                163,
+                153,
+                408,
+                384
+              ],
+              "scale": 4.179591836734694,
+              "valid_width": 1024,
+              "valid_height": 965,
+              "requested": "off",
+              "pre_refinement_candidates": 693,
+              "refinement_executed": false,
+              "maximum_objectness": 1.0256930589675903,
+              "threshold_maximum": 1.0256930589675903,
+              "post_threshold_count": 675,
+              "owned_count": 417
+            }
+          ],
+          "cross_tile_removed": 0,
+          "grid": 2,
+          "threshold_scope": "all_tiles",
+          "global_maximum_objectness": 1.0256930589675903,
+          "pre_merge_count": 958
+        }
+      }
+    ]
+  }
+}

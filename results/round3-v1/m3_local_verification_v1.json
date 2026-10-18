@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "scope": "M3 complete val and category crossfit; no test",
+  "manifest_sha256": "0384055d10e38804f6ac92228e2f775e88269584583826fdc18de5aa6c89fd7b",
+  "source_count": 84,
+  "variants": {
+    "m3-v2-g2": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 2.842170943040401e-14,
+      "prediction_file_sha256": "68068ba87c2b89c1d414f9e4abe7f09ab7ffd59a327466fb936cbbc7bb5063b0"
+    },
+    "m3-v2-g3": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 2.842170943040401e-14,
+      "prediction_file_sha256": "39010feb292e4a7595929cc6a11efaa3003d84b37012c91e289dd97a1d92a75c"
+    },
+    "m3-v2-branch-only": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 2.842170943040401e-14,
+      "prediction_file_sha256": "417e293a1ba318736bf7c1f6f2f5df5511c6c8aabf2e7680adc9c83f7175b58f"
+    },
+    "m3-v2-repeat-g2": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "prediction_file_sha256": "fee6d6bcaf8a8eef13f6253d20f01d08f00c01c001460ea5a235d802090e1389"
+    },
+    "m3-v2-repeat-g3": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "prediction_file_sha256": "6bcbd5560a3359ccf8b034adbb43bdb76b2cf69330df982df923028e1e55e101"
+    },
+    "b0-refine-on": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "prediction_file_sha256": "5ca951ae44c19407b33d62c8fbb516175e5cd823aeaa41ecb43547d5c7529fdf"
+    },
+    "b0-refine-off": {
+      "n": 1286,
+      "metrics_recomputed": true,
+      "truth_and_density_cells_reconstructed": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "prediction_file_sha256": "273039c393c09736d8af4e692eaacedce433afe061ec901fe870a5dd250b3615"
+    }
+  },
+  "crossfit": {
+    "m3": {
+      "fit_fold_selection_reproduced": true,
+      "selected_rows_and_metrics_recomputed": true
+    },
+    "mask": {
+      "fit_fold_selection_reproduced": true,
+      "selected_rows_and_metrics_recomputed": true
+    }
+  },
+  "verified_utc": "2026-10-18T13:35:01Z"
+}
