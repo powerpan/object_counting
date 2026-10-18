@@ -12,6 +12,7 @@ M4-v2 已先登記 M1 殘差設計、固定損失與取樣、396 張留出集和
 
 第三輪 M3-v2 的七組完整 val 與類別折外核算已完成。折外 MAE／RMSE 為 **8.79860／29.61995**，密集組 MAE **97.92308**；相對 B0 下降約 6.29%／10.95%／13.68%，通過開發候選點估計門檻，但配對信賴區間仍跨零，改善尚不確定。兩個 repeat 均重現 B0；強制遮罩 on／off 均未通過全部門檻。接續準備 TTA、CPU 校正與組合，尚無最終 test 結果。實例依最新指示保持開機，M4-ft 保持取消。
 
+- [TTA 開跑前實作核對](docs/ROUND3_TTA_EXECUTION.md)
 - [第三輪 M3-v2 完整結果](docs/ROUND3_M3_RESULTS.md)
 - [實例保持運行修訂](docs/ROUND3_INSTANCE_POLICY_AMENDMENT.md)
 - [第三輪事前規則](docs/ROUND3_PROTOCOL.md)
