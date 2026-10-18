@@ -8,6 +8,7 @@
 - [開發與實驗進度](docs/PROGRESS.md)
 - [公開資料與隱私規則](docs/PUBLISHING.md)
 - [環境建置腳本](scripts/bootstrap.sh)
+- [B0／M1 執行與結果判讀](docs/REPRODUCTION.md)
 
 執行環境目標：單張 48GB Ada GPU、Linux、Python 3.10、PyTorch 2.7.1。上游 GeCo2 固定於 `67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b`。模型及資料集另外下載，不放進 Git。
 
