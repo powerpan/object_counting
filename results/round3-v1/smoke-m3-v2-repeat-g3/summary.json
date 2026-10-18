@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "n": 32,
+  "phase": "smoke",
+  "variant": "m3-v2-repeat-g3",
+  "elapsed_seconds": 29.47912261635065,
+  "finished_utc": "2026-10-18T12:44:20Z",
+  "frozen_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "peak_allocated_mib": 4200.13818359375,
+  "peak_reserved_mib": 5510.0
+}

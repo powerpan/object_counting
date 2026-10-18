@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "n": 32,
+  "variant": "b0-refine-on",
+  "annotation_and_spatial_reconstruction": "passed",
+  "files_sha256": {
+    "protocol.json": "007b546bf66677e951e1d65aeab3ebf8e24803a23b1bb437d2259ab1c79c5202",
+    "summary.json": "8480f98e713b54621a11f505eb3c713699e2ba6cd29c4e90a155b335c92ca4af",
+    "predictions.jsonl": "b5300313db4625b9145e04b1b0b83a60cea7bf223c64751af246a828cc6f497d"
+  },
+  "smoke_not_used_for_selection": true,
+  "diagnostics": {
+    "triggered_images": 11,
+    "tiled_images": 0,
+    "cross_tile_removed": 0,
+    "cases": [
+      {
+        "image": "865.jpg",
+        "truth": 1022,
+        "prediction": 589,
+        "detail": {
+          "base_count": 787,
+          "base_scale": 1.78397212543554,
+          "base_refinement": {
+            "requested": "auto",
+            "pre_refinement_candidates": 1017,
+            "refinement_executed": false
+          },
+          "triggered": true,
+          "tiling_applied": false,
+          "backbone_passes": 1,
+          "decoder_passes": 2,
+          "median_exemplar_side_model_pixels": 26.218957901000977,
+          "tiles": [],
+          "cross_tile_removed": 0,
+          "forced_refinement": {
+            "requested": "on",
+            "pre_refinement_candidates": 1017,
+            "refinement_executed": true
+          }
+        }
+      }
+    ]
+  }
+}

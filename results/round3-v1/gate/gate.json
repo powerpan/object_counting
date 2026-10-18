@@ -1,0 +1,173 @@
+{
+  "status": "passed",
+  "n": 32,
+  "phase": "gate",
+  "variant": "m3-v2-g2",
+  "elapsed_seconds": 12.934888187795877,
+  "finished_utc": "2026-10-18T12:42:09Z",
+  "frozen_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "peak_allocated_mib": 4789.16748046875,
+  "peak_reserved_mib": 6024.0,
+  "rows": [
+    {
+      "image": "190.jpg",
+      "bitwise_equal": true,
+      "count": 9
+    },
+    {
+      "image": "191.jpg",
+      "bitwise_equal": true,
+      "count": 14
+    },
+    {
+      "image": "192.jpg",
+      "bitwise_equal": true,
+      "count": 18
+    },
+    {
+      "image": "195.jpg",
+      "bitwise_equal": true,
+      "count": 10
+    },
+    {
+      "image": "216.jpg",
+      "bitwise_equal": true,
+      "count": 39
+    },
+    {
+      "image": "219.jpg",
+      "bitwise_equal": true,
+      "count": 50
+    },
+    {
+      "image": "221.jpg",
+      "bitwise_equal": true,
+      "count": 43
+    },
+    {
+      "image": "224.jpg",
+      "bitwise_equal": true,
+      "count": 20
+    },
+    {
+      "image": "194.jpg",
+      "bitwise_equal": true,
+      "count": 85
+    },
+    {
+      "image": "196.jpg",
+      "bitwise_equal": true,
+      "count": 86
+    },
+    {
+      "image": "197.jpg",
+      "bitwise_equal": true,
+      "count": 82
+    },
+    {
+      "image": "198.jpg",
+      "bitwise_equal": true,
+      "count": 66
+    },
+    {
+      "image": "214.jpg",
+      "bitwise_equal": true,
+      "count": 61
+    },
+    {
+      "image": "215.jpg",
+      "bitwise_equal": true,
+      "count": 223
+    },
+    {
+      "image": "217.jpg",
+      "bitwise_equal": true,
+      "count": 62
+    },
+    {
+      "image": "218.jpg",
+      "bitwise_equal": true,
+      "count": 52
+    },
+    {
+      "image": "809.jpg",
+      "bitwise_equal": true,
+      "count": 323
+    },
+    {
+      "image": "820.jpg",
+      "bitwise_equal": true,
+      "count": 457
+    },
+    {
+      "image": "830.jpg",
+      "bitwise_equal": true,
+      "count": 584
+    },
+    {
+      "image": "840.jpg",
+      "bitwise_equal": true,
+      "count": 803
+    },
+    {
+      "image": "851.jpg",
+      "bitwise_equal": true,
+      "count": 347
+    },
+    {
+      "image": "865.jpg",
+      "bitwise_equal": true,
+      "count": 787
+    },
+    {
+      "image": "935.jpg",
+      "bitwise_equal": true,
+      "count": 1808
+    },
+    {
+      "image": "949.jpg",
+      "bitwise_equal": true,
+      "count": 1150
+    },
+    {
+      "image": "7656.jpg",
+      "bitwise_equal": true,
+      "count": 634
+    },
+    {
+      "image": "1956.jpg",
+      "bitwise_equal": true,
+      "count": 1084
+    },
+    {
+      "image": "220.jpg",
+      "bitwise_equal": true,
+      "count": 53
+    },
+    {
+      "image": "222.jpg",
+      "bitwise_equal": true,
+      "count": 66
+    },
+    {
+      "image": "226.jpg",
+      "bitwise_equal": true,
+      "count": 66
+    },
+    {
+      "image": "227.jpg",
+      "bitwise_equal": true,
+      "count": 24
+    },
+    {
+      "image": "228.jpg",
+      "bitwise_equal": true,
+      "count": 40
+    },
+    {
+      "image": "229.jpg",
+      "bitwise_equal": true,
+      "count": 25
+    }
+  ]
+}

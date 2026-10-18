@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "tests": 12,
+  "cuda_visible_devices": "",
+  "log_sha256": "8156bf02ff3f915ebaaac70251fcaf3352f2685d3ca95a45b6b200e7c549622f"
+}

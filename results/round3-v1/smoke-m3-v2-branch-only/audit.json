@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "n": 32,
+  "variant": "m3-v2-branch-only",
+  "annotation_and_spatial_reconstruction": "passed",
+  "files_sha256": {
+    "protocol.json": "2fd7e4a0b5b06c2e1b6043c71b8980438b04527f9e0cb6675754dfbe84ce3eac",
+    "summary.json": "2f8490191c15c41b2ffed1db018ca7756d50fbc521f58e1d1b3516ffd3c7434d",
+    "predictions.jsonl": "90aa24ea516d61c6ed918e31a2edab5384fe064f9c41722f34ea6a4b5810eaa5"
+  },
+  "smoke_not_used_for_selection": true,
+  "diagnostics": {
+    "triggered_images": 11,
+    "tiled_images": 11,
+    "cross_tile_removed": 10,
+    "cases": [
+      {
+        "image": "865.jpg",
+        "truth": 1022,
+        "prediction": 569,
+        "detail": {
+          "base_count": 787,
+          "base_scale": 1.78397212543554,
+          "base_refinement": {
+            "requested": "auto",
+            "pre_refinement_candidates": 1017,
+            "refinement_executed": false
+          },
+          "triggered": true,
+          "tiling_applied": true,
+          "backbone_passes": 5,
+          "decoder_passes": 5,
+          "median_exemplar_side_model_pixels": 26.218957901000977,
+          "tiles": [
+            {
+              "core": [
+                0,
+                0,
+                287,
+                192
+              ],
+              "crop": [
+                0,
+                0,
+                345,
+                231
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 223,
+              "refinement_executed": false,
+              "maximum_objectness": 0.759857714176178,
+              "threshold_maximum": 0.759857714176178,
+              "post_threshold_count": 150,
+              "owned_count": 101
+            },
+            {
+              "core": [
+                287,
+                0,
+                574,
+                192
+              ],
+              "crop": [
+                229,
+                0,
+                574,
+                231
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 298,
+              "refinement_executed": false,
+              "maximum_objectness": 0.7477400302886963,
+              "threshold_maximum": 0.7477400302886963,
+              "post_threshold_count": 198,
+              "owned_count": 122
+            },
+            {
+              "core": [
+                0,
+                192,
+                287,
+                384
+              ],
+              "crop": [
+                0,
+                153,
+                345,
+                384
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 360,
+              "refinement_executed": false,
+              "maximum_objectness": 0.7558965086936951,
+              "threshold_maximum": 0.7558965086936951,
+              "post_threshold_count": 243,
+              "owned_count": 186
+            },
+            {
+              "core": [
+                287,
+                192,
+                574,
+                384
+              ],
+              "crop": [
+                229,
+                153,
+                574,
+                384
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 343,
+              "refinement_executed": false,
+              "maximum_objectness": 0.849717378616333,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 238,
+              "owned_count": 160
+            }
+          ],
+          "cross_tile_removed": 0,
+          "grid": 2,
+          "threshold_scope": "tile",
+          "global_maximum_objectness": 0.849717378616333,
+          "pre_merge_count": 569
+        }
+      }
+    ]
+  }
+}

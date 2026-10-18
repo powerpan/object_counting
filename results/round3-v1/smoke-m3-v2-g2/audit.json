@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "n": 32,
+  "variant": "m3-v2-g2",
+  "annotation_and_spatial_reconstruction": "passed",
+  "files_sha256": {
+    "protocol.json": "77d0d206caf02df4a89b0550511abe214e80e879230d89084682246815b5f598",
+    "summary.json": "066cd3b5c5bc2a6b13471900ea00afe9c3576440416cd6f8cd5c017fa702d3cd",
+    "predictions.jsonl": "e01cb5a659ba5716939ee5ddbd11e2c8d110931b363bd430c4a049fd850202d2"
+  },
+  "smoke_not_used_for_selection": true,
+  "diagnostics": {
+    "triggered_images": 11,
+    "tiled_images": 11,
+    "cross_tile_removed": 10,
+    "cases": [
+      {
+        "image": "865.jpg",
+        "truth": 1022,
+        "prediction": 569,
+        "detail": {
+          "base_count": 787,
+          "base_scale": 1.78397212543554,
+          "base_refinement": {
+            "requested": "auto",
+            "pre_refinement_candidates": 1017,
+            "refinement_executed": false
+          },
+          "triggered": true,
+          "tiling_applied": true,
+          "backbone_passes": 5,
+          "decoder_passes": 5,
+          "median_exemplar_side_model_pixels": 26.218957901000977,
+          "tiles": [
+            {
+              "core": [
+                0,
+                0,
+                287,
+                192
+              ],
+              "crop": [
+                0,
+                0,
+                345,
+                231
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 223,
+              "refinement_executed": false,
+              "maximum_objectness": 0.759857714176178,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 150,
+              "owned_count": 101
+            },
+            {
+              "core": [
+                287,
+                0,
+                574,
+                192
+              ],
+              "crop": [
+                229,
+                0,
+                574,
+                231
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 298,
+              "refinement_executed": false,
+              "maximum_objectness": 0.7477400302886963,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 198,
+              "owned_count": 122
+            },
+            {
+              "core": [
+                0,
+                192,
+                287,
+                384
+              ],
+              "crop": [
+                0,
+                153,
+                345,
+                384
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 360,
+              "refinement_executed": false,
+              "maximum_objectness": 0.7558965086936951,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 243,
+              "owned_count": 186
+            },
+            {
+              "core": [
+                287,
+                192,
+                574,
+                384
+              ],
+              "crop": [
+                229,
+                153,
+                574,
+                384
+              ],
+              "scale": 2.9681159420289855,
+              "valid_width": 1024,
+              "valid_height": 685,
+              "requested": "off",
+              "pre_refinement_candidates": 343,
+              "refinement_executed": false,
+              "maximum_objectness": 0.849717378616333,
+              "threshold_maximum": 0.849717378616333,
+              "post_threshold_count": 238,
+              "owned_count": 160
+            }
+          ],
+          "cross_tile_removed": 0,
+          "grid": 2,
+          "threshold_scope": "all_tiles",
+          "global_maximum_objectness": 0.849717378616333,
+          "pre_merge_count": 569
+        }
+      }
+    ]
+  }
+}
