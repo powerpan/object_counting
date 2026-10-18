@@ -35,6 +35,10 @@ python "$CODE_ROOT/scripts/evaluate_val.py" \
 
 先檢查 `checkpoint_load.json`、逐圖預測及 `summary.json`。算子數值檢查、權重載入和 smoke 均通過後，才以新的輸出目錄執行 `--limit 0` 的完整 val。batch 2、4、8 為另立目錄的容量測試，須先確認顯存與輸出一致性。已有逐圖結果的目錄會拒絕覆寫。
 
+`scripts/run_b0_when_ready.py` 將上述步驟串接：先等候建置成功與三份資產雜湊通過，再解壓僅含 val 圖像的資料包、執行算子和 M1 測試、20 張 smoke，最後跑完整 val。它讀取 `provenance/geco.json`、`sam.json`、`validation_bundle.json`，每份包含相對 `path`、`bytes`、`sha256`。資料包必須只含 `data/fsc147/` 之下的一般檔案。
+
+此流程使用單程序鎖避免重複執行，準備階段最多等待 90 分鐘，smoke 最多 15 分鐘，完整 val 最多 90 分鐘。任何步驟失敗就停止，狀態寫入 `results/b0_workflow.json`；不會自動重跑、跳過失敗檢查或啟動訓練。本輪基線統一 batch 1，較大批次另外量測。遠端工作可在 SSH 斷線後繼續，但原始資料搬移仍需確認來源程序存活。
+
 ## 評估口徑
 
 輸入為 RGB 圖像及官方前三個示例框。沿用固定版上游的縮放、示例尺度限制、1024 補邊、ImageNet 正規化，以及 0.11 相對閾值／0.5 NMS。補邊區域的檢測會排除。這個入口沒有 test 選項。
