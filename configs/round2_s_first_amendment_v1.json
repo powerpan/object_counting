@@ -1,0 +1,14 @@
+{
+  "version": "round2-s-first-amendment-v1",
+  "date": "2026-10-18",
+  "reason": "Explicit request to obtain complete S validation before starting L",
+  "scope": "execution order only; existing S process and all model-selection rules unchanged",
+  "order": ["S42-training", "S42-training-audit", "S42-density-gate", "S42-gate-audit", "S42-full-val", "S42-val-audit", "L42-training", "L42-training-audit", "L42-density-gate", "L42-gate-audit", "L42-full-val", "L42-val-audit", "class-crossfit", "crossfit-audit"],
+  "single_S_seconds": 21600,
+  "single_L_seconds": 43200,
+  "total_M4_seconds": 108000,
+  "single_validation_seconds": 5400,
+  "S_result_does_not_change_L_settings": true,
+  "automatic_retry": false,
+  "test_enabled": false
+}
