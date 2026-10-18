@@ -15,6 +15,7 @@ M4-v2 已先登記 M1 殘差設計、固定損失與取樣、396 張留出集和
 M4-v3 CPU 校正及獨立核算已完成。區域／global 折外 MAE 分別為 **9.98296／9.85843**，均超過 B0 的 102% 上限；雖然 RMSE 下降，仍不通過候選門檻。兩個外折內部都選 global、都拒絕納入，因此按規則輸出退回 B0，沒有將校正帶入最終候選。組合流程尚待接續。
 
 - [M4-v3 CPU 校正結果](docs/ROUND3_CALIBRATION_RESULTS.md)
+- [第三輪組合執行口徑](docs/ROUND3_COMBINATION_EXECUTION.md)
 - [M4-v3 校正開跑前實作核對](docs/ROUND3_CALIBRATION_EXECUTION.md)
 - [TTA 完整驗證結果](docs/ROUND3_TTA_RESULTS.md)
 - [TTA 前置核驗結果](docs/ROUND3_TTA_PREFLIGHT_RESULTS.md)
