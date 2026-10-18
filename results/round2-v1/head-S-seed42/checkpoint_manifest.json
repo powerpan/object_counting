@@ -1,0 +1,9 @@
+{
+  "best_sha256": "7d1539871f9f2306ed89a040f6123c3a4b27d1affe3e6753fddb856e2e343450",
+  "last_sha256": "fc923b333b1d886256b978997520eda10aef953b4e801a6edbb3205c81de5c77",
+  "best_epoch": 29,
+  "best_holdout_mae": 7.023969225364156,
+  "complete_epochs": 30,
+  "weights_published": false,
+  "frozen_model_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f"
+}

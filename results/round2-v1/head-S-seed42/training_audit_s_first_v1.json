@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "width": "S",
+  "complete_epochs": 30,
+  "best_epoch": 29,
+  "best_holdout_mae": 7.023969225364156,
+  "training_elapsed_seconds": 16226.894972071052,
+  "holdout_only_not_official_val": true,
+  "frozen_state_unchanged": true,
+  "checkpoint_hashes_checked": true,
+  "files_sha256": {
+    "status.json": "672b67b197a7f2174d828eb3059994745cde3bdc4816ca543b53d26c07c23d6a",
+    "checkpoint_manifest.json": "13824b47e501dfe8b31b026bc6ef582ba115862f6ea51fe3078ed631bcc7a03a",
+    "history.json": "bb6eee9d402157e5caa25c7d225d6355bca7877308e8084a549bd2764c9d6648"
+  },
+  "audit_code_sha256": "fa1b12a779cb3f87a3c082a7f8b1aa54e5100957039a21a1a6d368c906a9c302"
+}

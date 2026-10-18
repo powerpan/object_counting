@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "run": "head-S-seed42",
+  "phase": "gate",
+  "overall": {
+    "n": 32,
+    "mae": 200.09782783313048,
+    "rmse": 455.0286592810128,
+    "truth_total": 10222,
+    "truth_min": 10,
+    "truth_median": 67.0,
+    "truth_mean": 319.4375,
+    "truth_max": 2092,
+    "game1": 201.45826128727168,
+    "game2": 204.8979681801892
+  },
+  "groups": {
+    "<50": {
+      "n": 11,
+      "mae": 8.270578999037282,
+      "rmse": 19.12486713858905,
+      "truth_total": 306,
+      "truth_min": 10,
+      "truth_median": 25,
+      "truth_mean": 27.818181818181817,
+      "truth_max": 47,
+      "game1": 10.488376245321147,
+      "game2": 13.60993290643012
+    },
+    "50-299": {
+      "n": 11,
+      "mae": 7.688197751775717,
+      "rmse": 15.976469447017866,
+      "truth_total": 956,
+      "truth_min": 58,
+      "truth_median": 69,
+      "truth_mean": 86.9090909090909,
+      "truth_max": 259,
+      "game1": 9.428025099357168,
+      "game2": 15.766361636360068
+    },
+    ">=300": {
+      "n": 10,
+      "mae": 622.7583946401232,
+      "rmse": 813.5602924944634,
+      "truth_total": 8960,
+      "truth_min": 320,
+      "truth_median": 829.5,
+      "truth_mean": 896,
+      "truth_max": 2092,
+      "game1": 622.7583946401232,
+      "game2": 623.3595741795361
+    }
+  },
+  "frozen_b0_boxes_bitwise_equal": 32,
+  "elapsed_seconds": 13.480522120371461,
+  "peak_allocated_mib": 4208.6162109375,
+  "finished_utc": "2026-10-18T08:48:53Z",
+  "maps_published": false
+}

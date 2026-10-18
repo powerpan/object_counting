@@ -6,7 +6,7 @@
 
 目前保留 B0：MAE 9.39、RMSE 33.26。M2 為 10.32／37.03；M3 為 9.09／34.41，平均誤差下降但 RMSE 上升，且差值區間跨零；M2＋M3 為 9.70／37.28。五組皆未通過事前候選門檻。M2 出現多物件候選示例，M3 的兩張極端案例則顯示切片也改變上游 SAM 遮罩執行分支；這些是後續研究線索，不是已證明的改進。完整負結果、對照、區間與案例均公開。
 
-第二輪已先登記事前規則，再通過 32 張逐位元等價 gate 與兩種密度頭的容量檢查。M4-head-S 已開始訓練，GeCo2 官方參數保持凍結；尚無第二輪完整 val 準確度結果。最終 test 及外部確認尚未啟動。原有 LOCA 實驗不等同於本路線的結果。
+第二輪已先登記事前規則，再通過 32 張逐位元等價 gate 與兩種密度頭的容量檢查。M4-head-S 已完成 30 輪，GeCo2 官方參數保持凍結；訓練／檢查點核算及 32 張密度 gate 通過，完整 val 正在執行。內部留出最佳 MAE 7.02 只用於選檢查點，不能與 B0 的完整 val 成績直接相比。最終 test 及外部確認尚未啟動。原有 LOCA 實驗不等同於本路線的結果。
 
 - [B0 實驗結果與數量背景](docs/B0_RESULTS.md)
 - [M2／M3 固定實驗規則](docs/M2_M3_PROTOCOL.md)
@@ -17,6 +17,7 @@
 - [L 型時間預算修訂](docs/ROUND2_BUDGET_AMENDMENT.md)
 - [M4 訓練後驗證與合計預算](docs/ROUND2_VALIDATION_WORKFLOW.md)
 - [S 型先驗證的順序修訂](docs/ROUND2_S_FIRST_AMENDMENT.md)
+- [S 型訓練與驗證結果](docs/M4_S_RESULTS.md)
 - [實施方案與階段門檻](docs/PLAN_B.md)
 - [開發與實驗進度](docs/PROGRESS.md)
 - [公開資料與隱私規則](docs/PUBLISHING.md)
