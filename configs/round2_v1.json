@@ -1,0 +1,246 @@
+{
+  "version": "round2-v1",
+  "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+  "precision": "FP32",
+  "tf32": false,
+  "seed": 42,
+  "baseline_result": "results/b0-val-b1-boundary-r1",
+  "first_round_config": "configs/m2_m3_v1.json",
+  "split_file": "configs/round2_splits_v1.json",
+  "split_sha256": "12f86d9aeee601f0766c22c9a65bedd47d000d86af25dc5a420e24ff0642491d",
+  "train_manifest": "manifests/fsc147_train.json",
+  "train_manifest_sha256": "59da470843c3dd9aa17b930b8471019dec03a332ffab8e26582096f5d636d17d",
+  "crossfit": {
+    "folds": [
+      "A",
+      "B"
+    ],
+    "selection": "lowest MAE among RMSE <= same-fold B0; else lowest RMSE",
+    "tie_break": [
+      "other_metric",
+      "candidate_order"
+    ],
+    "standardization": "fit fold only",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 42,
+    "outer_fold_model_choices": "fit fold only"
+  },
+  "m4": {
+    "input_channels": 257,
+    "output_size": 512,
+    "feature": "adapt_features output plus raw class_embed centerness",
+    "widths": {
+      "S": [
+        256,
+        256,
+        256,
+        128,
+        64
+      ],
+      "L": [
+        512,
+        512,
+        512,
+        256,
+        128
+      ]
+    },
+    "candidate_order": [
+      "S",
+      "L"
+    ],
+    "kernel_size": 3,
+    "conv_bias": false,
+    "groupnorm_groups": 32,
+    "activation": "GELU",
+    "output": "Softplus",
+    "output_scale": 100.0,
+    "final_weight_init": 0.0,
+    "final_scaled_density_init": 0.01,
+    "target_sigma": "max(mean_exemplar_side_model_pixels/8,1)",
+    "gaussian_truncate_sigma": 3.0,
+    "padding_output": 0,
+    "density_loss_reduction": "mean over valid pixels, then mean over images",
+    "count_loss_weight": 1.0,
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "min_lr": 1e-06,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 1,
+    "epochs": 30,
+    "gradient_clip_norm": 1.0,
+    "batch_candidates": [
+      4,
+      8
+    ],
+    "gradient_accumulation_steps": 1,
+    "backbone_feature_batch": 1,
+    "capacity_probe_steps": 4,
+    "batch8_projected_peak_limit_mib": 36000,
+    "capacity_projection_margin": 1.15,
+    "horizontal_flip_probability": 0.5,
+    "scale_jitter_final_multiplier": [
+      0.8,
+      1.0
+    ],
+    "augmentation_seed_rule": "seed + 1000003 * epoch + 1009 * train_index",
+    "checkpoint_selection": "minimum train-holdout density MAE, earlier epoch breaks ties",
+    "checkpoint_scope": "head state, optimizer, scheduler step, RNG states; frozen model SHA256",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "seed_repeats": "full-val selected seed42 width only; conditional development sensitivity, not unbiased OOF width selection",
+    "fusion": {
+      "grid": 8,
+      "features": [
+        "center_count",
+        "density_mass",
+        "mean_raw_objectness",
+        "mean_detection_side",
+        "median_exemplar_side",
+        "center_count_per_original_pixel_area"
+      ],
+      "blend_detection": "M1 cell mass, not center count",
+      "model": "sigmoid affine regression with squared cell-count loss",
+      "standardize": "mean/std fit fold only; constant std set to 1",
+      "optimizer": "L-BFGS-B",
+      "max_iterations": 1000,
+      "ftol": 1e-12,
+      "gtol": 1e-08,
+      "l2": 0.001,
+      "initial_coefficients": 0.0,
+      "intercept_regularized": false,
+      "weighting": "equal image and 64 cell weight",
+      "density_mass_tolerance": 1e-06
+    },
+    "ft": {
+      "conditional": true,
+      "modules": [
+        "class_embed",
+        "bbox_embed",
+        "adapt_features.up3"
+      ],
+      "parameter_prefixes": [
+        "class_embed.",
+        "bbox_embed.",
+        "adapt_features.up3."
+      ],
+      "frozen_auxiliary_heads": true,
+      "density_lr": 0.0001,
+      "geco_lr": 1e-05,
+      "loss_source": "utils.losses.SetCriterion and train.py pinned aggregation including auxiliary terms",
+      "required_annotation": "official FSCD-147 instances_train.json bounding boxes",
+      "if_unavailable": "cancel ft; do not synthesize boxes from points",
+      "detector_mae_max_ratio": 1.02,
+      "underfit_proxy": "(epoch26 mean train loss - epoch30 mean train loss)/max(abs(epoch26 mean train loss),1e-12) > .05",
+      "first_condition": "seed42 OOF density MAE or dense-group MAE below B0",
+      "seed": 42,
+      "epochs": 30
+    }
+  },
+  "m3_v2": {
+    "grids": [
+      2,
+      3
+    ],
+    "candidate_order": [
+      2,
+      3
+    ],
+    "halo_fraction_of_full_image": 0.1,
+    "trigger_exemplar_side_max": 32.0,
+    "trigger_count_min": 200,
+    "refine": "each tile follows original whole-image auto branch",
+    "refine_on_chunk_candidates": 800,
+    "relative_threshold": 0.11,
+    "threshold_and_cross_tile_normalization": "maximum raw objectness over all tiles",
+    "nms_iou": 0.5,
+    "controls": [
+      "branch_only_grid2",
+      "repeat_matched_selected_grid",
+      "b0_refine_on",
+      "b0_refine_off"
+    ]
+  },
+  "m2_v2": {
+    "candidates": [
+      {
+        "max_extra_exemplars": 1,
+        "min_mean_cosine": 0.75
+      },
+      {
+        "max_extra_exemplars": 1,
+        "min_mean_cosine": 0.85
+      },
+      {
+        "max_extra_exemplars": 3,
+        "min_mean_cosine": 0.75
+      },
+      {
+        "max_extra_exemplars": 3,
+        "min_mean_cosine": 0.85
+      }
+    ],
+    "reject_other_centers_at_least": 2,
+    "containment": "inclusive edges; excludes identical candidate index",
+    "min_relative_objectness": 0.5,
+    "min_scale_ratio": 1.5,
+    "min_side_in_model_pixels": 2.0,
+    "fallback_relative_change_gt": 0.5,
+    "controls": [
+      "repeat_same_selected_candidates_and_fallback_rule",
+      "no_fallback_same_selected_setting"
+    ],
+    "no_fallback_is_diagnostic_only": true
+  },
+  "metrics": {
+    "density_groups": [
+      50,
+      300
+    ],
+    "game_levels": [
+      1,
+      2
+    ],
+    "localization_radius": "0.5 * mean exemplar side in original pixels",
+    "localization": "maximum-cardinality one-to-one center/point matching; micro and macro F1; density/fusion do not claim their own point locations"
+  },
+  "admission": {
+    "mae_max_b0_ratio": 1.02,
+    "rmse": "strictly below B0",
+    "dense_mae": "strictly below B0",
+    "improved_density_spatial_claim": "GAME2 strictly below M1"
+  },
+  "stop": {
+    "allocated_memory_mib": 40000,
+    "single_val_seconds": 5400,
+    "m4_single_run_seconds": 21600,
+    "m4_total_seconds": 108000,
+    "m2_m3_total_seconds": 36000,
+    "combination_final_total_seconds": 28800,
+    "on_oom": "save diagnostics and stop dependent workflow, no automatic retry",
+    "on_budget_exceeded": "checkpoint and stop; partial run excluded from formal comparison",
+    "on_nonfinite": "stop",
+    "on_gate_mismatch": "stop"
+  },
+  "final_test": {
+    "enabled": false,
+    "requires": "committed final freeze checklist and independent blinded 200-image human annotations",
+    "max_evaluations_per_frozen_system": 1,
+    "carpk_prompt": "first three annotation boxes in original order"
+  },
+  "execution_order": [
+    "R2-0",
+    "R2-1-head-S42",
+    "R2-1-head-L42",
+    "R2-2",
+    "R2-seeds43-44",
+    "R2-3-if-eligible",
+    "R2-4",
+    "R2-5",
+    "R2-6",
+    "R2-7-if-all-checks-pass"
+  ]
+}
