@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "n": 32,
+  "variant": "T4",
+  "phase": "smoke",
+  "view_geometry_mass_game_localization_reconstructed": true,
+  "files_sha256": {
+    "protocol.json": "9819413e6cf4077897abb6f62ef3de4bc94b0effac0613a523342b7cd392a7ac",
+    "summary.json": "6da30773a0a0cd9c10904d50ae8840f4da0807256874b0b3fa841206baac94ee",
+    "predictions.jsonl": "821cca7f2239ea9f17a4efe8895dc166446b2cd58190439f626d0dac249ab83f"
+  },
+  "not_used_for_selection": true
+}

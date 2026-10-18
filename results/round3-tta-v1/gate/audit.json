@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "n": 32,
+  "variant": "tta-repeat",
+  "phase": "gate",
+  "view_geometry_mass_game_localization_reconstructed": true,
+  "files_sha256": {
+    "protocol.json": "620e5ebd738054c1a043c52b8cfb17c8a37c81d5b46e5d45d2af379e34c21b52",
+    "summary.json": "f66217b3abf461b6ec8700d0c0e6a979962edafc7ba482a4dde7783dd2fe6f94",
+    "predictions.jsonl": "60a1b9c6d92ac627a7ab7e689c712b7f7c80f866575701c84e4546d5a8636231"
+  },
+  "not_used_for_selection": true
+}

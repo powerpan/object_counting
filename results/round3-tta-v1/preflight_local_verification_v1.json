@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "scope": "TTA preflight only; no method selection or full val",
+  "archive_sha256": "e4c8f6de525d1af05bc6a5afd68de1f8e59d875254d01f27f5bb0ec45e42544a",
+  "manifest_sha256": "88572cd93fc5cfc632c57818f281204e5869942dadf24285d236fb4cab7e9d88",
+  "source_count": 93,
+  "cross_platform_note": "Transferred files use exact SHA; independent floating-point reconstruction uses registered numeric tolerances, not cross-platform bitwise equality.",
+  "sample_density_file_comparison": {
+    "label": "gate",
+    "image": "190.jpg",
+    "density_file_sha256": "0f08234fe9675aa87c08eafde523576a8ecbf6337c17279e4e5d0bc2fc4b5936",
+    "density_array_sha256": "68a732aab9ae0451b95a7bb4c1767d9571d1171aeba8bbbf856e49828f860572",
+    "count": 9.0,
+    "local_mass": 9.0,
+    "saved_mass": 9.0,
+    "remote_file_and_array_hash_verified": true,
+    "maximum_pixel_difference": 8.673617379884035e-19,
+    "l1_pixel_difference": 4.1717974735684684e-16,
+    "allclose_registered_tolerance": true,
+    "exact_zero_support_equal": true,
+    "local_numpy": "2.4.2"
+  },
+  "stages": {
+    "gate": {
+      "n": 32,
+      "truth_counts_and_density_mass_reproduced": true,
+      "game_and_cells_reproduced": true,
+      "repeat_matches_B0": true,
+      "cross_platform_array_digest_matches": 0,
+      "maximum_mass_error": 0.0,
+      "peak_allocated_mib": 4789.16552734375
+    },
+    "smoke-T2": {
+      "n": 32,
+      "truth_counts_and_density_mass_reproduced": true,
+      "game_and_cells_reproduced": true,
+      "repeat_matches_B0": null,
+      "cross_platform_array_digest_matches": 0,
+      "maximum_mass_error": 2.842170943040401e-14,
+      "peak_allocated_mib": 5012.15869140625
+    },
+    "smoke-T4": {
+      "n": 32,
+      "truth_counts_and_density_mass_reproduced": true,
+      "game_and_cells_reproduced": true,
+      "repeat_matches_B0": null,
+      "cross_platform_array_digest_matches": 0,
+      "maximum_mass_error": 3.552713678800501e-15,
+      "peak_allocated_mib": 5012.15869140625
+    },
+    "smoke-tta-repeat": {
+      "n": 32,
+      "truth_counts_and_density_mass_reproduced": true,
+      "game_and_cells_reproduced": true,
+      "repeat_matches_B0": true,
+      "cross_platform_array_digest_matches": 0,
+      "maximum_mass_error": 0.0,
+      "peak_allocated_mib": 4200.1376953125
+    }
+  },
+  "verified_utc": "2026-10-18T13:59:51Z"
+}
