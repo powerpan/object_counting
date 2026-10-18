@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "verified_utc": "2026-10-18T14:48:03Z",
+  "selected_sources_geometry_mass_game_localization_reconstructed": true,
+  "count_metrics_and_gate_independently_recomputed": true,
+  "paired_intervals_recomputed_with_registered_statistics": true,
+  "maximum_map_mass_error": 2.842170943040401e-14,
+  "scope": "development_only_no_test",
+  "gpu_seconds": 0,
+  "files_sha256": {
+    "protocol.json": "029f1f4a5300da7f5ff21218f70837054bd09d61c028ae63addd01c9829d4eb5",
+    "summary.json": "acb2475ca40d88b14c7ccd824e603c6d668b1a4d11280a8047e22272d6c9f8ed",
+    "predictions.jsonl": "6167883cce2e178b6164f6707c25cf536c3ec74a06db2f1fdd5f735354a6db49"
+  }
+}
