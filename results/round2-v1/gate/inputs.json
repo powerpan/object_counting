@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "verified_files": 3664,
+  "train_images": 3659,
+  "train_manifest_sha256": "59da470843c3dd9aa17b930b8471019dec03a332ffab8e26582096f5d636d17d",
+  "fsc_checkpoint_sha256": "945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b",
+  "sam2_sha256": "d0bb7f236400a49669ffdd1be617959a8b1d1065081789d7bbff88eded3a8071"
+}
