@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "hf_revision": "ed3c8ff3753e731fd7074862c0ea49d908785335",
+  "hf_file_sha256": "945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b",
+  "original_file_sha256": "4254ab24415a6030e50b81af77bd25e5df662baa57c51e23f7fe81057fab3a01",
+  "checked_tensors": 475,
+  "differences": [],
+  "scope": "Exact float32 model tensor equality; optimizer/metadata excluded"
+}

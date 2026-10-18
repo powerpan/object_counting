@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "test": "compiled_deformable_attention",
+  "forward_max_abs_error": 4.656612873077393e-10,
+  "double_precision_gradcheck": true,
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "gpu": "NVIDIA GeForce RTX 4090"
+}

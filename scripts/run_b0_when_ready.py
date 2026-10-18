@@ -40,8 +40,10 @@ def main():
     stage = 'waiting_for_environment_and_assets'
     try:
         status(stage)
+        direct_manifest = root / 'provenance/validation_manifest.json'
+        use_direct = direct_manifest.exists()
         required = [json.loads((root / 'provenance' / f'{p}.json').read_text())[0]
-                    for p in ['geco', 'sam', 'validation_bundle']]
+                    for p in (['geco', 'sam'] if use_direct else ['geco', 'sam', 'validation_bundle'])]
         verified = set()
         deadline = time.monotonic() + args.wait_minutes * 60
         while time.monotonic() < deadline:
@@ -62,20 +64,35 @@ def main():
                             candidate.replace(path)
                         verified.add(str(path))
                         break
-            if env_ready and len(verified) == len(required):
+            data_ready = not use_direct or (root / 'provenance/validation_download.json').exists()
+            if env_ready and data_ready and len(verified) == len(required):
                 break
             time.sleep(15)
         else:
             raise TimeoutError('Preparation deadline exceeded; no evaluation started')
 
-        stage = 'extracting_validation_inputs'
-        status(stage)
-        with tarfile.open(root / 'validation-inputs.tar.gz') as archive:
-            for member in archive.getmembers():
-                path = Path(member.name)
-                if not member.isfile() or path.is_absolute() or '..' in path.parts or not member.name.startswith('data/fsc147/'):
-                    raise ValueError('Unexpected archive member')
-            archive.extractall(root)
+        if use_direct:
+            stage = 'verifying_downloaded_validation_inputs'
+            status(stage)
+            receipt = json.loads((root / 'provenance/validation_download.json').read_text())
+            manifest = json.loads(direct_manifest.read_text())
+            if receipt['status'] != 'complete' or receipt['manifest_sha256'] != sha(direct_manifest):
+                raise ValueError('Validation download receipt does not match manifest')
+            if manifest['split'] != 'val' or manifest['n'] != 1286:
+                raise ValueError('Unexpected validation manifest')
+            for record in manifest['files']:
+                path = root / record['path']
+                if path.stat().st_size != record['bytes'] or sha(path) != record['sha256']:
+                    raise ValueError('Validation input changed after download')
+        else:
+            stage = 'extracting_validation_inputs'
+            status(stage)
+            with tarfile.open(root / 'validation-inputs.tar.gz') as archive:
+                for member in archive.getmembers():
+                    path = Path(member.name)
+                    if not member.isfile() or path.is_absolute() or '..' in path.parts or not member.name.startswith('data/fsc147/'):
+                        raise ValueError('Unexpected archive member')
+                archive.extractall(root)
         python = str(root / '.venv/bin/python')
         env = dict(os.environ, TORCH_HOME=str(root / 'cache/torch'), PYTHONUNBUFFERED='1')
 

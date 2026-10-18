@@ -19,10 +19,13 @@ def sha256(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, required=True)
-    parser.add_argument('--part', choices=['geco', 'sam', 'images', 'annotations'], required=True)
+    parser.add_argument('--part', choices=['geco', 'geco-original', 'sam', 'images', 'annotations'], required=True)
+    parser.add_argument('--hf-endpoint', default='https://hf-mirror.com')
     args = parser.parse_args()
     assets = {
-        'geco': [('weights/GECO2FSCD.pth', '1OG6-tTP2Egvx-O5oK6lxPzvQO1LWgHbb')],
+        'geco': [('weights/GECO2FSCD.pth', args.hf_endpoint.rstrip('/') +
+                 '/datasets/jerpelhan/geco2-assets/resolve/ed3c8ff3753e731fd7074862c0ea49d908785335/weights/GECO2FSCD.pth')],
+        'geco-original': [('weights/GECO2FSCD-original.pth', '1OG6-tTP2Egvx-O5oK6lxPzvQO1LWgHbb')],
         'sam': [('cache/torch/hub/checkpoints/sam2_hiera_base_plus.pt',
                  'https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2_hiera_base_plus.pt')],
         'images': [('data/fsc147/images.zip', '1ymDYrGs9DSRicfZbSCDiOu0ikGDh5k6S')],
@@ -46,7 +49,11 @@ def main():
                                         use_cookies=False, resume=True, timeout=(20, 90), retries=1)
                 if result is None:
                     raise RuntimeError('Official asset unavailable: ' + relative)
+            if args.part == 'geco' and sha256(partial) != '945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b':
+                raise ValueError('Downloaded checkpoint failed SHA-256 verification')
             partial.replace(path)
+        if args.part == 'geco' and sha256(path) != '945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b':
+            raise ValueError('Checkpoint differs from pinned author Hugging Face object')
         record = {'path': relative, 'source': url, 'bytes': path.stat().st_size,
                   'sha256': sha256(path)}
         records.append(record)

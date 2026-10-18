@@ -6,6 +6,12 @@
 
 `scripts/fetch_assets.py` 分別下載 FSC 專用 GeCo2 權重、SAM2 權重、FSC-147 官方圖像壓縮包和標註。執行時指定 `--root` 和 `--part`。Google Drive 下載支援中斷續傳，完成後保存來源、大小及 SHA-256。這些值能檢查搬移前後是否一致，不能當作作者提供的數位簽章。
 
+本輪改為伺服器直接下載公開資源。GeCo2 預設下載作者 Hugging Face 倉庫的 FSC 專用權重，固定 revision `ed3c8ff3753e731fd7074862c0ea49d908785335`；保留 `--part geco-original` 供原 Google Drive 版本的核對使用。兩個檔案的容器大小不同，必須用 `scripts/check_checkpoint_equivalence.py` 對照 `manifests/geco_gdrive_tensors.json` 的 475 個模型張量，逐項確認形狀、資料型別和完整內容雜湊一致；檔案名稱相同不是等價證據。
+
+FSC-147 的 val 圖像使用 `scripts/fetch_validation.py --root "$WORK_ROOT" --manifest "$CODE_ROOT/manifests/fsc147_val.json"`。傳輸來源是第三方 `isentropic/FSC147` 鏡像的固定版本 `3e420cb6537e803dd6d4516623ce82a79c0317b8`，每一張圖均對照原官方壓縮包中的檔案雜湊。三份標註由原始 GitHub 取得，也逐檔核對。只有全部 1,289 個檔案一致才寫入完成憑據。模型和資料不需要透過本機上傳；本機只傳送程式與小型核驗清單。
+
+`scripts/download_verified_ranges.py` 可對支援 HTTP Range 的大型公開資源使用 8 個並行連線。每段核對 Content-Range 和長度，最後核對完整 SHA-256；只有完整通過才提升為正式檔案。中斷前的前綴檔案需先停止寫入，才能用於續傳。
+
 工作根目錄應包含：
 
 ```text
@@ -38,6 +44,8 @@ python "$CODE_ROOT/scripts/evaluate_val.py" \
 `scripts/run_b0_when_ready.py` 將上述步驟串接：先等候建置成功與三份資產雜湊通過，再解壓僅含 val 圖像的資料包、執行算子和 M1 測試、20 張 smoke，最後跑完整 val。它讀取 `provenance/geco.json`、`sam.json`、`validation_bundle.json`，每份包含相對 `path`、`bytes`、`sha256`。資料包必須只含 `data/fsc147/` 之下的一般檔案。
 
 此流程使用單程序鎖避免重複執行，準備階段最多等待 90 分鐘，smoke 最多 15 分鐘，完整 val 最多 90 分鐘。任何步驟失敗就停止，狀態寫入 `results/b0_workflow.json`；不會自動重跑、跳過失敗檢查或啟動訓練。本輪基線統一 batch 1，較大批次另外量測。遠端工作可在 SSH 斷線後繼續，但原始資料搬移仍需確認來源程序存活。
+
+若存在 `provenance/validation_manifest.json`，流程會改用直接下載模式：檢查 `validation_download.json` 的完成狀態、清單雜湊，再重核每份實際檔案，不等待或解壓舊資料包。AutoDL 的 GitHub 加速可用 `PLANB_GIT_ACCELERATION=1`，只作用於 Git 複製步驟，不套用至一般依賴下載。
 
 ## 評估口徑
 

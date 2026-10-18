@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "verified_files": 1289,
+  "validation_images": 1286,
+  "manifest_sha256": "89b41e0f9e7cacde100b20b9d189ceb337e3ddccebf5d70ba6c7f2c9ae6f0b26",
+  "transport": "https://hf-mirror.com",
+  "mirror_revision": "3e420cb6537e803dd6d4516623ce82a79c0317b8",
+  "elapsed_seconds": 197.16021535545588
+}
