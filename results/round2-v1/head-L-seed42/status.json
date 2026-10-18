@@ -1,0 +1,12 @@
+{
+  "status": "interrupted",
+  "epoch": 1,
+  "next_batch": 215,
+  "global_step": 1080,
+  "best_epoch": 1,
+  "best_holdout_mae": 34.793008388859214,
+  "elapsed_seconds": 1366.437578227371,
+  "peak_allocated_mib": 25082.52001953125,
+  "peak_reserved_mib": 30566.0,
+  "updated_utc": "2026-10-18T09:18:00Z"
+}

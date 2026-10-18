@@ -1,0 +1,12 @@
+[
+  {
+    "epoch": 1,
+    "train_n": 3457,
+    "train_loss": 0.5424439073264133,
+    "holdout_n": 202,
+    "holdout_mae": 34.793008388859214,
+    "holdout_loss": 0.4628697627841836,
+    "frozen_state_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+    "elapsed_seconds": 1101.0258117206395
+  }
+]

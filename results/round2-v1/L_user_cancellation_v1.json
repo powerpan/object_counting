@@ -1,0 +1,96 @@
+{
+  "status": "cancelled_by_user",
+  "reason": "explicit_user_instruction_to_cancel_L_training",
+  "requested_utc": "2026-10-18T09:18:00Z",
+  "verified_utc": "2026-10-18T09:18:36Z",
+  "training_status": {
+    "status": "interrupted",
+    "epoch": 1,
+    "next_batch": 215,
+    "global_step": 1080,
+    "best_epoch": 1,
+    "best_holdout_mae": 34.793008388859214,
+    "elapsed_seconds": 1366.437578227371,
+    "peak_allocated_mib": 25082.52001953125,
+    "peak_reserved_mib": 30566.0,
+    "updated_utc": "2026-10-18T09:18:00Z"
+  },
+  "history_complete_epochs": 1,
+  "formal_L_validation_completed": false,
+  "automatic_resume_allowed": false,
+  "training_process_exited": true,
+  "controller_process_exited": true,
+  "gpu_compute_processes": 0,
+  "shared_workflow_lock_released": true,
+  "subsequent_L_gate_val_crossfit_started": false,
+  "source_receipts_verified": {
+    "round2_code_receipt": {
+      "code_commit": "f5f83bcc00563265a5aacb4995526a23bf365855",
+      "receipt_sha256": "1cb63c21b007cff37598e67a9da451a214b5f3943d45d5fa51449b6544ed2984"
+    },
+    "round2_budget_receipt": {
+      "code_commit": "6984b205e3aa4f50042143449091cd87c66c9c0d",
+      "receipt_sha256": "c47952e2149b744d93764f66c6610275e7515c15448f2ac35f16d638c10418ff"
+    },
+    "round2_analysis_receipt": {
+      "code_commit": "408f3e8fa5b29cdf0a112939c38aa2a8e878d8a4",
+      "receipt_sha256": "4e72a805aeacf205cd5f45c75cc1bfb01641b5020320a16f09d54143a296a945"
+    },
+    "round2_validation_workflow_receipt": {
+      "code_commit": "a16c38391d29f358084c358b7ad6caa913cbec0a",
+      "receipt_sha256": "683689cf87e2643af769f747a58c7df887fb4c68d8031485ff81fd200d5dde00"
+    },
+    "round2_s_first_receipt": {
+      "code_commit": "be801b983378990ac54934652f1b73f4e663ce35",
+      "receipt_sha256": "3bc1a8db3d49b982550f84f864b2535624011244346cee2d5b1ed183625f6969"
+    }
+  },
+  "checkpoints": {
+    "best": {
+      "relative_path": "work/round2-v1/head-L-seed42/best.pth",
+      "sha256": "b6bd20486a5b25feebc29e9bfd989886199c700da298ef464b671b069c913249",
+      "bytes": 88608045,
+      "completed_epochs": 1,
+      "next_batch": 0,
+      "global_step": 865,
+      "cpu_load_verified": true
+    },
+    "last": {
+      "relative_path": "work/round2-v1/head-L-seed42/last.pth",
+      "sha256": "307be93e1af12fb2a7b0cfc4e6d71eec3daba582d79b7a8f5790e40aded85f87",
+      "bytes": 88608045,
+      "completed_epochs": 1,
+      "next_batch": 215,
+      "global_step": 1080,
+      "cpu_load_verified": true
+    }
+  },
+  "budget": {
+    "cap_seconds": 108000,
+    "state": "stopped",
+    "active": null,
+    "L_settled_once": true,
+    "L_entry": {
+      "id": "head-L-seed42",
+      "limit_seconds": 43200.0,
+      "started_utc": "2026-10-18T08:55:11Z",
+      "elapsed_seconds": 1369.3275902438909,
+      "outcome": "stopped",
+      "evidence": {},
+      "finished_utc": "2026-10-18T09:18:01Z"
+    },
+    "total_spent_seconds": 18032.695445628837,
+    "remaining_seconds": 89967.30455437116
+  },
+  "controller_stop_error_type": "FileNotFoundError",
+  "controller_stop_explanation": "The controller tried to read the completion-only manifest after the interrupted child exited; it stopped before validation and settled the interrupted stage. This is a user cancellation, not a model failure.",
+  "retained_evidence_sha256": {
+    "results/round2-v1/head-L-seed42/status.json": "cd417fe00f261b00ecfba9306333a11c2bf13a4851ed7388e217f4e59cc98fc0",
+    "results/round2-v1/head-L-seed42/history.json": "9c26328bbb70959b416b652dfad6f421cec2874cacdb557f85e9475429d18916",
+    "results/round2-v1/head-L-seed42/protocol.json": "564b033893b30d7378e5c3143a53a8cdc67ece799b52213d41adcbb43580f540",
+    "results/round2-v1/workflow_s_first_v1.json": "9c18e01b7b30cceab74e7020728ffec17458bb3344eeaae898322c5206061af0",
+    "results/round2-v1/m4_budget_ledger_v1.json": "0bf0f0d434e6c057680f2f438452d0845345a10ed4f8f2d822a08bbc58945976",
+    "logs/round2-head-L-seed42.log": "cd8f4b87de048125ad349f1b08957fe78e3271d09e12d3b3dcc305a01e0e751b",
+    "logs/round2-s-first-workflow-r1.log": "5398abe6e5a32e6f7f86b7fb0e3312f5808b5b44743983b988ba553c8101d8e3"
+  }
+}
