@@ -1,0 +1,690 @@
+{
+  "status": "passed",
+  "scope": "Complete M2 development validation only; not test or a new combination",
+  "archive_sha256": "b96367a1c17f891da3980083a29768e5eeb3d86abf7eade62c4b4a12117be6f2",
+  "manifest_sha256": "4793083ca696398889f6a74f9019656369e2c510e5281f45233011defbfc4f61",
+  "source_count": 118,
+  "variants": {
+    "m2-v2-e1-c075": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 200,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 1091,
+        "rejected_by_single_object_filter": 546,
+        "selected_pseudo_exemplars": 200,
+        "fallback_images": 1,
+        "fallback_rule_triggered_images": 1,
+        "candidate_point_histogram": {
+          "0": 11,
+          "1": 162,
+          "2": 11,
+          "3": 4,
+          "4": 8,
+          "5": 2,
+          "6": 1,
+          "8": 1
+        },
+        "candidate_contains_2plus_points": 27,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e1-c075-repeat": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 200,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 1091,
+        "rejected_by_single_object_filter": 546,
+        "selected_pseudo_exemplars": 200,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "0": 11,
+          "1": 162,
+          "2": 11,
+          "3": 4,
+          "4": 8,
+          "5": 2,
+          "6": 1,
+          "8": 1
+        },
+        "candidate_contains_2plus_points": 27,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 312,
+          "base_count": 316,
+          "second_count": 312,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e1-c075-no-fallback": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 200,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 1091,
+        "rejected_by_single_object_filter": 546,
+        "selected_pseudo_exemplars": 200,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 1,
+        "candidate_point_histogram": {
+          "0": 11,
+          "1": 162,
+          "2": 11,
+          "3": 4,
+          "4": 8,
+          "5": 2,
+          "6": 1,
+          "8": 1
+        },
+        "candidate_contains_2plus_points": 27,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e1-c085": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 52,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 296,
+        "rejected_by_single_object_filter": 185,
+        "selected_pseudo_exemplars": 52,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "1": 36,
+          "2": 7,
+          "3": 2,
+          "4": 6,
+          "5": 1
+        },
+        "candidate_contains_2plus_points": 16,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e1-c085-repeat": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 52,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 296,
+        "rejected_by_single_object_filter": 185,
+        "selected_pseudo_exemplars": 52,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "1": 36,
+          "2": 7,
+          "3": 2,
+          "4": 6,
+          "5": 1
+        },
+        "candidate_contains_2plus_points": 16,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 312,
+          "base_count": 316,
+          "second_count": 312,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e1-c085-no-fallback": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 52,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 296,
+        "rejected_by_single_object_filter": 185,
+        "selected_pseudo_exemplars": 52,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "1": 36,
+          "2": 7,
+          "3": 2,
+          "4": 6,
+          "5": 1
+        },
+        "candidate_contains_2plus_points": 16,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e3-c075": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 200,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 1091,
+        "rejected_by_single_object_filter": 546,
+        "selected_pseudo_exemplars": 207,
+        "fallback_images": 1,
+        "fallback_rule_triggered_images": 1,
+        "candidate_point_histogram": {
+          "0": 11,
+          "1": 165,
+          "2": 12,
+          "3": 5,
+          "4": 9,
+          "5": 2,
+          "6": 1,
+          "8": 2
+        },
+        "candidate_contains_2plus_points": 31,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e3-c075-repeat": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 200,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 1091,
+        "rejected_by_single_object_filter": 546,
+        "selected_pseudo_exemplars": 207,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "0": 11,
+          "1": 165,
+          "2": 12,
+          "3": 5,
+          "4": 9,
+          "5": 2,
+          "6": 1,
+          "8": 2
+        },
+        "candidate_contains_2plus_points": 31,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 312,
+          "base_count": 316,
+          "second_count": 312,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e3-c075-no-fallback": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 200,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 1091,
+        "rejected_by_single_object_filter": 546,
+        "selected_pseudo_exemplars": 207,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 1,
+        "candidate_point_histogram": {
+          "0": 11,
+          "1": 165,
+          "2": 12,
+          "3": 5,
+          "4": 9,
+          "5": 2,
+          "6": 1,
+          "8": 2
+        },
+        "candidate_contains_2plus_points": 31,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e3-c085": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 52,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 296,
+        "rejected_by_single_object_filter": 185,
+        "selected_pseudo_exemplars": 54,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "1": 37,
+          "2": 7,
+          "3": 2,
+          "4": 7,
+          "5": 1
+        },
+        "candidate_contains_2plus_points": 17,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e3-c085-repeat": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 52,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 296,
+        "rejected_by_single_object_filter": 185,
+        "selected_pseudo_exemplars": 54,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "1": 37,
+          "2": 7,
+          "3": 2,
+          "4": 7,
+          "5": 1
+        },
+        "candidate_contains_2plus_points": 17,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 312,
+          "base_count": 316,
+          "second_count": 312,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    },
+    "m2-v2-e3-c085-no-fallback": {
+      "n": 1286,
+      "policy_truth_density_cells_game_localization": "passed",
+      "scalar_metrics_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "cross_platform_array_digest_matches": 0,
+      "diagnostics": {
+        "triggered_images": 52,
+        "first_detection_candidates": 76583,
+        "eligible_before_single_object_filter": 296,
+        "rejected_by_single_object_filter": 185,
+        "selected_pseudo_exemplars": 54,
+        "fallback_images": 0,
+        "fallback_rule_triggered_images": 0,
+        "candidate_point_histogram": {
+          "1": 37,
+          "2": 7,
+          "3": 2,
+          "4": 7,
+          "5": 1
+        },
+        "candidate_contains_2plus_points": 17,
+        "candidate_point_diagnosis_only_after_inference": true,
+        "case_3481": {
+          "truth": 431,
+          "prediction": 264,
+          "base_count": 316,
+          "second_count": 264,
+          "fallback": false,
+          "fallback_rule_triggered": false,
+          "pseudo_exemplars": [
+            {
+              "first_detection_index": 17,
+              "box_xyxy": [
+                149.4140625,
+                195.6328125,
+                162.9609375,
+                208.78125
+              ],
+              "cosine": 0.8989390730857849,
+              "relative_objectness": 0.8921871185302734,
+              "other_detection_centers": 1,
+              "annotated_points_inside": 3
+            }
+          ]
+        }
+      }
+    }
+  },
+  "fold_selection_controls_and_intervals_reproduced": true,
+  "within_fold_inclusion": {
+    "B": {
+      "fit_fold": "A",
+      "fit_n": 496,
+      "selected": "m2-v2-e1-c085",
+      "candidate_gate": false,
+      "fit_metrics": {
+        "n": 496,
+        "mae": 11.098790322580646,
+        "rmse": 39.244760283092816,
+        "game1": 13.700231422989983,
+        "game2": 17.703001006977267
+      },
+      "baseline_fit_metrics": {
+        "n": 496,
+        "mae": 11.076612903225806,
+        "rmse": 39.18998390800483,
+        "game1": 13.722395125839641,
+        "game2": 17.69050976839452
+      },
+      "dense_fit_metrics": {
+        "n": 6,
+        "mae": 225.83333333333334,
+        "rmse": 293.61738141102387,
+        "game1": 229.129436409974,
+        "game2": 246.45087176217064
+      },
+      "baseline_dense_fit_metrics": {
+        "n": 6,
+        "mae": 225.83333333333334,
+        "rmse": 293.61738141102387,
+        "game1": 229.129436409974,
+        "game2": 246.45087176217064
+      }
+    },
+    "A": {
+      "fit_fold": "B",
+      "fit_n": 790,
+      "selected": "m2-v2-e1-c085",
+      "candidate_gate": false,
+      "fit_metrics": {
+        "n": 790,
+        "mae": 8.449367088607595,
+        "rmse": 29.313732903007434,
+        "game1": 10.853874152663353,
+        "game2": 14.303051268355995
+      },
+      "baseline_fit_metrics": {
+        "n": 790,
+        "mae": 8.330379746835444,
+        "rmse": 28.927779999443484,
+        "game1": 10.777152350029095,
+        "game2": 14.223122865322317
+      },
+      "dense_fit_metrics": {
+        "n": 33,
+        "mae": 96.0909090909091,
+        "rmse": 131.8310443045349,
+        "game1": 118.20702956162296,
+        "game2": 128.51510165396647
+      },
+      "baseline_dense_fit_metrics": {
+        "n": 33,
+        "mae": 93,
+        "rmse": 129.73831470706833,
+        "game1": 115.82128553187988,
+        "game2": 126.12935762422339
+      }
+    }
+  },
+  "all_val_selected": "m2-v2-e1-c085",
+  "all_val_candidate_gate": false,
+  "negative_result_exclusion": false,
+  "stage_spent_seconds": {
+    "R3-0": 82.73134304024279,
+    "R3-1": 2753.8177534788847,
+    "R3-2": 2052.507943633944,
+    "R3-3": 0,
+    "R3-4": 0,
+    "R3-5": 2306.9010528475046,
+    "R3-6": 0
+  },
+  "total_spent_seconds": 7195.958093000576,
+  "cpu_wall_seconds": 46.20355195784941,
+  "verified_utc": "2026-10-18T16:02:04Z",
+  "cross_platform_note": "Transferred artifact SHA is exact; reconstructed arrays use registered numeric tolerance, not cross-platform bitwise equality."
+}

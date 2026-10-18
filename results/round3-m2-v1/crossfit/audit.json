@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "fold_choices_controls_and_metrics_reproduced": true,
+  "summary_sha256": "511502562e60758aff3d709aebc92b78dc2c9605d28b70866519bcf4b5e7cfa0",
+  "scope": "development_only_no_test"
+}

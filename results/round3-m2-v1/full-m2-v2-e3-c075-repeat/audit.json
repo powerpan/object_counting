@@ -1,0 +1,600 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "variant": "m2-v2-e3-c075-repeat",
+  "phase": "full",
+  "policy_geometry_density_truth_reconstructed": true,
+  "diagnostics": {
+    "triggered_images": 200,
+    "first_detection_candidates": 76583,
+    "eligible_before_single_object_filter": 1091,
+    "rejected_by_single_object_filter": 546,
+    "selected_pseudo_exemplars": 207,
+    "fallback_images": 0,
+    "fallback_rule_triggered_images": 0,
+    "candidate_point_histogram": {
+      "0": 11,
+      "1": 165,
+      "2": 12,
+      "3": 5,
+      "4": 9,
+      "5": 2,
+      "6": 1,
+      "8": 2
+    },
+    "candidate_contains_2plus_points": 31,
+    "candidate_point_diagnosis_only_after_inference": true,
+    "case_3481": {
+      "truth": 431,
+      "prediction": 312,
+      "base_count": 316,
+      "second_count": 312,
+      "fallback": false,
+      "fallback_rule_triggered": false,
+      "pseudo_exemplars": [
+        {
+          "first_detection_index": 17,
+          "box_xyxy": [
+            149.4140625,
+            195.6328125,
+            162.9609375,
+            208.78125
+          ],
+          "cosine": 0.8989390730857849,
+          "relative_objectness": 0.8921871185302734,
+          "other_detection_centers": 1,
+          "annotated_points_inside": 3
+        }
+      ]
+    }
+  },
+  "files_sha256": {
+    "protocol.json": "7c07e2d6791701bb82096eaad2a90e7946f7e1b0c6574b3bc1c0789a38903be0",
+    "summary.json": "6acb2e2645ea4abb830c073d4a58a62e3f2d9a44a95c42b43bc416ca6e1a1168",
+    "predictions.jsonl": "36c94868b2bf76ebd504426cb0ad26ffea0cac4ca8f6ca870cef7c44a091282b"
+  },
+  "metrics": {
+    "overall": {
+      "n": 1286,
+      "mae": 9.405909797822707,
+      "rmse": 33.015783962655505,
+      "truth_total": 82042,
+      "truth_min": 7,
+      "truth_median": 27.0,
+      "truth_mean": 63.79626749611197,
+      "truth_max": 2092,
+      "game1": 11.968169939179573,
+      "game2": 15.599188091969365
+    },
+    "<50": {
+      "n": 888,
+      "mae": 2.2927927927927927,
+      "rmse": 5.21842715595245,
+      "truth_total": 18939,
+      "truth_min": 7,
+      "truth_median": 18.0,
+      "truth_mean": 21.3277027027027,
+      "truth_max": 49,
+      "game1": 3.880226970031752,
+      "game2": 6.499535549539019
+    },
+    "50-299": {
+      "n": 359,
+      "mae": 15.623955431754874,
+      "rmse": 29.562784328783966,
+      "truth_total": 39921,
+      "truth_min": 50,
+      "truth_median": 93,
+      "truth_mean": 111.20055710306407,
+      "truth_max": 298,
+      "game1": 18.719145968256864,
+      "game2": 24.010889397622964
+    },
+    ">=300": {
+      "n": 39,
+      "mae": 114.12820512820512,
+      "rmse": 165.16200283202906,
+      "truth_total": 23182,
+      "truth_min": 301,
+      "truth_median": 458,
+      "truth_mean": 594.4102564102565,
+      "truth_max": 2092,
+      "game1": 133.98080999468002,
+      "game2": 145.3604878085977
+    }
+  },
+  "per_class": {
+    "ants": {
+      "n": 22,
+      "mae": 8.818181818181818,
+      "rmse": 13.777451934889188,
+      "truth_total": 823,
+      "truth_min": 8,
+      "truth_median": 19.5,
+      "truth_mean": 37.40909090909091,
+      "truth_max": 238,
+      "game1": 9.632343253023246,
+      "game2": 10.959070046888234
+    },
+    "birds": {
+      "n": 87,
+      "mae": 17.402298850574713,
+      "rmse": 52.804127320399544,
+      "truth_total": 10595,
+      "truth_min": 7,
+      "truth_median": 47,
+      "truth_mean": 121.7816091954023,
+      "truth_max": 2092,
+      "game1": 25.006439394478036,
+      "game2": 28.96041456071592
+    },
+    "books": {
+      "n": 76,
+      "mae": 23.407894736842106,
+      "rmse": 50.604893668082084,
+      "truth_total": 7053,
+      "truth_min": 8,
+      "truth_median": 42.5,
+      "truth_mean": 92.80263157894737,
+      "truth_max": 1022,
+      "game1": 28.56525491344931,
+      "game2": 36.417335800488
+    },
+    "bottle caps": {
+      "n": 122,
+      "mae": 9.540983606557377,
+      "rmse": 32.458043535677476,
+      "truth_total": 13419,
+      "truth_min": 8,
+      "truth_median": 50.0,
+      "truth_mean": 109.99180327868852,
+      "truth_max": 1229,
+      "game1": 11.368342796998395,
+      "game2": 15.626991765845062
+    },
+    "bullets": {
+      "n": 11,
+      "mae": 0.7272727272727273,
+      "rmse": 1.2792042981336627,
+      "truth_total": 217,
+      "truth_min": 8,
+      "truth_median": 19,
+      "truth_mean": 19.727272727272727,
+      "truth_max": 40,
+      "game1": 4.688695633318829,
+      "game2": 8.998987974579808
+    },
+    "camels": {
+      "n": 14,
+      "mae": 8.714285714285714,
+      "rmse": 13.26111393726571,
+      "truth_total": 265,
+      "truth_min": 8,
+      "truth_median": 14.0,
+      "truth_mean": 18.928571428571427,
+      "truth_max": 58,
+      "game1": 9.944179607250756,
+      "game2": 11.850112488541923
+    },
+    "chairs": {
+      "n": 72,
+      "mae": 15.916666666666666,
+      "rmse": 28.400899829250324,
+      "truth_total": 5923,
+      "truth_min": 8,
+      "truth_median": 57.5,
+      "truth_mean": 82.26388888888889,
+      "truth_max": 301,
+      "game1": 20.82820246854297,
+      "game2": 25.98553697198895
+    },
+    "chicken wings": {
+      "n": 157,
+      "mae": 0.7070063694267515,
+      "rmse": 1.3983611882267233,
+      "truth_total": 2928,
+      "truth_min": 8,
+      "truth_median": 17,
+      "truth_mean": 18.64968152866242,
+      "truth_max": 52,
+      "game1": 2.216741243656214,
+      "game2": 5.397380106692059
+    },
+    "donuts tray": {
+      "n": 73,
+      "mae": 0.3287671232876712,
+      "rmse": 1.0068260178089292,
+      "truth_total": 1000,
+      "truth_min": 8,
+      "truth_median": 12,
+      "truth_mean": 13.698630136986301,
+      "truth_max": 54,
+      "game1": 1.859571059910476,
+      "game2": 4.4312002520466915
+    },
+    "flamingos": {
+      "n": 102,
+      "mae": 3.3823529411764706,
+      "rmse": 10.050363372613383,
+      "truth_total": 3313,
+      "truth_min": 8,
+      "truth_median": 17.0,
+      "truth_mean": 32.48039215686274,
+      "truth_max": 402,
+      "game1": 4.530380114945804,
+      "game2": 6.701181951747249
+    },
+    "flower pots": {
+      "n": 12,
+      "mae": 11.583333333333334,
+      "rmse": 16.028620235898867,
+      "truth_total": 498,
+      "truth_min": 18,
+      "truth_median": 32.5,
+      "truth_mean": 41.5,
+      "truth_max": 76,
+      "game1": 12.831093701986148,
+      "game2": 16.110716276570862
+    },
+    "flowers": {
+      "n": 2,
+      "mae": 1,
+      "rmse": 1.4142135623730951,
+      "truth_total": 62,
+      "truth_min": 20,
+      "truth_median": 31.0,
+      "truth_mean": 31,
+      "truth_max": 42,
+      "game1": 3.759367822958069,
+      "game2": 6.206146142324391
+    },
+    "fresh cut": {
+      "n": 11,
+      "mae": 7.636363636363637,
+      "rmse": 10.539967224375467,
+      "truth_total": 900,
+      "truth_min": 20,
+      "truth_median": 64,
+      "truth_mean": 81.81818181818181,
+      "truth_max": 177,
+      "game1": 11.301495489567708,
+      "game2": 18.542443607468968
+    },
+    "grapes": {
+      "n": 155,
+      "mae": 8.303225806451612,
+      "rmse": 24.28898595474248,
+      "truth_total": 11447,
+      "truth_min": 11,
+      "truth_median": 53,
+      "truth_mean": 73.85161290322581,
+      "truth_max": 757,
+      "game1": 10.059042420084246,
+      "game2": 13.253983098258493
+    },
+    "horses": {
+      "n": 23,
+      "mae": 5.130434782608695,
+      "rmse": 8.091863868699548,
+      "truth_total": 405,
+      "truth_min": 8,
+      "truth_median": 13,
+      "truth_mean": 17.608695652173914,
+      "truth_max": 65,
+      "game1": 6.375133540762604,
+      "game2": 7.79153748932002
+    },
+    "kiwis": {
+      "n": 25,
+      "mae": 1.88,
+      "rmse": 3.1685959035509716,
+      "truth_total": 734,
+      "truth_min": 8,
+      "truth_median": 24,
+      "truth_mean": 29.36,
+      "truth_max": 87,
+      "game1": 2.9672985412049244,
+      "game2": 6.365619232928415
+    },
+    "milk cartons": {
+      "n": 14,
+      "mae": 7.785714285714286,
+      "rmse": 9.437766079503591,
+      "truth_total": 1010,
+      "truth_min": 22,
+      "truth_median": 66.0,
+      "truth_mean": 72.14285714285714,
+      "truth_max": 185,
+      "game1": 12.412830855134665,
+      "game2": 20.831885166032944
+    },
+    "oyster shells": {
+      "n": 9,
+      "mae": 2.4444444444444446,
+      "rmse": 4.0,
+      "truth_total": 169,
+      "truth_min": 9,
+      "truth_median": 12,
+      "truth_mean": 18.77777777777778,
+      "truth_max": 49,
+      "game1": 3.255965279306269,
+      "game2": 6.1542764236475636
+    },
+    "oysters": {
+      "n": 4,
+      "mae": 2.25,
+      "rmse": 2.958039891549808,
+      "truth_total": 42,
+      "truth_min": 8,
+      "truth_median": 9.0,
+      "truth_mean": 10.5,
+      "truth_max": 16,
+      "game1": 3.2685101399377396,
+      "game2": 5.427306144346881
+    },
+    "peaches": {
+      "n": 36,
+      "mae": 2.1666666666666665,
+      "rmse": 4.129837231121289,
+      "truth_total": 1536,
+      "truth_min": 8,
+      "truth_median": 34.5,
+      "truth_mean": 42.666666666666664,
+      "truth_max": 133,
+      "game1": 3.916329235145233,
+      "game2": 7.502618377170553
+    },
+    "pills": {
+      "n": 55,
+      "mae": 3.8727272727272726,
+      "rmse": 9.443612559916792,
+      "truth_total": 2897,
+      "truth_min": 9,
+      "truth_median": 28,
+      "truth_mean": 52.67272727272727,
+      "truth_max": 283,
+      "game1": 5.5488742758036915,
+      "game2": 8.241882913106918
+    },
+    "polka dots": {
+      "n": 53,
+      "mae": 33.20754716981132,
+      "rmse": 57.11293016868273,
+      "truth_total": 9940,
+      "truth_min": 9,
+      "truth_median": 103,
+      "truth_mean": 187.54716981132074,
+      "truth_max": 885,
+      "game1": 38.48570309466036,
+      "game2": 43.07284694594506
+    },
+    "prawn crackers": {
+      "n": 2,
+      "mae": 0.5,
+      "rmse": 0.7071067811865476,
+      "truth_total": 21,
+      "truth_min": 8,
+      "truth_median": 10.5,
+      "truth_mean": 10.5,
+      "truth_max": 13,
+      "game1": 0.9838174665338604,
+      "game2": 2.5457132013868486
+    },
+    "sausages": {
+      "n": 5,
+      "mae": 3.4,
+      "rmse": 5.916079783099616,
+      "truth_total": 179,
+      "truth_min": 10,
+      "truth_median": 25,
+      "truth_mean": 35.8,
+      "truth_max": 104,
+      "game1": 6.295043739969034,
+      "game2": 9.181528201479038
+    },
+    "seagulls": {
+      "n": 78,
+      "mae": 2.0384615384615383,
+      "rmse": 4.34859246311452,
+      "truth_total": 1719,
+      "truth_min": 7,
+      "truth_median": 14.0,
+      "truth_mean": 22.03846153846154,
+      "truth_max": 119,
+      "game1": 2.8706644325501123,
+      "game2": 4.4863438071819814
+    },
+    "shallots": {
+      "n": 4,
+      "mae": 1.75,
+      "rmse": 3.5,
+      "truth_total": 75,
+      "truth_min": 7,
+      "truth_median": 18.5,
+      "truth_mean": 18.75,
+      "truth_max": 31,
+      "game1": 3.1513088912215577,
+      "game2": 5.542827184756254
+    },
+    "shirts": {
+      "n": 20,
+      "mae": 56.1,
+      "rmse": 141.1718810528499,
+      "truth_total": 2752,
+      "truth_min": 9,
+      "truth_median": 38.0,
+      "truth_mean": 137.6,
+      "truth_max": 1231,
+      "game1": 59.39091496577419,
+      "game2": 63.62181401139671
+    },
+    "skateboard": {
+      "n": 19,
+      "mae": 6.052631578947368,
+      "rmse": 11.137891702604554,
+      "truth_total": 689,
+      "truth_min": 8,
+      "truth_median": 26,
+      "truth_mean": 36.26315789473684,
+      "truth_max": 127,
+      "game1": 7.772007172471687,
+      "game2": 12.43494360931748
+    },
+    "toilet paper rolls": {
+      "n": 23,
+      "mae": 17.391304347826086,
+      "rmse": 59.22029616829748,
+      "truth_total": 1431,
+      "truth_min": 8,
+      "truth_median": 18,
+      "truth_mean": 62.21739130434783,
+      "truth_max": 907,
+      "game1": 18.961072040265705,
+      "game2": 22.87933027220464
+    }
+  },
+  "candidate_gate": false,
+  "paired_vs_b0": {
+    "overall": {
+      "image": {
+        "unit": "image",
+        "units": 1286,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.016329704510108865,
+        "mae_delta_95ci": [
+          -0.11199455676516329,
+          0.15633748055987537
+        ],
+        "rmse_delta": -0.24725882588234072,
+        "rmse_delta_95ci": [
+          -0.861810741998387,
+          0.24045190803726058
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.016329704510108865,
+        "mae_delta_95ci": [
+          -0.07833966909725511,
+          0.14144187734365532
+        ],
+        "rmse_delta": -0.24725882588234072,
+        "rmse_delta_95ci": [
+          -0.8068606709653466,
+          0.27236857628987443
+        ]
+      }
+    },
+    "<50": {
+      "image": {
+        "unit": "image",
+        "units": 888,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.0011261261261261261,
+        "mae_delta_95ci": [
+          -0.02364864864864865,
+          0.021396396396396396
+        ],
+        "rmse_delta": 0.00680207004728306,
+        "rmse_delta_95ci": [
+          -0.023728914113322543,
+          0.04025828603545226
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.0011261261261261261,
+        "mae_delta_95ci": [
+          -0.01941087885580944,
+          0.01724191079552702
+        ],
+        "rmse_delta": 0.00680207004728306,
+        "rmse_delta_95ci": [
+          -0.007147934596815286,
+          0.02607902862159898
+        ]
+      }
+    },
+    "50-299": {
+      "image": {
+        "unit": "image",
+        "units": 359,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.013927576601671309,
+        "mae_delta_95ci": [
+          -0.34268802228412254,
+          0.2395543175487465
+        ],
+        "rmse_delta": -0.5727498099582569,
+        "rmse_delta_95ci": [
+          -1.8892273415254675,
+          0.12926093505077127
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 23,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.013927576601671309,
+        "mae_delta_95ci": [
+          -0.12113965068561705,
+          0.08355213226123182
+        ],
+        "rmse_delta": -0.5727498099582569,
+        "rmse_delta_95ci": [
+          -1.7715867815492967,
+          0.07862535014876855
+        ]
+      }
+    },
+    ">=300": {
+      "image": {
+        "unit": "image",
+        "units": 39,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.6923076923076923,
+        "mae_delta_95ci": [
+          -2.1025641025641026,
+          4.692948717948715
+        ],
+        "rmse_delta": -0.6865533562705934,
+        "rmse_delta_95ci": [
+          -4.178438195573559,
+          2.1648495945580706
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 9,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.6923076923076923,
+        "mae_delta_95ci": [
+          -2.782608695652174,
+          3.4922619047619037
+        ],
+        "rmse_delta": -0.6865533562705934,
+        "rmse_delta_95ci": [
+          -4.019363816158725,
+          1.9632241100763315
+        ]
+      }
+    }
+  },
+  "localization": {
+    "micro_f1": 0.8624170789119243,
+    "image_macro_f1": 0.9111031030031262
+  },
+  "inference_seconds_mean": 0.151333609445261
+}
