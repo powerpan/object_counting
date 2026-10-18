@@ -81,3 +81,33 @@ python -m unittest discover -s tests -v
 ```
 
 實際完成到哪一步，以 [進度記錄](PROGRESS.md) 為準。
+
+## M2／M3 固定設定實驗
+
+這輪需要已完成的 `results/b0-val-b1-boundary-r1/`、原模型／資料和 `configs/m2_m3_v1.json`。程式與設定應放在同一工作根目錄下。完整流程命令如下；已存在輸出的階段會拒絕覆寫，不能不加檢查地重新執行：
+
+```bash
+python "$CODE_ROOT/scripts/run_m2_m3_workflow.py" --root "$WORK_ROOT"
+```
+
+流程先測幾何及密度函數，再用 32 張圖片比較原模型和新介面的原始輸出，逐位元一致才進入五組 smoke 和完整 val。單程序鎖位於 `results/.m2-m3.lock`；狀態為 `results/m2-m3-workflow.json`。每組結果寫入 `results/m2-m3-v1/val-<方法>/`，不修改 B0。OOM 或其他錯誤會停止後續階段；沒有自動改參數或重新訓練。
+
+每組完成後，用獨立分析程式重算全部指標、配對區間及與已完成對照的差值；它略過尚未完成的組別：
+
+```bash
+OPENBLAS_NUM_THREADS=2 python "$CODE_ROOT/scripts/analyze_m2_m3.py" --root "$WORK_ROOT"
+python "$CODE_ROOT/scripts/diagnose_m2_m3.py" --root "$WORK_ROOT"
+python "$CODE_ROOT/scripts/plot_m2_case.py" --root "$WORK_ROOT" --image 3481.jpg
+```
+
+`analysis.json` 包含真值和程式雜湊核驗、圖像／類別配對 bootstrap、候選品質代理指標及改善／退步案例；`contrasts.json` 保存對照差值。`diagnostics.json` 的類別與觸發條件細分是看到 M2 結果後增加的探索分析，不回饋推論規則。圖例只呈現標註點和框，不包含資料集原圖。
+
+逐圖 `detail.tiles[].raw_count` 指片內閾值／NMS 已完成、尚未依核心區篩選的數量；它不是上游 SAM 遮罩修正之前的候選數。需要檢查上游的「超過 800 候選略過遮罩修正」分支時，須另在五組主評估全部結束後執行 `scripts/trace_m3_cases.py --root "$WORK_ROOT"`。該腳本只對 M3 最大改善／退步各一張加唯讀 hook，並驗證重跑框與已保存結果逐位元一致；這是事後機制診斷，不屬於新參數試驗。
+
+回收已完成且核驗通過的結果後，可由同一份數據重建繁體中文結果文件：
+
+```bash
+python "$CODE_ROOT/scripts/render_m2_m3_report.py" --repo "$CODE_ROOT"
+```
+
+程式只能更新統計報告；是否採用新方法仍須結合 [事前規則](M2_M3_PROTOCOL.md) 與研究判讀。少數樣例的改善不能覆蓋整體或密集組的退步。

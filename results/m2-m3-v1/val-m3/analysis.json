@@ -1,0 +1,328 @@
+{
+  "status": "passed",
+  "variant": "m3",
+  "n": 1286,
+  "class_count": 29,
+  "classes_sha256": "ba1bc6c6a21875919625adb851eaee1aab0ad1f88ecf64d017bebda891b5815e",
+  "analysis_code_sha256": "7480552b36c40858ed3acc53134ec1299c1bdf7f4de512cd13bbe84f521e38af",
+  "independent_metrics_match": true,
+  "annotation_counts_match": true,
+  "untriggered_images_identical_to_baseline": 1151,
+  "paired_vs_b0": {
+    "overall": {
+      "image": {
+        "unit": "image",
+        "units": 1286,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.30326594090202175,
+        "mae_delta_95ci": [
+          -1.1951788491446345,
+          0.5809486780715392
+        ],
+        "rmse_delta": 1.1518509998127513,
+        "rmse_delta_95ci": [
+          -4.489487261866554,
+          7.379969918063399
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.30326594090202175,
+        "mae_delta_95ci": [
+          -1.1906508632915358,
+          0.5777704271934315
+        ],
+        "rmse_delta": 1.1518509998127513,
+        "rmse_delta_95ci": [
+          -4.469481531401819,
+          7.363727179069475
+        ]
+      }
+    },
+    "<50": {
+      "image": {
+        "unit": "image",
+        "units": 888,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.03265765765765766,
+        "mae_delta_95ci": [
+          -0.09124436936936936,
+          0.010135135135135136
+        ],
+        "rmse_delta": -0.09606852586999182,
+        "rmse_delta_95ci": [
+          -0.27937999585779477,
+          0.006405775065678755
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.03265765765765766,
+        "mae_delta_95ci": [
+          -0.10155383438515968,
+          0.021140313764394646
+        ],
+        "rmse_delta": -0.09606852586999182,
+        "rmse_delta_95ci": [
+          -0.28889397929132343,
+          0.02222040701349413
+        ]
+      }
+    },
+    "50-299": {
+      "image": {
+        "unit": "image",
+        "units": 359,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.2590529247910863,
+        "mae_delta_95ci": [
+          -0.9387186629526463,
+          0.4067548746518102
+        ],
+        "rmse_delta": -0.026863735913341458,
+        "rmse_delta_95ci": [
+          -1.6659842953357804,
+          1.7060638299395081
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 23,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.2590529247910863,
+        "mae_delta_95ci": [
+          -0.9617795981911187,
+          0.37147159807152114
+        ],
+        "rmse_delta": -0.026863735913341458,
+        "rmse_delta_95ci": [
+          -1.8190575762413872,
+          1.664555989751854
+        ]
+      }
+    },
+    ">=300": {
+      "image": {
+        "unit": "image",
+        "units": 39,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -6.871794871794871,
+        "mae_delta_95ci": [
+          -36.669871794871796,
+          20.87692307692305
+        ],
+        "rmse_delta": 7.684563387600292,
+        "rmse_delta_95ci": [
+          -32.1678321427879,
+          47.039135430918115
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 9,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -6.871794871794871,
+        "mae_delta_95ci": [
+          -46.903225806451616,
+          25.634159159159136
+        ],
+        "rmse_delta": 7.684563387600292,
+        "rmse_delta_95ci": [
+          -34.45618869753701,
+          59.26128068764667
+        ]
+      }
+    }
+  },
+  "improved_images": 69,
+  "worsened_images": 47,
+  "unchanged_error_images": 1170,
+  "largest_improvements": [
+    {
+      "image": "3665.jpg",
+      "truth": 907,
+      "baseline": 1179,
+      "prediction": 897,
+      "absolute_error_delta": -262,
+      "class": "toilet paper rolls"
+    },
+    {
+      "image": "3425.jpg",
+      "truth": 885,
+      "baseline": 1111,
+      "prediction": 888,
+      "absolute_error_delta": -223,
+      "class": "polka dots"
+    },
+    {
+      "image": "6969.jpg",
+      "truth": 949,
+      "baseline": 634,
+      "prediction": 766,
+      "absolute_error_delta": -132,
+      "class": "birds"
+    },
+    {
+      "image": "975.jpg",
+      "truth": 718,
+      "baseline": 534,
+      "prediction": 656,
+      "absolute_error_delta": -122,
+      "class": "birds"
+    },
+    {
+      "image": "3482.jpg",
+      "truth": 315,
+      "baseline": 205,
+      "prediction": 269,
+      "absolute_error_delta": -64,
+      "class": "polka dots"
+    },
+    {
+      "image": "949.jpg",
+      "truth": 1092,
+      "baseline": 1150,
+      "prediction": 1098,
+      "absolute_error_delta": -52,
+      "class": "birds"
+    },
+    {
+      "image": "5736.jpg",
+      "truth": 239,
+      "baseline": 171,
+      "prediction": 222,
+      "absolute_error_delta": -51,
+      "class": "polka dots"
+    },
+    {
+      "image": "5860.jpg",
+      "truth": 757,
+      "baseline": 494,
+      "prediction": 538,
+      "absolute_error_delta": -44,
+      "class": "grapes"
+    },
+    {
+      "image": "845.jpg",
+      "truth": 142,
+      "baseline": 102,
+      "prediction": 145,
+      "absolute_error_delta": -37,
+      "class": "books"
+    },
+    {
+      "image": "1915.jpg",
+      "truth": 684,
+      "baseline": 387,
+      "prediction": 417,
+      "absolute_error_delta": -30,
+      "class": "bottle caps"
+    }
+  ],
+  "largest_regressions": [
+    {
+      "image": "865.jpg",
+      "truth": 1022,
+      "baseline": 787,
+      "prediction": 490,
+      "absolute_error_delta": 297,
+      "class": "books"
+    },
+    {
+      "image": "3428.jpg",
+      "truth": 458,
+      "baseline": 467,
+      "prediction": 678,
+      "absolute_error_delta": 211,
+      "class": "polka dots"
+    },
+    {
+      "image": "3484.jpg",
+      "truth": 356,
+      "baseline": 373,
+      "prediction": 277,
+      "absolute_error_delta": 62,
+      "class": "polka dots"
+    },
+    {
+      "image": "840.jpg",
+      "truth": 637,
+      "baseline": 803,
+      "prediction": 855,
+      "absolute_error_delta": 52,
+      "class": "books"
+    },
+    {
+      "image": "935.jpg",
+      "truth": 2092,
+      "baseline": 1808,
+      "prediction": 1757,
+      "absolute_error_delta": 51,
+      "class": "birds"
+    },
+    {
+      "image": "6926.jpg",
+      "truth": 238,
+      "baseline": 203,
+      "prediction": 156,
+      "absolute_error_delta": 47,
+      "class": "ants"
+    },
+    {
+      "image": "5745.jpg",
+      "truth": 146,
+      "baseline": 155,
+      "prediction": 196,
+      "absolute_error_delta": 41,
+      "class": "polka dots"
+    },
+    {
+      "image": "7656.jpg",
+      "truth": 1231,
+      "baseline": 634,
+      "prediction": 595,
+      "absolute_error_delta": 39,
+      "class": "shirts"
+    },
+    {
+      "image": "2850.jpg",
+      "truth": 287,
+      "baseline": 116,
+      "prediction": 77,
+      "absolute_error_delta": 39,
+      "class": "chairs"
+    },
+    {
+      "image": "1990.jpg",
+      "truth": 476,
+      "baseline": 402,
+      "prediction": 372,
+      "absolute_error_delta": 30,
+      "class": "bottle caps"
+    }
+  ],
+  "pseudo_candidates": 0,
+  "pseudo_candidates_with_annotation_inside": 0,
+  "pseudo_candidates_with_multiple_annotations_inside": 0,
+  "pseudo_support_is_only_a_proxy": true,
+  "mean_backbone_passes": 1.4199066874027995,
+  "mean_decoder_passes": 1.4199066874027995,
+  "val_candidate_gate": false,
+  "files_sha256": {
+    "protocol.json": "6440900296a4b15157e624cb6b95bfffe4398314d1d64d7c4afa174d251faed7",
+    "summary.json": "e7c081eabf267334ba13835a0fc456df7c9f7fef4d463a9b90ea3bd718528eb5",
+    "predictions.jsonl": "60e7ea066fa15f899280c4700f5af581e71b153406f3dc87993955a3eab9b214"
+  }
+}

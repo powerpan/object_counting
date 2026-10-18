@@ -1,7 +1,8 @@
 {
   "completed_variants": [
     "m2",
-    "m2-repeat"
+    "m2-repeat",
+    "m3"
   ],
   "contrasts": {
     "m2_vs_m2-repeat": {
