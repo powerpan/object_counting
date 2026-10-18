@@ -1,0 +1,6 @@
+{
+  "stage": "failed",
+  "updated_utc": "2026-10-18T02:38:52Z",
+  "failed_stage": "b0_full_validation",
+  "error_type": "CalledProcessError"
+}

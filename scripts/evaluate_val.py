@@ -19,7 +19,7 @@ from PIL import Image
 from torchvision import ops, transforms as T
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from planb.density import boxes_to_density, game
+from planb.density import boxes_to_density, game, points_for_game
 
 PIN = '67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b'
 
@@ -130,6 +130,9 @@ def main():
                   'tf32': False, 'upstream_commit': PIN, 'torch': torch.__version__,
                   'cuda': torch.version.cuda, 'gpu': torch.cuda.get_device_name(0),
                   'ground_truth': 'exact_annotation_point_count', 'relative_threshold': .11, 'nms_iou': .5,
+                  'game_boundary_policy': 'clip_exact_edges_and_float64_roundoff_up_to_8_ulps;reject_larger_overflow',
+                  'runner_sha256': digest(Path(__file__)),
+                  'density_module_sha256': digest(Path(__file__).resolve().parents[1] / 'planb/density.py'),
                   'annotation_sha256': digest(annotations_dir / 'annotation_FSC147_384.json'),
                   'split_sha256': digest(annotations_dir / 'Train_Test_Val_FSC_147.json'),
                   'checkpoint_sha256': load_report['fsc_sha256'], 'ids': names}
@@ -163,16 +166,14 @@ def main():
             for idx, (name, w, h, scale, anno) in enumerate(metas):
                 boxes_original = final_boxes(outputs[idx], int(w * scale), int(h * scale)).cpu().numpy() * (1024 / scale)
                 density = boxes_to_density(boxes_original, h, w)
-                points = np.asarray(anno['points'], dtype=float).reshape(-1, 2)
-                # FSC points may sit exactly on the far image edge; place those
-                # on its final pixel for the discrete GAME grid, preserving count.
-                if len(points) and ((points < 0).any() or (points[:, 0] > w).any() or (points[:, 1] > h).any()):
-                    raise ValueError('Point annotation exceeds image boundary')
-                points = np.minimum(points, [np.nextafter(float(w), 0), np.nextafter(float(h), 0)])
+                original_points = np.asarray(anno['points'], dtype=np.float64).reshape(-1, 2)
+                points = points_for_game(original_points, h, w)
+                adjusted = int(np.any(points != original_points, axis=1).sum())
                 mass = float(density.sum())
                 if not np.isclose(mass, len(boxes_original), atol=1e-8, rtol=0):
                     raise ValueError('M1 mass is inconsistent with detection count')
                 row = {'image': name, 'truth': len(points), 'prediction': len(boxes_original),
+                       'game_boundary_adjusted_points': adjusted,
                        'density_mass': mass, 'game1': game(density, points, 1),
                        'game2': game(density, points, 2), 'inference_seconds_per_image': batch_seconds / len(metas),
                        'width': w, 'height': h, 'scale_factor': scale, 'boxes_xyxy': boxes_original.tolist()}
@@ -184,6 +185,7 @@ def main():
             del outputs, refs, centerness, coords, masks, x, boxes
             summary = {'status': 'complete' if len(rows) == len(names) else 'running',
                        'scope': 'full_validation' if len(names) == 1286 else 'smoke_only',
+                       'game_boundary_adjusted_points': sum(r['game_boundary_adjusted_points'] for r in rows),
                        'overall': metrics(rows), 'groups': {
                            '<50': metrics([r for r in rows if r['truth'] < 50]),
                            '50-299': metrics([r for r in rows if 50 <= r['truth'] < 300]),

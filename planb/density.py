@@ -2,6 +2,22 @@
 import numpy as np
 
 
+def points_for_game(points, height, width):
+    """Place edge points in the final grid cell; tolerate only float64 roundoff.
+
+    The original point count is preserved. Coordinates farther than eight
+    float64 ULPs beyond an image boundary are rejected, not silently clipped.
+    """
+    points = np.asarray(points, dtype=np.float64).reshape(-1, 2)
+    if height <= 0 or width <= 0 or not np.isfinite(points).all():
+        raise ValueError('Invalid image size or annotation points')
+    bounds = np.array([width, height], dtype=np.float64)
+    tolerance = 8 * np.spacing(bounds)
+    if ((points < -tolerance) | (points > bounds + tolerance)).any():
+        raise ValueError('Point annotation exceeds image boundary beyond float64 roundoff')
+    return np.clip(points, 0, np.nextafter(bounds, 0))
+
+
 def boxes_to_density(boxes, height, width):
     boxes = np.asarray(boxes, dtype=np.float64).reshape(-1, 4)
     if height <= 0 or width <= 0 or not np.isfinite(boxes).all():

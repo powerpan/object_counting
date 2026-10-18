@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "scope": "smoke_only",
+  "game_boundary_adjusted_points": 0,
+  "overall": {
+    "n": 20,
+    "mae": 4.8,
+    "rmse": 9.077444574328174,
+    "truth_total": 1193,
+    "truth_min": 10,
+    "truth_median": 58.5,
+    "truth_mean": 59.65,
+    "truth_max": 259,
+    "game1": 6.222724265012661,
+    "game2": 8.671077004404147
+  },
+  "groups": {
+    "<50": {
+      "n": 9,
+      "mae": 2.0,
+      "rmse": 2.943920288775949,
+      "truth_total": 237,
+      "truth_min": 10,
+      "truth_median": 20.0,
+      "truth_mean": 26.333333333333332,
+      "truth_max": 47,
+      "game1": 3.7058109642706114,
+      "game2": 5.050833657166803
+    },
+    "50-299": {
+      "n": 11,
+      "mae": 7.090909090909091,
+      "rmse": 11.946852000726917,
+      "truth_total": 956,
+      "truth_min": 58,
+      "truth_median": 69.0,
+      "truth_mean": 86.9090909090909,
+      "truth_max": 259,
+      "game1": 8.282016965619793,
+      "game2": 11.633094288507426
+    },
+    ">=300": {
+      "n": 0
+    }
+  },
+  "elapsed_seconds": 3.0139737874269485,
+  "peak_allocated_mib": 3317.14404296875,
+  "peak_reserved_mib": 4770.0
+}

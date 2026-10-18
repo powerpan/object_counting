@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import tarfile
 import time
@@ -22,7 +23,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--wait-minutes', type=int, default=90)
+    parser.add_argument('--run-label', default='', help='Optional fresh suffix; preserves earlier logs and predictions')
     args = parser.parse_args()
+    if args.run_label and not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,47}', args.run_label):
+        parser.error('Run label must use lowercase letters, digits and hyphens')
+    suffix = '-' + args.run_label if args.run_label else ''
     root = args.root.resolve()
     results = root / 'results'
     results.mkdir(exist_ok=True)
@@ -31,7 +36,8 @@ def main():
     status_file = results / 'b0_workflow.json'
 
     def status(stage, **values):
-        record = {'stage': stage, 'updated_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), **values}
+        record = {'stage': stage, 'run_label': args.run_label,
+                  'updated_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), **values}
         tmp = status_file.with_suffix('.tmp')
         tmp.write_text(json.dumps(record, indent=2) + '\n')
         tmp.replace(status_file)
@@ -100,7 +106,7 @@ def main():
             nonlocal stage
             stage = stage_name
             status(stage)
-            with (root / 'logs' / f'{stage}.log').open('x') as log:
+            with (root / 'logs' / f'{stage}{suffix}.log').open('x') as log:
                 subprocess.run(command, cwd=root, env=env, stdout=log, stderr=subprocess.STDOUT,
                                check=True, timeout=timeout)
 
@@ -108,17 +114,20 @@ def main():
             '--upstream', str(root / 'external/GECO2'), '--output', str(results / 'cuda_ops.json')], 300)
         run('m1_unit_tests', [python, '-m', 'unittest', 'discover', '-s', 'tests', '-v'], 60)
         runner = [python, str(root / 'scripts/evaluate_val.py'), '--root', str(root)]
-        run('b0_smoke_b1', runner + ['--output', str(results / 'b0-smoke-b1'), '--limit', '20', '--batch-size', '1'], 900)
-        smoke = json.loads((results / 'b0-smoke-b1/summary.json').read_text())
+        smoke_dir = results / ('b0-smoke-b1' + suffix)
+        full_dir = results / ('b0-val-b1' + suffix)
+        run('b0_smoke_b1', runner + ['--output', str(smoke_dir), '--limit', '20', '--batch-size', '1'], 900)
+        smoke = json.loads((smoke_dir / 'summary.json').read_text())
         if smoke['status'] != 'complete' or smoke['overall']['n'] != 20:
             raise RuntimeError('Smoke evaluation incomplete')
         # Full validation uses the measured batch 1 setting. Larger batches and
         # training are separate experiments; a failure is never silently retried.
-        run('b0_full_validation', runner + ['--output', str(results / 'b0-val-b1'), '--limit', '0', '--batch-size', '1'], 5400)
-        summary = json.loads((results / 'b0-val-b1/summary.json').read_text())
+        run('b0_full_validation', runner + ['--output', str(full_dir), '--limit', '0', '--batch-size', '1'], 5400)
+        summary = json.loads((full_dir / 'summary.json').read_text())
         if summary['status'] != 'complete' or summary['overall']['n'] != 1286:
             raise RuntimeError('Full validation incomplete')
-        status('complete', scope='B0 full validation and M1 checks; no training')
+        status('complete', scope='B0 full validation and M1 checks; no training',
+               smoke_output=smoke_dir.name, validation_output=full_dir.name)
     except Exception as error:
         # Raw tracebacks and paths stay in private logs; publish only a checked
         # diagnostic summary after inspecting the failed stage.

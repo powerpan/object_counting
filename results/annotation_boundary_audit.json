@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "split": "val",
+  "images_checked": 1286,
+  "boundary_adjusted_images": 9,
+  "boundary_adjusted_points": 19,
+  "adjustments": [
+    {
+      "image": "842.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "931.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "1977.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "1989.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "2840.jpg",
+      "adjusted_points": 11
+    },
+    {
+      "image": "3435.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "4831.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "4850.jpg",
+      "adjusted_points": 1
+    },
+    {
+      "image": "6969.jpg",
+      "adjusted_points": 1
+    }
+  ],
+  "roundoff_only_overflows": [
+    {
+      "image": "1989.jpg",
+      "size": [
+        408,
+        384
+      ],
+      "original_points": [
+        [
+          408.00000000000006,
+          350.832
+        ]
+      ],
+      "clipped_points": [
+        [
+          407.99999999999994,
+          350.832
+        ]
+      ]
+    }
+  ],
+  "policy": "8 float64 ULPs at image dimensions; preserve all points; reject larger overflow"
+}

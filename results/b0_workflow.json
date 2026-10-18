@@ -1,0 +1,8 @@
+{
+  "stage": "complete",
+  "run_label": "boundary-r1",
+  "updated_utc": "2026-10-18T02:45:44Z",
+  "scope": "B0 full validation and M1 checks; no training",
+  "smoke_output": "b0-smoke-b1-boundary-r1",
+  "validation_output": "b0-val-b1-boundary-r1"
+}

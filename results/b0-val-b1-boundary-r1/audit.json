@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "full_val",
+  "n": 1286,
+  "annotation_point_counts_match": true,
+  "independent_metrics_match": true,
+  "density_mass_matches_counts": true,
+  "split_and_code_hashes_match": true,
+  "previous_partial_run": {
+    "compared": true,
+    "images": 342,
+    "changed_count_images": [],
+    "changed_box_images": []
+  },
+  "game_boundary_adjusted_points": 19,
+  "mean_signed_count_error": -4.244945567651633,
+  "sum_absolute_errors_over_total_truth": 0.14718071231808097,
+  "inference_seconds_mean": 0.13015006016360517,
+  "inference_seconds_median": 0.097486212849617,
+  "inference_seconds_p95": 0.2920637186616659,
+  "maximum_density_mass_error": 2.2737367544323206e-13,
+  "files_sha256": {
+    "protocol.json": "2ca467bc9f397d1141a8a2ee5499ce057b43ba72417cb17b67c22b0f714589ca",
+    "summary.json": "609a7ce62b38801c76bdfa8d9576e9c52f34ea77f375850802982460f2795aa9",
+    "predictions.jsonl": "176703553bdf6bc810057fbc27ba02ac68352818cb5fdc715ed0e2231c16a0f8",
+    "checkpoint_load.json": "46d58472e944fae6c2d5ce40b3a2e160ac3a4c6bed0424153fcede28fcfef60e"
+  }
+}
