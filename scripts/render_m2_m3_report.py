@@ -45,6 +45,9 @@ def main():
     for method, (s, a) in completed.items():
         ci = a['paired_vs_b0']['overall']; img, cls = ci['image'], ci['class']
         lines.append(f"| {LABELS[method]} | {img['mae_delta']:+.3f} | {interval(img['mae_delta_95ci'])} | {interval(cls['mae_delta_95ci'])} | {img['rmse_delta']:+.3f} | {'是' if a['val_candidate_gate'] else '否'} |")
+    if (root / 'figures/paired-intervals.png').exists():
+        lines += ['', '下圖同時呈現全體及密集組的 MAE／RMSE 差值與區間；橫軸零為 B0，左側較好，線段跨零表示本次重抽樣同時容許改善或退步。', '',
+                  '![圖像與類別配對區間](../results/m2-m3-v1/figures/paired-intervals.png)']
     lines += ['', '候選門檻為：整體 MAE 不超過 B0 的 102%，同時 RMSE 和密集組 MAE 都下降；還須看對照及區間，不能僅憑此表宣布穩定改善。', '',
               '## 觸發與失敗線索', '',
               '| 方法 | M2 觸發圖數 | M3 觸發圖數 | 改善／退步／誤差不變圖數 |',

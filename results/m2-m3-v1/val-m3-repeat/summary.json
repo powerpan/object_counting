@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "phase": "full",
+  "variant": "m3-repeat",
+  "overall": {
+    "n": 1286,
+    "mae": 9.389580093312597,
+    "rmse": 33.263042788537845,
+    "truth_total": 82042,
+    "truth_min": 7,
+    "truth_median": 27.0,
+    "truth_mean": 63.79626749611197,
+    "truth_max": 2092,
+    "game1": 11.913109128257734,
+    "game2": 15.560466492012685
+  },
+  "groups": {
+    "<50": {
+      "n": 888,
+      "mae": 2.293918918918919,
+      "rmse": 5.211625085905167,
+      "truth_total": 18939,
+      "truth_min": 7,
+      "truth_median": 18.0,
+      "truth_mean": 21.3277027027027,
+      "truth_max": 49,
+      "game1": 3.888061650846464,
+      "game2": 6.503281795535504
+    },
+    "50-299": {
+      "n": 359,
+      "mae": 15.637883008356546,
+      "rmse": 30.135534138742223,
+      "truth_total": 39921,
+      "truth_min": 50,
+      "truth_median": 93.0,
+      "truth_mean": 111.20055710306407,
+      "truth_max": 298,
+      "game1": 18.581561426116735,
+      "game2": 23.94114663543284
+    },
+    ">=300": {
+      "n": 39,
+      "mae": 113.43589743589743,
+      "rmse": 165.84855618829965,
+      "truth_total": 23182,
+      "truth_min": 301,
+      "truth_median": 458.0,
+      "truth_mean": 594.4102564102565,
+      "truth_max": 2092,
+      "game1": 133.2533087438944,
+      "game2": 144.64035979929218
+    }
+  },
+  "m2_triggered_images": 0,
+  "m3_triggered_images": 135,
+  "elapsed_seconds": 306.3639689274132,
+  "inference_seconds_mean": 0.2304775761121748,
+  "peak_allocated_mib": 5429.1845703125,
+  "peak_reserved_mib": 7746.0
+}
