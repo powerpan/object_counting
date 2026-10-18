@@ -1,0 +1,96 @@
+{
+  "phase": "smoke",
+  "variant": "m2-m3",
+  "split": "val",
+  "ids": [
+    "190.jpg",
+    "191.jpg",
+    "192.jpg",
+    "195.jpg",
+    "216.jpg",
+    "219.jpg",
+    "221.jpg",
+    "224.jpg",
+    "194.jpg",
+    "196.jpg",
+    "197.jpg",
+    "198.jpg",
+    "214.jpg",
+    "215.jpg",
+    "217.jpg",
+    "218.jpg",
+    "809.jpg",
+    "820.jpg",
+    "830.jpg",
+    "840.jpg",
+    "851.jpg",
+    "865.jpg",
+    "935.jpg",
+    "949.jpg",
+    "7656.jpg",
+    "1956.jpg",
+    "220.jpg",
+    "222.jpg",
+    "226.jpg",
+    "227.jpg",
+    "228.jpg",
+    "229.jpg"
+  ],
+  "planned_n": 32,
+  "config": {
+    "version": "m2-m3-v1",
+    "precision": "FP32",
+    "seed": 42,
+    "m2": {
+      "max_extra_exemplars": 3,
+      "min_relative_objectness": 0.5,
+      "min_mean_cosine": 0.75,
+      "min_scale_ratio": 1.5,
+      "min_side_in_model_pixels": 2.0
+    },
+    "m3": {
+      "trigger_median_exemplar_side": 32.0,
+      "trigger_predicted_count": 200,
+      "grid": 2,
+      "halo_fraction_of_full_image": 0.1,
+      "merge_nms_iou": 0.5
+    },
+    "postprocess": {
+      "relative_threshold": 0.11,
+      "nms_iou": 0.5
+    },
+    "variants": [
+      "m2",
+      "m2-repeat",
+      "m3",
+      "m3-repeat",
+      "m2-m3"
+    ],
+    "bootstrap_replicates": 2000,
+    "stop": {
+      "memory_allocated_mib": 40000,
+      "variant_timeout_seconds": 5400
+    }
+  },
+  "config_sha256": "6088c06a0f1e653e51afefdc33f80f71a0d50562b8e15e9e9de23682ca48a698",
+  "code_sha256": {
+    "scripts/run_m2_m3.py": "faf4a07e32b28c23721b68b410fadf1cf520b4bc05fd471f298c078c57ebc0ad",
+    "planb/geco_adapter.py": "e9060c9e520aa644a5a90449abcd517f8cf470ca7e97bfb9e08848030d76f7f2",
+    "planb/inference_variants.py": "aba460b4a75ab79b690d85005bd6744687d7c1870e20b5673a7e76b51e45d6c1",
+    "planb/geometry.py": "4c7fcb35d5c883de71b49526bc78f076545d612c972b1cce73a985d5379d3635",
+    "planb/density.py": "3b71f2a9b2f5cbc42635ed0f43911059bc480e573d15619c3a0697a785b6a97d",
+    "scripts/evaluate_val.py": "fe59975df07f3bccecc8cdefe98567693bbdcfcef3b67c1ed99ac7bd07c5fda2"
+  },
+  "baseline_predictions_sha256": "176703553bdf6bc810057fbc27ba02ac68352818cb5fdc715ed0e2231c16a0f8",
+  "checkpoint_sha256": "945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b",
+  "sam2_sha256": "d0bb7f236400a49669ffdd1be617959a8b1d1065081789d7bbff88eded3a8071",
+  "annotation_sha256": "6a1d0f43d12274219a5307cb35b24c85fb275a34b3d5acf5b67f2066f9e0bfe1",
+  "split_sha256": "e281e2d9118cd9ae6f5a2852006b6a24e7a7ea5605d9a6e0fa946dcf93308271",
+  "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+  "precision": "FP32",
+  "tf32": false,
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "ground_truth_used_by_policy": false,
+  "batch_size": 1
+}

@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "phase": "smoke",
+  "variant": "m3",
+  "overall": {
+    "n": 32,
+    "mae": 63.75,
+    "rmse": 164.66405193605556,
+    "truth_total": 10222,
+    "truth_min": 10,
+    "truth_median": 67.0,
+    "truth_mean": 319.4375,
+    "truth_max": 2092,
+    "game1": 71.1480105096486,
+    "game2": 78.48198311641633
+  },
+  "groups": {
+    "<50": {
+      "n": 11,
+      "mae": 2.0,
+      "rmse": 2.9232609437842774,
+      "truth_total": 306,
+      "truth_min": 10,
+      "truth_median": 25.0,
+      "truth_mean": 27.818181818181817,
+      "truth_max": 47,
+      "game1": 3.700694537814321,
+      "game2": 5.121222707623423
+    },
+    "50-299": {
+      "n": 11,
+      "mae": 7.545454545454546,
+      "rmse": 13.331439259407542,
+      "truth_total": 956,
+      "truth_min": 58,
+      "truth_median": 69.0,
+      "truth_mean": 86.9090909090909,
+      "truth_max": 259,
+      "game1": 8.736562420165246,
+      "game2": 11.929704098488962
+    },
+    ">=300": {
+      "n": 10,
+      "mae": 193.5,
+      "rmse": 294.21199839571466,
+      "truth_total": 8960,
+      "truth_min": 320,
+      "truth_median": 829.5,
+      "truth_mean": 896.0,
+      "truth_max": 2092,
+      "game1": 213.99265097709804,
+      "game2": 232.3863264858086
+    }
+  },
+  "m2_triggered_images": 0,
+  "m3_triggered_images": 11,
+  "elapsed_seconds": 21.096688825637102,
+  "inference_seconds_mean": 0.6481782373739406,
+  "peak_allocated_mib": 5261.20458984375,
+  "peak_reserved_mib": 7898.0
+}
