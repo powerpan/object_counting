@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "available_utc": "2026-10-18T08:55:11Z",
+  "evidence": {
+    "val-head-S-seed42/audit.json": "d83b0b401ef739418cab9cd31c942d468603e9fa4eb6494ad0e3fa076701cedb"
+  },
+  "spent_seconds": 16663.367855384946,
+  "remaining_seconds": 91336.63214461505,
+  "scope": "S alone on full development val; not crossfit width selection"
+}

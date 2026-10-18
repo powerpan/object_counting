@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "phase": "full",
+  "saved_maps_and_hashes_checked": true,
+  "mass_and_spatial_metrics_recomputed": true,
+  "maximum_mass_difference": 0.0,
+  "official_point_counts_checked": true,
+  "frozen_detector_localization_recomputed": true,
+  "config_and_code_hashes_checked": true,
+  "summary": {
+    "n": 1286,
+    "mae": 16.620711807884977,
+    "rmse": 83.29638928931232,
+    "game1": 18.96436519936237,
+    "game2": 23.26369864426272
+  },
+  "audit_code_sha256": "a0a0e4331b9041a69da8a3ffbb0f80291c89aea2f2c8fa1e7b5a10f092b1c87c",
+  "files_sha256": {
+    "protocol.json": "f5fda9df04bb35b5ed76afe3dd824cb3104692efb837b8af4d28d5146b897dba",
+    "summary.json": "12d12c39137164d4a83fbffaedf16a358aad71009948b4ac4fbf3f42da168656",
+    "predictions.jsonl": "63283c81d4e7658ccba83bec04c10e5ada0546514fe0209ba341e04227bfc840"
+  }
+}
