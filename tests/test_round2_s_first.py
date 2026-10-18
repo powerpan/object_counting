@@ -106,6 +106,15 @@ class SFirstTests(unittest.TestCase):
             flow.stop_identity(111,1)
             self.assertEqual(kill.call_args_list,[mock.call(111,signal.SIGTERM),mock.call(111,signal.SIGCONT)])
 
+    def test_relative_script_requires_matching_process_cwd_and_script_position(self):
+        expected=self.root/'scripts/continue_round2_budget.py'
+        current={'args':[b'python',b'scripts/continue_round2_budget.py'],'cwd':str(self.root)}
+        self.assertTrue(flow.script_matches(current,expected))
+        self.assertFalse(flow.script_matches({**current,'cwd':str(self.root/'other')},expected))
+        self.assertFalse(flow.script_matches({'args':current['args']},expected))
+        self.assertTrue(flow.script_matches({'args':[b'python',str(expected).encode()]},expected))
+        self.assertFalse(flow.script_matches({'args':[b'python',b'wrong.py',str(expected).encode()],'cwd':str(self.root)},expected))
+
     def test_S_training_audit_does_not_require_L_but_rejects_changed_frozen_state(self):
         d=self.result/'head-S-seed42';d.mkdir();work=self.root/'work/round2-v1/head-S-seed42';work.mkdir(parents=True)
         for kind in ('best','last'):(work/(kind+'.pth')).write_bytes(b'synthetic')

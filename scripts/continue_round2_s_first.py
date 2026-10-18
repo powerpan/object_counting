@@ -23,9 +23,22 @@ def process(pid):
         if fields[0] == 'Z':
             return None
         return {'state': fields[0], 'start_ticks': int(fields[19]),
+                'cwd': str((base/'cwd').resolve(strict=True)),
                 'args': (base/'cmdline').read_bytes().split(b'\0')}
     except FileNotFoundError:
         return None
+
+
+def script_matches(current, expected):
+    """Resolve the actual Python script argument using its process cwd."""
+    if len(current['args']) < 2:
+        return False
+    script = Path(os.fsdecode(current['args'][1]))
+    if not script.is_absolute():
+        if not current.get('cwd'):
+            return False
+        script = Path(current['cwd'])/script
+    return script.resolve() == Path(expected).resolve()
 
 
 def stop_identity(pid, expected_ticks):
@@ -231,13 +244,13 @@ def adopt(root, controller_pid):
     controller = process(controller_pid);child=process(hold['S_pid'])
     if not controller or controller['state'] != 'T' or controller['start_ticks'] != hold['controller_start_ticks']:
         raise ValueError('Expected the verified held controller')
-    if not any(a == str(root/'scripts/continue_round2_budget.py').encode() for a in controller['args']):
+    if not script_matches(controller, root/'scripts/continue_round2_budget.py'):
         raise ValueError('Unexpected controller command')
     status = read(folder/'head-S-seed42/status.json')
     if child is None:
         if status['status'] != 'complete':
             raise ValueError('S exited without completion before handoff')
-    elif child['start_ticks'] != hold['S_start_ticks'] or not any(a == str(root/'scripts/round2_m4.py').encode() for a in child['args']):
+    elif child['start_ticks'] != hold['S_start_ticks'] or not script_matches(child, root/'scripts/round2_m4.py'):
         raise ValueError('S process identity changed')
     if sha(old_file) != hold['workflow_sha256']:
         raise ValueError('Held workflow changed unexpectedly')
