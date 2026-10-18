@@ -1,0 +1,328 @@
+{
+  "status": "passed",
+  "variant": "m2-m3",
+  "n": 1286,
+  "class_count": 29,
+  "classes_sha256": "ba1bc6c6a21875919625adb851eaee1aab0ad1f88ecf64d017bebda891b5815e",
+  "analysis_code_sha256": "7480552b36c40858ed3acc53134ec1299c1bdf7f4de512cd13bbe84f521e38af",
+  "independent_metrics_match": true,
+  "annotation_counts_match": true,
+  "untriggered_images_identical_to_baseline": 972,
+  "paired_vs_b0": {
+    "overall": {
+      "image": {
+        "unit": "image",
+        "units": 1286,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.31493001555209954,
+        "mae_delta_95ci": [
+          -0.699902799377916,
+          1.31650466562986
+        ],
+        "rmse_delta": 4.0121934258270855,
+        "rmse_delta_95ci": [
+          -1.7621551646115892,
+          10.44903627335958
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.31493001555209954,
+        "mae_delta_95ci": [
+          -0.593374739039666,
+          1.4943356374807977
+        ],
+        "rmse_delta": 4.0121934258270855,
+        "rmse_delta_95ci": [
+          -1.5456784669898709,
+          10.036532088236052
+        ]
+      }
+    },
+    "<50": {
+      "image": {
+        "unit": "image",
+        "units": 888,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.0259009009009009,
+        "mae_delta_95ci": [
+          -0.10698198198198199,
+          0.04842342342342342
+        ],
+        "rmse_delta": -0.08090151857820338,
+        "rmse_delta_95ci": [
+          -0.2745054294521925,
+          0.056423585292673606
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 29,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": -0.0259009009009009,
+        "mae_delta_95ci": [
+          -0.1532148407148407,
+          0.08617836159619253
+        ],
+        "rmse_delta": -0.08090151857820338,
+        "rmse_delta_95ci": [
+          -0.35543664688579957,
+          0.11790534253424105
+        ]
+      }
+    },
+    "50-299": {
+      "image": {
+        "unit": "image",
+        "units": 359,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.7409470752089137,
+        "mae_delta_95ci": [
+          -0.8247214484679666,
+          2.45160167130919
+        ],
+        "rmse_delta": 2.6846478443592687,
+        "rmse_delta_95ci": [
+          -2.1729099839384123,
+          7.614911848002737
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 23,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 0.7409470752089137,
+        "mae_delta_95ci": [
+          -0.1653202947845805,
+          1.8176088602801967
+        ],
+        "rmse_delta": 2.6846478443592687,
+        "rmse_delta_95ci": [
+          0.11672492650207644,
+          5.128277552366627
+        ]
+      }
+    },
+    ">=300": {
+      "image": {
+        "unit": "image",
+        "units": 39,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 4.153846153846154,
+        "mae_delta_95ci": [
+          -25.82179487179487,
+          33.72243589743587
+        ],
+        "rmse_delta": 22.037524954448884,
+        "rmse_delta_95ci": [
+          -18.893658312844845,
+          62.844549086301505
+        ]
+      },
+      "class": {
+        "unit": "class",
+        "units": 9,
+        "replicates": 2000,
+        "seed": 42,
+        "mae_delta": 4.153846153846154,
+        "mae_delta_95ci": [
+          -36.18829254727475,
+          33.555075807514754
+        ],
+        "rmse_delta": 22.037524954448884,
+        "rmse_delta_95ci": [
+          -18.68966929977447,
+          67.16012339576702
+        ]
+      }
+    }
+  },
+  "improved_images": 129,
+  "worsened_images": 118,
+  "unchanged_error_images": 1039,
+  "largest_improvements": [
+    {
+      "image": "3665.jpg",
+      "truth": 907,
+      "baseline": 1179,
+      "prediction": 897,
+      "absolute_error_delta": -262,
+      "class": "toilet paper rolls"
+    },
+    {
+      "image": "3425.jpg",
+      "truth": 885,
+      "baseline": 1111,
+      "prediction": 888,
+      "absolute_error_delta": -223,
+      "class": "polka dots"
+    },
+    {
+      "image": "3489.jpg",
+      "truth": 278,
+      "baseline": 445,
+      "prediction": 283,
+      "absolute_error_delta": -162,
+      "class": "polka dots"
+    },
+    {
+      "image": "975.jpg",
+      "truth": 718,
+      "baseline": 534,
+      "prediction": 656,
+      "absolute_error_delta": -122,
+      "class": "birds"
+    },
+    {
+      "image": "3482.jpg",
+      "truth": 315,
+      "baseline": 205,
+      "prediction": 269,
+      "absolute_error_delta": -64,
+      "class": "polka dots"
+    },
+    {
+      "image": "949.jpg",
+      "truth": 1092,
+      "baseline": 1150,
+      "prediction": 1098,
+      "absolute_error_delta": -52,
+      "class": "birds"
+    },
+    {
+      "image": "5736.jpg",
+      "truth": 239,
+      "baseline": 171,
+      "prediction": 222,
+      "absolute_error_delta": -51,
+      "class": "polka dots"
+    },
+    {
+      "image": "5860.jpg",
+      "truth": 757,
+      "baseline": 494,
+      "prediction": 538,
+      "absolute_error_delta": -44,
+      "class": "grapes"
+    },
+    {
+      "image": "1915.jpg",
+      "truth": 684,
+      "baseline": 387,
+      "prediction": 417,
+      "absolute_error_delta": -30,
+      "class": "bottle caps"
+    },
+    {
+      "image": "4574.jpg",
+      "truth": 402,
+      "baseline": 312,
+      "prediction": 341,
+      "absolute_error_delta": -29,
+      "class": "flamingos"
+    }
+  ],
+  "largest_regressions": [
+    {
+      "image": "865.jpg",
+      "truth": 1022,
+      "baseline": 787,
+      "prediction": 490,
+      "absolute_error_delta": 297,
+      "class": "books"
+    },
+    {
+      "image": "3481.jpg",
+      "truth": 431,
+      "baseline": 316,
+      "prediction": 26,
+      "absolute_error_delta": 290,
+      "class": "polka dots"
+    },
+    {
+      "image": "3476.jpg",
+      "truth": 262,
+      "baseline": 278,
+      "prediction": 64,
+      "absolute_error_delta": 182,
+      "class": "polka dots"
+    },
+    {
+      "image": "3428.jpg",
+      "truth": 458,
+      "baseline": 467,
+      "prediction": 346,
+      "absolute_error_delta": 103,
+      "class": "polka dots"
+    },
+    {
+      "image": "5745.jpg",
+      "truth": 146,
+      "baseline": 155,
+      "prediction": 47,
+      "absolute_error_delta": 90,
+      "class": "polka dots"
+    },
+    {
+      "image": "2850.jpg",
+      "truth": 287,
+      "baseline": 116,
+      "prediction": 51,
+      "absolute_error_delta": 65,
+      "class": "chairs"
+    },
+    {
+      "image": "5059.jpg",
+      "truth": 286,
+      "baseline": 281,
+      "prediction": 355,
+      "absolute_error_delta": 64,
+      "class": "polka dots"
+    },
+    {
+      "image": "3484.jpg",
+      "truth": 356,
+      "baseline": 373,
+      "prediction": 277,
+      "absolute_error_delta": 62,
+      "class": "polka dots"
+    },
+    {
+      "image": "840.jpg",
+      "truth": 637,
+      "baseline": 803,
+      "prediction": 855,
+      "absolute_error_delta": 52,
+      "class": "books"
+    },
+    {
+      "image": "935.jpg",
+      "truth": 2092,
+      "baseline": 1808,
+      "prediction": 1757,
+      "absolute_error_delta": 51,
+      "class": "birds"
+    }
+  ],
+  "pseudo_candidates": 228,
+  "pseudo_candidates_with_annotation_inside": 217,
+  "pseudo_candidates_with_multiple_annotations_inside": 53,
+  "pseudo_support_is_only_a_proxy": true,
+  "mean_backbone_passes": 1.4230171073094868,
+  "mean_decoder_passes": 1.5870917573872472,
+  "val_candidate_gate": false,
+  "files_sha256": {
+    "protocol.json": "7197b05d454321b1af6251847192c1553115069eb0510dde56440c0e6e74ea34",
+    "summary.json": "213c18a9474d34786b683256565658879e601cb098107fa0732ad8fb55775f02",
+    "predictions.jsonl": "5afb892a554f06868c39a9a30a50eb8fc17749926932db62afd9416f81fed06a"
+  }
+}

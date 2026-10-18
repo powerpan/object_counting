@@ -39,7 +39,9 @@ def main():
     calls = []
     def capture(module, inputs):
         outputs = inputs[1]
-        count = int(outputs[0]['box_v'].numel())
+        # Match the exact quantity used by the pinned SAMMaskProcessor branch.
+        count = len(outputs[0]['pred_boxes'][0])
+        assert count == outputs[0]['box_v'].numel()
         calls.append({'pre_refinement_candidates': count, 'upstream_skips_sam_mask_refinement': count > 800})
     handle = model.sam_mask.register_forward_pre_hook(capture)
     result = []

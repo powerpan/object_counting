@@ -1,4 +1,4 @@
-# B0／M1 執行與判讀
+# 實驗重現與結果核算
 
 先執行 `scripts/bootstrap.sh` 建置環境。一般 Python 依賴預設使用 HTTPS 套件鏡像，PyTorch／Torchvision 的 cu118 wheel 來自官方索引；可用 `PLANB_PIP_INDEX_URL` 更換一般依賴來源。CUDA 11.8 工具包必須已存在。
 
@@ -103,6 +103,8 @@ python "$CODE_ROOT/scripts/plot_m2_case.py" --root "$WORK_ROOT" --image 3481.jpg
 `analysis.json` 包含真值和程式雜湊核驗、圖像／類別配對 bootstrap、候選品質代理指標及改善／退步案例；`contrasts.json` 保存對照差值。`diagnostics.json` 的類別與觸發條件細分是看到 M2 結果後增加的探索分析，不回饋推論規則。圖例只呈現標註點和框，不包含資料集原圖。
 
 逐圖 `detail.tiles[].raw_count` 指片內閾值／NMS 已完成、尚未依核心區篩選的數量；它不是上游 SAM 遮罩修正之前的候選數。需要檢查上游的「超過 800 候選略過遮罩修正」分支時，須另在五組主評估全部結束後執行 `scripts/trace_m3_cases.py --root "$WORK_ROOT"`。該腳本只對 M3 最大改善／退步各一張加唯讀 hook，並驗證重跑框與已保存結果逐位元一致；這是事後機制診斷，不屬於新參數試驗。
+
+五組全部核算後，可執行 `scripts/plot_m2_m3_intervals.py --root "$WORK_ROOT"`，將整體與密集組的 MAE／RMSE 配對區間輸出為 `results/m2-m3-v1/figures/paired-intervals.png`。圖表直接讀取各組 `analysis.json`，沒有額外篩選圖片或重新估計參數。
 
 回收已完成且核驗通過的結果後，可由同一份數據重建繁體中文結果文件：
 

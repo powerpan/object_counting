@@ -1,0 +1,209 @@
+{
+  "status": "passed",
+  "scope": "posthoc_two_cases; no parameter changes or causal proof",
+  "script_sha256": "93f6188796aa56889ef62a142d78f242694da4c13a6ba647918d58167cda26eb",
+  "cases": [
+    {
+      "image": "865.jpg",
+      "truth": 1022,
+      "baseline_prediction": 787,
+      "m3_prediction": 490,
+      "saved_output_bitwise_equal": true,
+      "calls_in_order_global_then_tiles": [
+        {
+          "pre_refinement_candidates": 1017,
+          "upstream_skips_sam_mask_refinement": true
+        },
+        {
+          "pre_refinement_candidates": 223,
+          "upstream_skips_sam_mask_refinement": false
+        },
+        {
+          "pre_refinement_candidates": 298,
+          "upstream_skips_sam_mask_refinement": false
+        },
+        {
+          "pre_refinement_candidates": 360,
+          "upstream_skips_sam_mask_refinement": false
+        },
+        {
+          "pre_refinement_candidates": 343,
+          "upstream_skips_sam_mask_refinement": false
+        }
+      ],
+      "tile_details": [
+        {
+          "core": [
+            0,
+            0,
+            287,
+            192
+          ],
+          "crop": [
+            0,
+            0,
+            345,
+            231
+          ],
+          "scale": 2.9681159420289855,
+          "raw_count": 140,
+          "owned_count": 97
+        },
+        {
+          "core": [
+            287,
+            0,
+            574,
+            192
+          ],
+          "crop": [
+            229,
+            0,
+            574,
+            231
+          ],
+          "scale": 2.9681159420289855,
+          "raw_count": 178,
+          "owned_count": 110
+        },
+        {
+          "core": [
+            0,
+            192,
+            287,
+            384
+          ],
+          "crop": [
+            0,
+            153,
+            345,
+            384
+          ],
+          "scale": 2.9681159420289855,
+          "raw_count": 196,
+          "owned_count": 146
+        },
+        {
+          "core": [
+            287,
+            192,
+            574,
+            384
+          ],
+          "crop": [
+            229,
+            153,
+            574,
+            384
+          ],
+          "scale": 2.9681159420289855,
+          "raw_count": 198,
+          "owned_count": 137
+        }
+      ],
+      "before_merge_count": 490,
+      "removed_by_cross_tile_nms": 0
+    },
+    {
+      "image": "3665.jpg",
+      "truth": 907,
+      "baseline_prediction": 1179,
+      "m3_prediction": 897,
+      "saved_output_bitwise_equal": true,
+      "calls_in_order_global_then_tiles": [
+        {
+          "pre_refinement_candidates": 1210,
+          "upstream_skips_sam_mask_refinement": true
+        },
+        {
+          "pre_refinement_candidates": 300,
+          "upstream_skips_sam_mask_refinement": false
+        },
+        {
+          "pre_refinement_candidates": 535,
+          "upstream_skips_sam_mask_refinement": false
+        },
+        {
+          "pre_refinement_candidates": 405,
+          "upstream_skips_sam_mask_refinement": false
+        },
+        {
+          "pre_refinement_candidates": 693,
+          "upstream_skips_sam_mask_refinement": false
+        }
+      ],
+      "tile_details": [
+        {
+          "core": [
+            0,
+            0,
+            204,
+            192
+          ],
+          "crop": [
+            0,
+            0,
+            245,
+            231
+          ],
+          "scale": 4.179591836734694,
+          "raw_count": 252,
+          "owned_count": 80
+        },
+        {
+          "core": [
+            204,
+            0,
+            408,
+            192
+          ],
+          "crop": [
+            163,
+            0,
+            408,
+            231
+          ],
+          "scale": 4.179591836734694,
+          "raw_count": 460,
+          "owned_count": 221
+        },
+        {
+          "core": [
+            0,
+            192,
+            204,
+            384
+          ],
+          "crop": [
+            0,
+            153,
+            245,
+            384
+          ],
+          "scale": 4.179591836734694,
+          "raw_count": 376,
+          "owned_count": 200
+        },
+        {
+          "core": [
+            204,
+            192,
+            408,
+            384
+          ],
+          "crop": [
+            163,
+            153,
+            408,
+            384
+          ],
+          "scale": 4.179591836734694,
+          "raw_count": 633,
+          "owned_count": 398
+        }
+      ],
+      "before_merge_count": 899,
+      "removed_by_cross_tile_nms": 2
+    }
+  ]
+}
