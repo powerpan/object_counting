@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "tests_run": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 3.5342742316424847,
+  "scope": "CPU-only code tests; relative-script handoff regression included; no model accuracy claim",
+  "cuda_visible_devices": "",
+  "code_commit": "be801b983378990ac54934652f1b73f4e663ce35",
+  "amendment_commit": "a20c49a4a809af8b5a234bf91d61ab4a8a2356f1",
+  "source_receipts_verified": 5,
+  "python_version": "3.10.8",
+  "live_relative_script_precheck": "passed",
+  "prior_attempt": "Rejected before signals or workflow/ledger creation; initial source and log retained; S unaffected"
+}

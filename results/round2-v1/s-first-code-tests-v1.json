@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "tests_run": 41,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 3.563417736440897,
+  "scope": "CPU-only code tests; no model accuracy claim",
+  "cuda_visible_devices": "",
+  "code_commit": "11174d29a7ca0868204a61da11e1f5390eca3ae5",
+  "amendment_commit": "a20c49a4a809af8b5a234bf91d61ab4a8a2356f1",
+  "source_receipts_verified": 5,
+  "python_version": "3.10.8"
+}

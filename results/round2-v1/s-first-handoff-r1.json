@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-18T08:19:57Z",
+  "source_commit": "be801b983378990ac54934652f1b73f4e663ce35",
+  "source_receipts_verified": 5,
+  "old_controller_exited": true,
+  "S_process_unchanged": true,
+  "S_training_still_running": true,
+  "L_not_started": true,
+  "new_controller_running": true,
+  "global_budget_seconds": 108000,
+  "preflight_seconds": 42.222489861771464,
+  "active_budget_stage": "head-S-seed42",
+  "scope": "Scheduling handoff only; S validation has not run",
+  "first_attempt_preserved": true
+}
