@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "n": 32,
+  "phase": "smoke",
+  "variant": "m2-v2-e3-c085",
+  "frozen_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "elapsed_seconds": 10.003183145076036,
+  "finished_utc": "2026-10-18T15:10:58Z",
+  "peak_allocated_mib": 4461.158203125,
+  "peak_reserved_mib": 5748.0
+}

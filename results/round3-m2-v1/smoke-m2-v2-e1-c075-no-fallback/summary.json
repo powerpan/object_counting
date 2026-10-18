@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "n": 32,
+  "diagnostic_only": true,
+  "source_main_predictions_sha256": "39dff18889dab53efe1da2ad771a7be40a05768aa5e0bddb78363164587c8896",
+  "source": "same saved second pass; no additional inference",
+  "independently_reconstructed": true
+}

@@ -17,6 +17,8 @@ M4-v3 CPU 校正及獨立核算已完成。區域／global 折外 MAE 分別為 
 固定規則組合及核算也已完成，直接使用既有輸出，沒有新 GPU 推論。折外 MAE／RMSE 為 **8.81687／29.58091**，密集 MAE **97.92308**、GAME(2) **14.37813**；通過開發點估計門檻但區間跨零，效果接近單獨 M3。全 val 的將來設定為 M3 3×3＋T2、不強制遮罩或校正，與折外成績分開。可選 M2-v2、正式凍結及獨立人工盲標尚待處理，沒有 test 成功結論。
 
 - [M2-v2 開跑前實作核對](docs/ROUND3_M2_EXECUTION.md)
+- [M2-v2 前置核驗結果](docs/ROUND3_M2_PREFLIGHT_RESULTS.md)
+- [M2-v2 完成後收尾與關機提醒](docs/ROUND3_M2_FINALIZATION_AMENDMENT.md)
 - [M4-v3 CPU 校正結果](docs/ROUND3_CALIBRATION_RESULTS.md)
 - [第三輪組合結果](docs/ROUND3_COMBINATION_RESULTS.md)
 - [第三輪組合執行口徑](docs/ROUND3_COMBINATION_EXECUTION.md)

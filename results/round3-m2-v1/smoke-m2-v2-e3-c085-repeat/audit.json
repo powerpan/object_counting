@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "n": 32,
+  "variant": "m2-v2-e3-c085-repeat",
+  "phase": "smoke",
+  "policy_geometry_density_truth_reconstructed": true,
+  "diagnostics": {
+    "triggered_images": 0,
+    "first_detection_candidates": 9171,
+    "eligible_before_single_object_filter": 0,
+    "rejected_by_single_object_filter": 0,
+    "selected_pseudo_exemplars": 0,
+    "fallback_images": 0,
+    "fallback_rule_triggered_images": 0,
+    "candidate_point_histogram": {},
+    "candidate_contains_2plus_points": 0,
+    "candidate_point_diagnosis_only_after_inference": true,
+    "case_3481": null
+  },
+  "files_sha256": {
+    "protocol.json": "7ec22e1fa270cc925ea2681e9cc7e66547a957c6396acf21f0b330387aa9b721",
+    "summary.json": "1ffe428c59387643c2bdce88618d655822bd1e07852c4b8668f45ec07bb546e3",
+    "predictions.jsonl": "1a75be540f6b7eade80af9da0e68f055d66cca497ebdbd13d7fde5e538a719ce"
+  }
+}

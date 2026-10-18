@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "n": 32,
+  "diagnostic_only": true,
+  "files_sha256": {
+    "predictions.jsonl": "610268cd26f3db85e98a3dcf476cc54bba660a2e93af2db9bad0d21b6cf77084",
+    "summary.json": "71f4ac8621e5dfffebc6a747e0b99f72cfd4dae280b3aebbf861b6a53aad8860"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "scope": "M2 preflight only; no selection or full-val conclusion",
+  "archive_sha256": "1cf1c53e2d07314e56ae2a840959d01d426f15ef74c0fbc1289f84bc3f210523",
+  "source_count": 118,
+  "stages": {
+    "smoke-m2-v2-e1-c075": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e1-c075-repeat": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e1-c075-no-fallback": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": null,
+      "diagnostic_only": true
+    },
+    "smoke-m2-v2-e1-c085": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e1-c085-repeat": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e1-c085-no-fallback": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": null,
+      "diagnostic_only": true
+    },
+    "smoke-m2-v2-e3-c075": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e3-c075-repeat": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e3-c075-no-fallback": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": null,
+      "diagnostic_only": true
+    },
+    "smoke-m2-v2-e3-c085": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e3-c085-repeat": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": 4461.158203125,
+      "diagnostic_only": false
+    },
+    "smoke-m2-v2-e3-c085-no-fallback": {
+      "n": 32,
+      "truth_policy_density_cells_game_localization": "passed",
+      "maximum_mass_error": 0.0,
+      "cross_platform_array_digest_matches": 0,
+      "peak_allocated_mib": null,
+      "diagnostic_only": true
+    }
+  },
+  "verified_utc": "2026-10-18T15:16:09Z",
+  "cross_platform_note": "Transferred artifact SHA is exact; reconstructed floating point arrays use registered rtol=1e-12 and atol=1e-8. Remote bitwise gate is unchanged."
+}
