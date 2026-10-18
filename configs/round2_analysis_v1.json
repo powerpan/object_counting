@@ -1,0 +1,16 @@
+{
+  "version": "round2-analysis-v1",
+  "grid": 8,
+  "grid_boundaries": "integer linspace in original image; left/top inclusive, right/bottom exclusive",
+  "detection_side": "arithmetic mean of width and height in original pixels",
+  "exemplar_side": "median of three per-box arithmetic mean sides in original pixels",
+  "empty_cell_feature_means": 0.0,
+  "objectness": "raw objectness of retained B0 detections",
+  "density_resize": "crop padding, bilinear float64 align_corners=False, rescale total mass",
+  "density_storage": "all original-size arrays on server; hashes and cell masses in public results",
+  "fusion_objective": "mean squared cell-count error + 0.001 * sum(non-intercept coefficients squared)",
+  "fusion_convergence_required": true,
+  "localization_edge": "euclidean distance <= 0.5 * mean exemplar arithmetic side",
+  "localization_matching": "maximum-cardinality bipartite matching",
+  "localization_aggregation": ["micro", "image-macro"]
+}
