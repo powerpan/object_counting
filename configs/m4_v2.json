@@ -1,0 +1,57 @@
+{
+  "version": "m4-v2-v1",
+  "base_config": "configs/round2_v1.json",
+  "base_config_sha256": "0570104f597fb257f9635546251f7a10785780103f56cd6ad422079e4a120901",
+  "split_file": "configs/m4_v2_splits.json",
+  "split_sha256": "17614be57a73edec8d747d51bda30a3d1d8db3d73401631f18f7b21a1b5712e7",
+  "input_channels": 258,
+  "channels": [
+    256,
+    256,
+    256,
+    128,
+    64
+  ],
+  "groups": 32,
+  "output_scale": 100.0,
+  "count_loss_weight": 0.1,
+  "negative_mass_weight": 1.0,
+  "dense_threshold": 300,
+  "dense_multiplicity": 4,
+  "batch_size": 8,
+  "epochs": 30,
+  "seed": 42,
+  "conditional_seeds": [
+    43,
+    44
+  ],
+  "checkpoint_selection": "minimum clamped-density holdout RMSE among trained epochs; ties earlier epoch",
+  "safety_epoch": 10,
+  "safety_comparison": "current epoch 10 clamped-density RMSE strictly greater than same-holdout B0 RMSE",
+  "on_safety_stop": "record negative result; no further training, candidate validation or extra seeds automatically",
+  "start_count_tolerance": 0.0001,
+  "memory_limit_mib": 40000,
+  "capacity_batch4_projection_limit_mib": 36000,
+  "capacity_projection_margin": 1.15,
+  "capacity_steps": 4,
+  "single_train_seconds": 25200,
+  "total_m4_seconds": 108000,
+  "dense_check_seconds": 1800,
+  "single_eval_seconds": 5400,
+  "s_fusion_seconds": 1800,
+  "diagnostic_thresholds": [
+    0.7,
+    0.9
+  ],
+  "diagnostic_does_not_change_v2": true,
+  "s_fusion_candidate_eligible": false,
+  "extra_seed_requires_count_gate": true,
+  "test_enabled": false,
+  "predecessor_ledger": "results/round2-v1/m4_budget_ledger_v1.json",
+  "predecessor_ledger_sha256": "0bf0f0d434e6c057680f2f438452d0845345a10ed4f8f2d822a08bbc58945976",
+  "predecessor_spent_seconds": 18032.695445628837,
+  "source_drafts_sha256": {
+    "docs/source_drafts/M4_V2_PROTOCOL.md": "a2a29716adaa4a905cf7a67aed5c10ffdf0441693fc4386a4fdc97538fca8e06",
+    "docs/source_drafts/ROUND2_L_CANCEL_AMENDMENT.md": "75f2e135c469352ca1be040ff41694b595a87667be75cab9ac50f7795f2a3630"
+  }
+}
