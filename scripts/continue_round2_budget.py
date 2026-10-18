@@ -16,7 +16,6 @@ from round2_m4_budget import budget_record
 
 
 def process(pid):
-    active_started=None;active_accounted=False
     try:
         base=Path('/proc')/str(pid)
         raw=(base/'stat').read_text().rsplit(')',1)[1].split()
@@ -54,9 +53,10 @@ def main():
             time.sleep(.2)
     write_json(old_file,{**old,'state':'superseded','successor':'workflow_budget_v1.json','updated_utc':utc()})
     state.update(state='running',updated_utc=utc());write_json(out,state)
+    active_started=None;active_accounted=False
+    start=datetime.fromisoformat(old['stage_started_utc'].replace('Z','+00:00')).timestamp()
     try:
         sdir=result/'head-S-seed42'
-        start=datetime.fromisoformat(old['stage_started_utc'].replace('Z','+00:00')).timestamp()
         while True:
             current=process(old['stage_pid'])
             status=json.loads((sdir/'status.json').read_text()) if (sdir/'status.json').exists() else {}
