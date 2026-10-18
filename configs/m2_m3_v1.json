@@ -1,0 +1,23 @@
+{
+  "version": "m2-m3-v1",
+  "precision": "FP32",
+  "seed": 42,
+  "m2": {
+    "max_extra_exemplars": 3,
+    "min_relative_objectness": 0.5,
+    "min_mean_cosine": 0.75,
+    "min_scale_ratio": 1.5,
+    "min_side_in_model_pixels": 2.0
+  },
+  "m3": {
+    "trigger_median_exemplar_side": 32.0,
+    "trigger_predicted_count": 200,
+    "grid": 2,
+    "halo_fraction_of_full_image": 0.1,
+    "merge_nms_iou": 0.5
+  },
+  "postprocess": {"relative_threshold": 0.11, "nms_iou": 0.5},
+  "variants": ["m2", "m2-repeat", "m3", "m3-repeat", "m2-m3"],
+  "bootstrap_replicates": 2000,
+  "stop": {"memory_allocated_mib": 40000, "variant_timeout_seconds": 5400}
+}
