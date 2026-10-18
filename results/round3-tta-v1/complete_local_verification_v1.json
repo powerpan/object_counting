@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "scope": "TTA complete val and category crossfit; no test",
+  "archive_sha256": "42b1e2837d5f063f505bc9660f33eef348a3d0801a7c46039c1433cbe67da35e",
+  "manifest_sha256": "c8718be74ddebf0de89f78462830bf73289b73af53eab76cde33737b49d2faa7",
+  "source_count": 93,
+  "n": 1286,
+  "true_objects": 82042,
+  "cross_platform_note": "Exact SHA for transferred files; registered numeric tolerance for reconstructed floating-point densities.",
+  "variants": {
+    "T2": {
+      "n": 1286,
+      "truth_counts_geometry_mass_game_reproduced": true,
+      "metrics_and_candidate_gate_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "repeat_matches_B0": null,
+      "predictions_sha256": "fb539946d8ff710f6ad5cef76b378e48e3f6f3d7038d23d56c389040c6ae7d35"
+    },
+    "T4": {
+      "n": 1286,
+      "truth_counts_geometry_mass_game_reproduced": true,
+      "metrics_and_candidate_gate_reproduced": true,
+      "maximum_mass_error": 1.1368683772161603e-13,
+      "repeat_matches_B0": null,
+      "predictions_sha256": "cee85807216e3d51d9ad2430a6094fb269983e7ed037634d75ff0f21862beb4c"
+    },
+    "tta-repeat": {
+      "n": 1286,
+      "truth_counts_geometry_mass_game_reproduced": true,
+      "metrics_and_candidate_gate_reproduced": true,
+      "maximum_mass_error": 5.684341886080802e-14,
+      "repeat_matches_B0": true,
+      "predictions_sha256": "e70f6166682fef0182544ab560f2628abc776866569867e1c4c115eecf5d220d"
+    }
+  },
+  "crossfit": {
+    "B": {
+      "fit_fold": "A",
+      "selected": "T2",
+      "reproduced": true
+    },
+    "A": {
+      "fit_fold": "B",
+      "selected": "T2",
+      "reproduced": true
+    },
+    "all_val_selected": "T2",
+    "selected_rows_metrics_candidate_gate_reproduced": true
+  },
+  "verified_utc": "2026-10-18T14:31:47Z"
+}

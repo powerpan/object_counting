@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "n": 1286,
+  "fold_local_choices_reproduced": true,
+  "selected_rows_and_metrics_reproduced": true,
+  "summary_sha256": "1a2563990e613e849aeb40d6b57e40fb7da2ca862a615843c88fb286b9de6ddf",
+  "scope": "development_only_no_test"
+}

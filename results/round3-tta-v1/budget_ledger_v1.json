@@ -1,0 +1,478 @@
+{
+  "version": "round3-ledger-v1",
+  "caps": {
+    "R3-0": 1800,
+    "R3-1": 10800,
+    "R3-2": 7200,
+    "R3-3": 0,
+    "R3-4": 3600,
+    "R3-5": 7200,
+    "R3-6": 7200
+  },
+  "total_cap": 37800,
+  "entries": [
+    {
+      "id": "controller-preflight",
+      "stage": "R3-0",
+      "limit": 60.0,
+      "started_utc": "2026-10-18T12:41:52Z",
+      "seconds": 0.04409231245517731,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:41:52Z"
+    },
+    {
+      "id": "unit-tests",
+      "stage": "R3-0",
+      "limit": 120.0,
+      "started_utc": "2026-10-18T12:41:52Z",
+      "seconds": 2.5682502891868353,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:41:54Z"
+    },
+    {
+      "id": "gate",
+      "stage": "R3-0",
+      "limit": 1200.0,
+      "started_utc": "2026-10-18T12:41:54Z",
+      "seconds": 15.742434998974204,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:42:10Z"
+    },
+    {
+      "id": "smoke-m3-v2-g2",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:42:10Z",
+      "seconds": 18.595414742827415,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:42:29Z"
+    },
+    {
+      "id": "audit-smoke-m3-v2-g2",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:42:29Z",
+      "seconds": 4.022949256002903,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:42:33Z"
+    },
+    {
+      "id": "smoke-m3-v2-g3",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:42:33Z",
+      "seconds": 23.107923014089465,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:42:56Z"
+    },
+    {
+      "id": "audit-smoke-m3-v2-g3",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:42:56Z",
+      "seconds": 3.973379136994481,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:43:00Z"
+    },
+    {
+      "id": "smoke-m3-v2-branch-only",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:43:00Z",
+      "seconds": 18.598632834851742,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:43:18Z"
+    },
+    {
+      "id": "audit-smoke-m3-v2-branch-only",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:43:18Z",
+      "seconds": 4.071538181975484,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:43:22Z"
+    },
+    {
+      "id": "smoke-m3-v2-repeat-g2",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:43:22Z",
+      "seconds": 21.50073680281639,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:43:44Z"
+    },
+    {
+      "id": "audit-smoke-m3-v2-repeat-g2",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:43:44Z",
+      "seconds": 4.072957795113325,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:43:48Z"
+    },
+    {
+      "id": "smoke-m3-v2-repeat-g3",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:43:48Z",
+      "seconds": 32.41535359621048,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:44:20Z"
+    },
+    {
+      "id": "audit-smoke-m3-v2-repeat-g3",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:44:20Z",
+      "seconds": 3.9217022005468607,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:44:24Z"
+    },
+    {
+      "id": "smoke-b0-refine-on",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:44:24Z",
+      "seconds": 24.15600810945034,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:44:49Z"
+    },
+    {
+      "id": "audit-smoke-b0-refine-on",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:44:49Z",
+      "seconds": 3.872221590951085,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:44:52Z"
+    },
+    {
+      "id": "smoke-b0-refine-off",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:44:52Z",
+      "seconds": 13.837335648015141,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:45:06Z"
+    },
+    {
+      "id": "audit-smoke-b0-refine-off",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:45:06Z",
+      "seconds": 4.072703082114458,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:45:10Z"
+    },
+    {
+      "id": "full-m3-v2-g2",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T12:45:10Z",
+      "seconds": 301.10484010353684,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:50:11Z"
+    },
+    {
+      "id": "audit-full-m3-v2-g2",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:50:11Z",
+      "seconds": 18.496949061751366,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:50:30Z"
+    },
+    {
+      "id": "full-m3-v2-g3",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T12:50:30Z",
+      "seconds": 363.5871962457895,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:56:34Z"
+    },
+    {
+      "id": "audit-full-m3-v2-g3",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T12:56:34Z",
+      "seconds": 18.54543613642454,
+      "passed": true,
+      "finished_utc": "2026-10-18T12:56:52Z"
+    },
+    {
+      "id": "full-m3-v2-branch-only",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T12:56:52Z",
+      "seconds": 300.6948040947318,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:01:53Z"
+    },
+    {
+      "id": "audit-full-m3-v2-branch-only",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:01:53Z",
+      "seconds": 18.19486697949469,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:02:11Z"
+    },
+    {
+      "id": "full-m3-v2-repeat-g2",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T13:02:11Z",
+      "seconds": 347.0141250304878,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:07:58Z"
+    },
+    {
+      "id": "audit-full-m3-v2-repeat-g2",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:07:58Z",
+      "seconds": 18.596153054386377,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:08:17Z"
+    },
+    {
+      "id": "full-m3-v2-repeat-g3",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T13:08:17Z",
+      "seconds": 503.30237184278667,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:16:40Z"
+    },
+    {
+      "id": "audit-full-m3-v2-repeat-g3",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:16:40Z",
+      "seconds": 18.84932111762464,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:16:59Z"
+    },
+    {
+      "id": "full-b0-refine-on",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T13:16:59Z",
+      "seconds": 354.5907915495336,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:22:53Z"
+    },
+    {
+      "id": "audit-full-b0-refine-on",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:22:53Z",
+      "seconds": 18.193476205691695,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:23:12Z"
+    },
+    {
+      "id": "full-b0-refine-off",
+      "stage": "R3-1",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T13:23:12Z",
+      "seconds": 263.2306567020714,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:27:35Z"
+    },
+    {
+      "id": "audit-full-b0-refine-off",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:27:35Z",
+      "seconds": 18.09563796967268,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:27:53Z"
+    },
+    {
+      "id": "crossfit",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:27:53Z",
+      "seconds": 6.2250383626669645,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:27:59Z"
+    },
+    {
+      "id": "crossfit-audit",
+      "stage": "R3-1",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:27:59Z",
+      "seconds": 4.87723303027451,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:28:04Z"
+    },
+    {
+      "id": "tta-controller-preflight",
+      "stage": "R3-0",
+      "limit": 120.0,
+      "started_utc": "2026-10-18T13:53:03Z",
+      "seconds": 1.2968769762665033,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:53:03Z"
+    },
+    {
+      "id": "tta-unit-tests",
+      "stage": "R3-0",
+      "limit": 120.0,
+      "started_utc": "2026-10-18T13:53:03Z",
+      "seconds": 2.5185024347156286,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:53:05Z"
+    },
+    {
+      "id": "tta-gate",
+      "stage": "R3-0",
+      "limit": 1200.0,
+      "started_utc": "2026-10-18T13:53:05Z",
+      "seconds": 35.96811508387327,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:53:41Z"
+    },
+    {
+      "id": "tta-audit-gate",
+      "stage": "R3-0",
+      "limit": 300.0,
+      "started_utc": "2026-10-18T13:53:41Z",
+      "seconds": 4.6769940964877605,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "tta-smoke-T2",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:53:46Z",
+      "seconds": 18.596975408494473,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:54:05Z"
+    },
+    {
+      "id": "tta-audit-smoke-T2",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:54:05Z",
+      "seconds": 4.274303672835231,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:54:09Z"
+    },
+    {
+      "id": "tta-smoke-T4",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:54:09Z",
+      "seconds": 30.36804474517703,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:54:39Z"
+    },
+    {
+      "id": "tta-audit-smoke-T4",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:54:39Z",
+      "seconds": 4.623454527929425,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:54:44Z"
+    },
+    {
+      "id": "tta-smoke-tta-repeat",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:54:44Z",
+      "seconds": 27.659339057281613,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:55:12Z"
+    },
+    {
+      "id": "tta-audit-smoke-tta-repeat",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T13:55:12Z",
+      "seconds": 4.624269902706146,
+      "passed": true,
+      "finished_utc": "2026-10-18T13:55:16Z"
+    },
+    {
+      "id": "tta-full-T2",
+      "stage": "R3-2",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T13:55:16Z",
+      "seconds": 400.02784084156156,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:01:56Z"
+    },
+    {
+      "id": "tta-audit-full-T2",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T14:01:56Z",
+      "seconds": 22.91115639731288,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:02:19Z"
+    },
+    {
+      "id": "tta-full-T4",
+      "stage": "R3-2",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T14:02:19Z",
+      "seconds": 742.7138915508986,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:14:42Z"
+    },
+    {
+      "id": "tta-audit-full-T4",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T14:14:42Z",
+      "seconds": 28.45958868972957,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:15:10Z"
+    },
+    {
+      "id": "tta-full-tta-repeat",
+      "stage": "R3-2",
+      "limit": 5400.0,
+      "started_utc": "2026-10-18T14:15:10Z",
+      "seconds": 730.1390807684511,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:27:20Z"
+    },
+    {
+      "id": "tta-audit-full-tta-repeat",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T14:27:21Z",
+      "seconds": 26.25833892636001,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:27:47Z"
+    },
+    {
+      "id": "tta-crossfit",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T14:27:47Z",
+      "seconds": 6.075972398743033,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:27:53Z"
+    },
+    {
+      "id": "tta-crossfit-audit",
+      "stage": "R3-2",
+      "limit": 900.0,
+      "started_utc": "2026-10-18T14:27:53Z",
+      "seconds": 5.77568674646318,
+      "passed": true,
+      "finished_utc": "2026-10-18T14:27:59Z"
+    }
+  ],
+  "active": null,
+  "state": "open",
+  "inherited_ledger_sha256": "8e15c47b4042b70b9e24bc1b8a9a87552e5bba52890cb48c00796a09b4bbe3ae",
+  "inherited_entry_count": 33
+}

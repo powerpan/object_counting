@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scope": "TTA complete val and crossfit; no calibration or test",
+  "collected_utc": "2026-10-18T14:28:41Z",
+  "registration_commit": "ab4f53a840a6a8a6d28992c9368b82b98e8c1102",
+  "code_commit": "0a57c3e15a24136a2ca27dc288eed933510c809c",
+  "source_count": 93,
+  "prior_receipts_sha256": {
+    "round2_code_receipt.json": "1cb63c21b007cff37598e67a9da451a214b5f3943d45d5fa51449b6544ed2984",
+    "round2_budget_receipt.json": "c47952e2149b744d93764f66c6610275e7515c15448f2ac35f16d638c10418ff",
+    "round2_analysis_receipt.json": "4e72a805aeacf205cd5f45c75cc1bfb01641b5020320a16f09d54143a296a945",
+    "round2_validation_workflow_receipt.json": "683689cf87e2643af769f747a58c7df887fb4c68d8031485ff81fd200d5dde00",
+    "round2_s_first_receipt.json": "3bc1a8db3d49b982550f84f864b2535624011244346cee2d5b1ed183625f6969",
+    "m4_v2_receipt_v1.json": "fb74481f4b9047b5e8b3a89df3ca9ba7b331f6a10940c2fa4371722c46c1f106",
+    "round3_m3_receipt_v1.json": "dc9f4b1a6a4a74eb9ae9cf88f7506eb037a70585bc4f4bd91e095127d2850c1a"
+  },
+  "tta_receipt_sha256": "05fcd4f3ab79c56341cbb2ef075c12668878b1ccfafe63bbfc76b2862b440bfc",
+  "gpu_processes": 0,
+  "shared_locks_verified_free": true,
+  "instance_policy": "keep_running",
+  "files_sha256": {
+    "full-T2/protocol.json": "bfe7e5fcdceb2722ccea517c2d5f34e116f0ddeca16d2e2bba009ff8882ec700",
+    "full-T2/summary.json": "e6c6640630e59ba6b838b3d8db9c83c05acff747fe6ebd8ca474310e75d25fba",
+    "full-T2/audit.json": "19c1faec7d9604f04f9c942d35ccb4c8152bc89cf86e836ccf97b2ffa94e846e",
+    "full-T2/predictions.jsonl": "fb539946d8ff710f6ad5cef76b378e48e3f6f3d7038d23d56c389040c6ae7d35",
+    "full-T4/protocol.json": "a3492577987e9355abb69e1d83fda74cdbb90a9ce867bb9ef2e88488bde23c3f",
+    "full-T4/summary.json": "6d295855771a69cd9b7fd2299783fe79a2fb5b994b7eed596d0fda14cdb0251c",
+    "full-T4/audit.json": "7c41b86a2b9fba6dfd3849b724f67be2466735724d1eabaa16974bbe0efb97c0",
+    "full-T4/predictions.jsonl": "cee85807216e3d51d9ad2430a6094fb269983e7ed037634d75ff0f21862beb4c",
+    "full-tta-repeat/protocol.json": "208105abafb343c495c39982e9bf1b4e2c426c87a4eb8c310c487b8e48c1f1ac",
+    "full-tta-repeat/summary.json": "24698d941a240c03948e5c20693565c7f637add239b16d33cb05e5a3ea5402c9",
+    "full-tta-repeat/audit.json": "99b587f5897d5f72fcfff6c136a0fc9c7d10d458cb73e8deaedcd0eb3130d306",
+    "full-tta-repeat/predictions.jsonl": "e70f6166682fef0182544ab560f2628abc776866569867e1c4c115eecf5d220d",
+    "crossfit/summary.json": "1a2563990e613e849aeb40d6b57e40fb7da2ca862a615843c88fb286b9de6ddf",
+    "crossfit/audit.json": "0dae4c983f500a52e4260614bbba5371e03cd1452629ddd9bbefb705ce56a961",
+    "crossfit/predictions.jsonl": "c6458e64b69d23dbb1eec088667528d10a67dde09dc64a5cd5f8fd22465831d9",
+    "workflow_v1.json": "d610e6767e7a0c60d8aa4078f1827cafbd4a2fcf1ce7843bf5d32fdeea216b6e",
+    "budget_ledger_v1.json": "fd565279ab090f2673bffd86af6c34ce464338f0cb163d85ea54c724a7dfe28b"
+  }
+}
