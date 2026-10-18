@@ -1,0 +1,25 @@
+{
+  "version": "round3-m2-v1",
+  "candidate_order": ["m2-v2-e1-c075", "m2-v2-e1-c085", "m2-v2-e3-c075", "m2-v2-e3-c085"],
+  "candidates": {
+    "m2-v2-e1-c075": {"max_extra_exemplars": 1, "min_mean_cosine": 0.75},
+    "m2-v2-e1-c085": {"max_extra_exemplars": 1, "min_mean_cosine": 0.85},
+    "m2-v2-e3-c075": {"max_extra_exemplars": 3, "min_mean_cosine": 0.75},
+    "m2-v2-e3-c085": {"max_extra_exemplars": 3, "min_mean_cosine": 0.85}
+  },
+  "policy": {
+    "min_relative_objectness": 0.5,
+    "min_scale_ratio": 1.5,
+    "min_side_in_model_pixels": 2,
+    "other_centers_rejection_minimum": 2,
+    "fallback_relative_count_difference": 0.5,
+    "center_boundary": "closed_on_all_sides",
+    "candidate_ranking": "relative_objectness_times_cosine_stable_descending"
+  },
+  "controls": ["repeat", "no-fallback"],
+  "no_fallback_source": "same_saved_second_pass_as_main_no_extra_inference",
+  "stage_seconds": 7200,
+  "full_variant_seconds": 5400,
+  "memory_allocated_mib": 40000,
+  "test_enabled": false
+}
