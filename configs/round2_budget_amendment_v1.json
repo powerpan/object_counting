@@ -1,0 +1,12 @@
+{
+  "version": "round2-budget-amendment-v1",
+  "date": "2026-10-18",
+  "reason": "L capacity probe estimates about 9 hours for 30 epochs; explicit approval obtained before L training",
+  "scope": "training time limit only; no model, data, seed, loss, epoch, selection, or memory rule changed",
+  "m4_S_single_run_seconds": 21600,
+  "m4_L_single_run_seconds": 43200,
+  "m4_total_seconds": 108000,
+  "total_includes_completed_preflight_and_all_training_validation": true,
+  "original_registration": "ce0fc1a",
+  "original_code_receipt_unchanged": true
+}
