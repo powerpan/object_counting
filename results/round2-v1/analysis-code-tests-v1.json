@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "test_count": 24,
+  "elapsed_seconds": 2.8865047823637724,
+  "code_commit": "408f3e8fa5b29cdf0a112939c38aa2a8e878d8a4",
+  "analysis_receipt_sha256": "4e72a805aeacf205cd5f45c75cc1bfb01641b5020320a16f09d54143a296a945",
+  "training_sources_unchanged": true,
+  "scope": "CPU unit tests; completed-checkpoint validation and crossfit audit not yet executed",
+  "finished_utc": "2026-10-18T04:41:57.082859+00:00"
+}
