@@ -4,6 +4,7 @@ import fcntl
 import json
 import math
 from pathlib import Path
+import re
 import signal
 import subprocess
 import sys
@@ -53,6 +54,17 @@ def workflow(root):
             run_stage(root,ledger,state,state_path,'m4v2-audit-'+stage,5400,
                 lambda limit:command('audit_m4_v2_pretraining.py',limit,'--stage',stage),lambda:evidence(stage,'audit.json'))
         try:
+            def cpu_evidence():
+                log=root/'logs/round2-m4v2-cpu-tests.log';content=log.read_text()
+                match=re.search(r'Ran (\d+) tests in',content)
+                if not match or int(match.group(1))!=53 or not re.search(r'^OK$',content,re.M):
+                    raise ValueError('Expected all 53 remote CPU tests to pass')
+                path=folder/'cpu-tests.json'
+                write_json(path,{'status':'passed','tests':53,'cuda_visible_devices':'',
+                                 'code_commit':sources['code_commit'],'log_sha256':sha(log)})
+                return {str(path.relative_to(root)):sha(path)}
+            run_stage(root,ledger,state,state_path,'m4v2-cpu-tests',600,
+                lambda limit:['/usr/bin/env','CUDA_VISIBLE_DEVICES=',python,'-m','unittest','discover','-s','tests','-v'],cpu_evidence)
             run('initial-gate','m4_v2_preflight.py',1800,'--phase','initial-gate');audit('initial-gate')
             run('s-dense-check','m4_s_dense_check.py',1800);audit('s-dense-check')
             run('s-fusion-record','m4_s_fusion_record.py',1800);audit('s-fusion-record')
