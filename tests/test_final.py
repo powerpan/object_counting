@@ -80,5 +80,17 @@ class FinalChecks(unittest.TestCase):
         im=np.full((10,12,3),127,dtype=np.uint8)
         self.assertTrue(np.array_equal(density_image(im,np.zeros((10,12))),im))
 
+    def test_carpk_frozen_population_and_two_car_prompts(self):
+        manifest=json.loads((Path(__file__).resolve().parents[1]/'manifests/carpk_test_v1.json').read_text())
+        rows=manifest['files'];self.assertEqual(len(rows),459)
+        self.assertEqual(sum(len(r['points']) for r in rows),47500)
+        two=[r for r in rows if r['distinct_exemplars']==2]
+        self.assertEqual(len(two),5)
+        for r in rows:
+            self.assertEqual(len(r['exemplars']),3);self.assertEqual(r['truth'],len(r['points']))
+        for r in two:
+            self.assertEqual(len(r['points']),2);self.assertEqual(r['exemplars'][1],r['exemplars'][2])
+        self.assertEqual([r['image'] for r in rows],manifest['ids'])
+
 
 if __name__=='__main__':unittest.main()
