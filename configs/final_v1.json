@@ -1,0 +1,124 @@
+{
+  "version": "final-v1",
+  "method_commit": "c785598b17e9686d19e2089c4ba8b266df10a9ff",
+  "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+  "method_config": "configs/round3_v1.json",
+  "method_config_sha256": "bd661a1481eb9650f6722bd71746680e68abd7f28a014767f7df5660779348fc",
+  "method": "M3-v2-g3 when triggered, otherwise T2",
+  "baseline": "B0 original view",
+  "mask": "automatic; tile branch follows original view",
+  "calibration": false,
+  "m2": false,
+  "precision": "FP32",
+  "tf32": false,
+  "seed": 42,
+  "batch_size": 1,
+  "trigger": {
+    "median_sqrt_exemplar_area_model_pixels_le": 32,
+    "b0_count_ge": 200,
+    "operator": "or"
+  },
+  "tiling": {
+    "grid": 3,
+    "halo_fraction": 0.1,
+    "threshold": "global maximum across tiles * 0.11",
+    "nms_iou": 0.5
+  },
+  "tta": {
+    "views": [
+      "original",
+      "horizontal_flip"
+    ],
+    "count": "arithmetic mean",
+    "density": "mean of original-grid M1 maps"
+  },
+  "localization": {
+    "boxes": "M3 merged boxes for triggered images; original-view boxes for T2",
+    "radius": "0.5 * mean exemplar width and height",
+    "matching": "maximum cardinality bipartite"
+  },
+  "size_groups": {
+    "formula": "sqrt(mean(first_three_exemplar_areas)/(image_width*image_height))",
+    "source": "all 1286 official val images",
+    "quantile_method": "linear",
+    "cutoffs": [
+      0.08481851881440144,
+      0.15272090794772686
+    ],
+    "boundaries": [
+      "small <= lower",
+      "lower < medium <= upper",
+      "large > upper"
+    ]
+  },
+  "density_groups": [
+    "<50",
+    "50-299",
+    ">=300"
+  ],
+  "game_levels": [
+    1,
+    2
+  ],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "units": [
+      "image",
+      "class"
+    ],
+    "method": "paired multinomial percentile 95%"
+  },
+  "success": {
+    "rmse_ratio_max": 0.98,
+    "rmse_image_ci_upper_strict_max": 0,
+    "dense_mae_ratio_max": 0.95,
+    "mae_ratio_max": 1.02
+  },
+  "test_manifest": "manifests/fsc147_test_v1.json",
+  "test_manifest_sha256": "bbbd7c13d12888b9990a5a915f79399ac8bf095d4b53ebae895b325827e44d5f",
+  "geco_sha256": "945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b",
+  "sam2_sha256": "d0bb7f236400a49669ffdd1be617959a8b1d1065081789d7bbff88eded3a8071",
+  "human_blind_labels": {
+    "status": "omitted_by_owner_amendment",
+    "kappa": null,
+    "occlusion_clutter_claims": false
+  },
+  "qualitative": {
+    "random_seed": 20261022,
+    "random_six": [
+      "2145.jpg",
+      "4300.jpg",
+      "2025.jpg",
+      "4.jpg",
+      "2033.jpg",
+      "6044.jpg"
+    ],
+    "worst_final": 6,
+    "improved": 3,
+    "regressed": 3,
+    "ties": "image filename ascending",
+    "overlap": "retain selection reasons; render duplicates once",
+    "mechanism_val": [
+      "865.jpg",
+      "3665.jpg"
+    ]
+  },
+  "budgets_seconds": {
+    "test_and_carpk": 7200,
+    "preflight": 1800,
+    "demo": 3600
+  },
+  "max_memory_allocated_mib": 40000,
+  "test_retries": 0,
+  "carpk": {
+    "split": "official test",
+    "exemplars": "first three annotation boxes in original file order",
+    "tuning": false
+  },
+  "demo": {
+    "source": "val only; no rerun of test images",
+    "dense_val": "809.jpg",
+    "ordinary_val": "190.jpg"
+  }
+}

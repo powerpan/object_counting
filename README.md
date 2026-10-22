@@ -62,3 +62,7 @@ M4-v3 CPU 校正及獨立核算已完成。區域／global 折外 MAE 分別為 
 執行環境目標：單張 48GB Ada GPU、Linux、Python 3.10、PyTorch 2.7.1。上游 GeCo2 固定於 `67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b`。模型及資料集另外下載，不放進 Git。
 
 此倉庫只發布去識別化的程式、方法、設定、測試與結果。SSH 金鑰、帳密、服務端點、個人路徑及完整原始日誌均不發布。
+
+## 最終交付（2026-10-22）
+
+方法已凍結為觸發圖 M3-v2 3×3、其餘 T2。正式評估尚未執行；參見 [最終凍結](docs/FINAL_FREEZE.md)及[人工盲標取消與執行修訂](docs/FINALIZATION_AMENDMENT_20261022.md)。
