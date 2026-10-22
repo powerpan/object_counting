@@ -48,7 +48,12 @@ def main(root, out):
             if row.get('density_file_sha256'):
                 path=Path('work')/p.parent.relative_to(root/'results')/(Path(row['image']).stem+'.npz')
                 if (root/path).exists(): expected[str(path)]=row['density_file_sha256']
-    for p in (root/'results').rglob('*checkpoint*manifest*.json'):
+    # The cancelled L and safety-stopped v2 saved digests in their closure
+    # records, rather than the normal completed-training manifest.
+    records = list((root/'results').rglob('*checkpoint*manifest*.json'))
+    records += [root/'results/m4-v2-v1/train-seed42/summary.json',
+                root/'results/round2-v1/L_user_cancellation_v1.json']
+    for p in records:
         def collect(obj):
             if isinstance(obj,dict):
                 for k,v in obj.items():
