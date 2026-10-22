@@ -18,7 +18,18 @@ def directory(raw,offset):
     while raw[i:i+4]==b'PK\x01\x02':
         v=struct.unpack('<4s6H3L5H2L',raw[i:i+46]);nl,el,cl=v[10:13]
         name=raw[i+46:i+46+nl].decode('utf-8')
-        entries.append({'name':name,'offset':v[16],'compressed':v[8],'size':v[9],'method':v[4],'flags':v[3]})
+        entry={'name':name,'offset':v[16],'compressed':v[8],'size':v[9],'method':v[4],'flags':v[3]}
+        extra=raw[i+46+nl:i+46+nl+el];j=0;zip64=None
+        while j+4<=len(extra):
+            tag,length=struct.unpack('<HH',extra[j:j+4]);j+=4
+            if tag==1:zip64=extra[j:j+length]
+            j+=length
+        q=0
+        for key in ['size','compressed','offset']:
+            if entry[key]==0xffffffff:
+                if zip64 is None or q+8>len(zip64):raise ValueError('Missing ZIP64 size/offset')
+                entry[key]=struct.unpack('<Q',zip64[q:q+8])[0];q+=8
+        entries.append(entry)
         i+=46+nl+el+cl
     if i!=len(raw):raise ValueError('Unexpected central directory')
     entries.sort(key=lambda v:v['offset'])
