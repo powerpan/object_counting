@@ -48,6 +48,11 @@ def main(root,dataset):
     try:
         runtime(root);verified=asset_checks(root,cfg,dataset)
         names,records,baseline=inputs(root,cfg,dataset)
+        expected_final={}
+        if dataset=='gate':
+            for route,relative in [('M3-v2-g3','round3-v1/full-m3-v2-g3'),('T2','round3-tta-v1/full-T2')]:
+                expected_final[route]={r['image']:r for r in map(json.loads,
+                    (root/'results'/relative/'predictions.jsonl').read_text().splitlines())}
         write(out/'protocol.json',{'dataset':dataset,'ids':names,'n':len(names),'started_utc':utc(),
               'config_sha256':sha(root/'configs/final_v1.json'),'implementation':receipt,
               'assets':verified,'ground_truth_used_by_policy':False,'precision':'FP32','tf32':False,
@@ -65,6 +70,12 @@ def main(root,dataset):
                             np.asarray(b['boxes_xyxy'],dtype=np.float32).reshape(-1,4),
                             np.asarray(baseline[name]['boxes_xyxy'],dtype=np.float32).reshape(-1,4)):
                         raise ValueError('Clone B0 differs from saved validation B0')
+                    expected=expected_final[detail['route']][name]
+                    if f['prediction']!=expected['prediction'] or not np.array_equal(
+                            np.asarray(f['boxes_xyxy']).reshape(-1,4),np.asarray(expected['boxes_xyxy']).reshape(-1,4)):
+                        raise ValueError('Frozen final route differs from prior method output')
+                    if not np.allclose(cell_mass(fd),expected['mass8'],rtol=1e-12,atol=1e-8):
+                        raise ValueError('Frozen final density differs from prior method output')
                 # Scoring starts only after inference. No truth is supplied to FinalEngine.
                 points=points_for_game(rec['points'],h,w)
                 ratio,group=size_group(prompts.numpy(),w,h,cfg['size_groups']['cutoffs'])

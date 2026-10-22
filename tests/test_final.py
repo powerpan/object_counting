@@ -7,6 +7,7 @@ import numpy as np
 from planb.final_metrics import size_group,success,intervals,qualitative_selection,report
 from planb.final_inference import trigger
 from planb.round3_accounting import StageLedger
+from planb.demo_ui import selection,density_image
 
 
 class FinalChecks(unittest.TestCase):
@@ -69,6 +70,15 @@ class FinalChecks(unittest.TestCase):
             self.assertEqual(ledger.begin('one','a',100,'now'),20)
             self.assertFalse(ledger.finish('one',21,True,'end'))
             with self.assertRaises(RuntimeError):ledger.begin('two','b',30,'now')
+
+    def test_demo_boxes_are_real_coordinates(self):
+        self.assertEqual(selection([[8,9],[2,3],[10,10],[12,14]],20,20),[[2.,3.,8.,9.],[10.,10.,12.,14.]])
+        with self.assertRaises(ValueError):selection([[2,3],[2,8]],20,20)
+        with self.assertRaises(ValueError):selection([[0,0]]*8,20,20)
+
+    def test_zero_density_keeps_original_image(self):
+        im=np.full((10,12,3),127,dtype=np.uint8)
+        self.assertTrue(np.array_equal(density_image(im,np.zeros((10,12))),im))
 
 
 if __name__=='__main__':unittest.main()
