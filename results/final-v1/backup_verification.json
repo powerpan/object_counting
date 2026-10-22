@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "off_instance_all_objects_verified": true,
+  "destination": "owner-private AutoDL regional file storage, separate from instance disks",
+  "within_authorized_free_20GB": true,
+  "archive_sha256": "eec0772fdd6b335532186bd28d0a8ffa1d28b76967294a545e2cb59a715ede06",
+  "archive_bytes": 6370596924,
+  "manifest_sha256": "af5a9a7bc624a2ae96c2465324210294fea4b43065c3b22812d41a0d095aac22",
+  "logical_files": 25741,
+  "unique_objects": 7730,
+  "prior_checkpoint_sha_verified": 6,
+  "prior_file_sha_verified_density_arrays": 23756,
+  "elapsed_seconds": 271.88996448740363,
+  "finished_utc": "2026-10-22T14:44:27.391310+00:00"
+}

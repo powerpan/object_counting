@@ -1,0 +1,11 @@
+{
+  "dataset": "gate",
+  "finished_utc": "2026-10-22T15:08:58.148071+00:00",
+  "files_sha256": {
+    "audit.json": "93cbbecf2ca77bab3f90b218e7464c0bdd92402ab8bc3284dcde2728d8d9fcf5",
+    "counts.jsonl": "6077a2b00ff9885cffa45565712643414fc00ea909b7b52dc05f72eb5e2f145e",
+    "protocol.json": "93f0d96b25bda6376fc5bdc8f7209e14b97aa50d80ab8e31912373aa76fcb7bf",
+    "raw_evidence.json": "baddd21457c6d11dd9cdae50daacaa8432ba3a66663ac27bb8c07d2be861580b",
+    "summary.json": "177907e67d045144ecb36c6d0a6130233d507341d35f2abce26eca5c1d1033bf"
+  }
+}

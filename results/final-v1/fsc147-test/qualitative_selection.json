@@ -1,0 +1,28 @@
+{
+  "random_six": [
+    "2145.jpg",
+    "4300.jpg",
+    "2025.jpg",
+    "4.jpg",
+    "2033.jpg",
+    "6044.jpg"
+  ],
+  "worst_final": [
+    "7171.jpg",
+    "1123.jpg",
+    "2009.jpg",
+    "6842.jpg",
+    "2038.jpg",
+    "2243.jpg"
+  ],
+  "most_improved": [
+    "1123.jpg",
+    "2159.jpg",
+    "6644.jpg"
+  ],
+  "most_regressed": [
+    "7171.jpg",
+    "6658.jpg",
+    "7473.jpg"
+  ]
+}

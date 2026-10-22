@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "n": 1190,
+  "official_truth_prompts_actual_dimensions_verified": true,
+  "all_count_group_metrics_and_paired_intervals_recomputed": true,
+  "paired_intervals_use_registered_statistical_algorithm": true,
+  "selected_images_spatially_reconstructed": 16,
+  "full_remote_array_audit_sha256": "fab9b3b3c942b62f78701ce4aa41d4ab29932ce0b0300faab2c11f493cd72e4c",
+  "all_array_files_downloaded_to_mac": false,
+  "elapsed_seconds": 1.1423064169939607
+}

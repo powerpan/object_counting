@@ -1,0 +1,13 @@
+{
+  "dataset": "fsc147-test",
+  "finished_utc": "2026-10-22T15:08:59.395326+00:00",
+  "files_sha256": {
+    "audit.json": "fab9b3b3c942b62f78701ce4aa41d4ab29932ce0b0300faab2c11f493cd72e4c",
+    "counts.jsonl": "f4b1653113d782845c56cf923762a6e9c09499d42281f33cde0dbc3157a7f38a",
+    "protocol.json": "85b65e2d5edac8766b98170dd69dbc995bafcab240378c85043163cd3b5f7491",
+    "qualitative_rows.json": "e265f0a2d5bebcd1974bff943c45346c3c249928920b1b4394a94ed6408dbb39",
+    "qualitative_selection.json": "874a78059413df59c13b09e481389b1ae10beb943230761eabbdb108b95bf72d",
+    "raw_evidence.json": "b44e2754d1f0f826f333a08ff1326a2bf4d7a033e2bb368834a858616a7f8343",
+    "summary.json": "54a56b0ca127462067eb5ce017481d05553b313ea537005c5fa0d8c4e63dc34d"
+  }
+}

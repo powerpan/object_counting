@@ -1,0 +1,5 @@
+{
+  "raw_predictions_sha256": "dbef79fbc3a591eae2b2e9a63d193ad887d415ffda96068ba3f98d68fffe5528",
+  "raw_predictions_retained_in_private_backup": true,
+  "compact_counts_do_not_include_all_boxes": true
+}

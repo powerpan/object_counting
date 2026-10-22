@@ -1,0 +1,11 @@
+{
+  "dataset": "carpk",
+  "finished_utc": "2026-10-22T15:22:19.986783+00:00",
+  "files_sha256": {
+    "audit.json": "9a3657ac9f62ceadea974f3f6b6ce55406a05007ac08d0a4c084d071c2e807a7",
+    "counts.jsonl": "98c977a95d1036a2fd2e6ca6fc88cc0be2422c6a25afd41845da5650f308057e",
+    "protocol.json": "54fa3c5667c3c3e3f91280d9025318c68fe8b4b026e097f4f26bc926ce2e047d",
+    "raw_evidence.json": "0d602924f882c4ea8271f31318b1968e8ef93a6d4e742810a6b669093f466b13",
+    "summary.json": "76da8fd90890fe78183d874db92924115e03c923e579d943638bbf226d3f42f8"
+  }
+}

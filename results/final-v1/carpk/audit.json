@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "n": 459,
+  "checked_truth_prompts_routes_density_metrics": true,
+  "count_game_localization_reconstructed": true,
+  "bootstrap_recomputed_with_registered_algorithm": true,
+  "density_max_pixel_difference": 0.0,
+  "predictions_sha256": "87b37b0b91542881428f048a9e0eec3843dea5472bafc2c8942514bc71126798",
+  "summary_sha256": "76da8fd90890fe78183d874db92924115e03c923e579d943638bbf226d3f42f8",
+  "elapsed_seconds": 46.152554988861084,
+  "finished_utc": "2026-10-22T15:16:57.980630+00:00"
+}
