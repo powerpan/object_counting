@@ -28,7 +28,7 @@ def main(a):
                     remote=match.group(1);key=hashlib.sha256(remote.encode()).hexdigest();f=cache/key
                     if not f.exists():
                         cmd='cat -- '+shlex.quote(remote)
-                        p=subprocess.run(['ssh','-C','-F',a.ssh_config,a.ssh_alias,cmd],capture_output=True,timeout=60)
+                        p=subprocess.run(['ssh','-C','-F',a.ssh_config,a.ssh_alias,cmd],capture_output=True,timeout=180)
                         if p.returncode!=0:raise RuntimeError('Image transfer failed')
                         f.write_bytes(p.stdout)
                         (cache/(key+'.json')).write_text(json.dumps({'bytes':len(p.stdout),'sha256':hashlib.sha256(p.stdout).hexdigest()}))
