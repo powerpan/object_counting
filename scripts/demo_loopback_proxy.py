@@ -33,19 +33,27 @@ def main(a):
                         f.write_bytes(p.stdout)
                         (cache/(key+'.json')).write_text(json.dumps({'bytes':len(p.stdout),'sha256':hashlib.sha256(p.stdout).hexdigest()}))
                     return self.bytes(f.read_bytes(),mimetypes.guess_type(remote)[0] or 'application/octet-stream')
-                c=http.client.HTTPConnection('127.0.0.1',a.upstream,timeout=90)
-                body=self.rfile.read(int(self.headers.get('Content-Length','0'))) if self.command=='POST' else None
-                headers={k:v for k,v in self.headers.items() if k.lower() not in ['host','connection','accept-encoding','transfer-encoding']}
-                headers['Host']='127.0.0.1:'+str(a.port)
-                c.request(self.command,self.path,body,headers);r=c.getresponse();self.send_response(r.status)
+                body=self.rfile.read(int(self.headers.get('Content-Length','0'))) if self.command=='POST' else b''
+                headers={k:v for k,v in self.headers.items() if k.lower() not in ['host','connection','accept-encoding','transfer-encoding','content-length']}
+                headers.update({'Host':'127.0.0.1:'+str(a.port),'Connection':'close','Content-Length':str(len(body))})
+                wire=(self.command+' '+self.path+' HTTP/1.1\r\n'+''.join(k+': '+v+'\r\n' for k,v in headers.items())+'\r\n').encode('latin1')+body
+                proc=subprocess.Popen(['ssh','-C','-F',a.ssh_config,'-o','ConnectTimeout=10','-o','ServerAliveInterval=10','-o','ServerAliveCountMax=3','-W','127.0.0.1:'+str(a.remote_port),a.ssh_alias],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
+                proc.stdin.write(wire);proc.stdin.flush()
+                class PipeSocket:
+                    def makefile(self,*args,**kwargs):return proc.stdout
+                r=http.client.HTTPResponse(PipeSocket());r.begin();self.send_response(r.status)
                 for k,v in r.getheaders():
                     if k.lower() not in ['connection','transfer-encoding','content-length']:self.send_header(k,v)
                 self.send_header('Connection','close');self.end_headers();self.close_connection=True
-                while True:
-                    block=r.read1(65536)
-                    if not block:break
-                    self.wfile.write(block);self.wfile.flush()
-                c.close()
+                try:
+                    while True:
+                        block=r.read1(65536)
+                        if not block:break
+                        self.wfile.write(block);self.wfile.flush()
+                finally:
+                    r.close();proc.stdin.close()
+                    if proc.poll() is None:proc.terminate()
+
             except (BrokenPipeError,ConnectionResetError):pass
             except Exception:
                 self.close_connection=True
@@ -55,6 +63,6 @@ def main(a):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=7863);p.add_argument('--upstream',type=int,required=True)
+    p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=7863);p.add_argument('--remote-port',type=int,default=7860)
     p.add_argument('--wheel',required=True);p.add_argument('--cache',required=True);p.add_argument('--ssh-config',required=True);p.add_argument('--ssh-alias',required=True)
     main(p.parse_args())
