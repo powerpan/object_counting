@@ -22,7 +22,7 @@ def main(root,stage):
     if backup['status']!='passed' or not backup['off_instance_all_objects_verified']:raise ValueError('Off-instance backup required')
     if subprocess.check_output(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],text=True).strip():raise RuntimeError('GPU busy')
     out=root/'results/final-v1';out.mkdir(exist_ok=True)
-    state_path=out/'workflow_'+stage+'.json'
+    state_path=out/('workflow_'+stage+'.json')
     if state_path.exists():raise FileExistsError('Existing stage; no implicit restart')
     ledger_path=out/'budget_ledger_v1.json'
     if stage=='fsc147-test':
