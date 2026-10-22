@@ -1,0 +1,14 @@
+{
+  "gradio_version": "6.30.0",
+  "official_wheel_sha256": "aae3aa81ec9f44e55781b498ad2ba12b117aa512e8d2bb0ef3e52af7f2ee6305",
+  "proxy_source_sha256": "9cf628cef3d73a5de3e4c8353936130a0e5cb00269d021154ac54a386508987d",
+  "source_commit": "5972f98",
+  "loopback_only": true,
+  "frozen_model_sources_unchanged": true,
+  "request_isolation": true,
+  "prior_source_commit": "4647477",
+  "prior_proxy_source_sha256": "ffe9c78d9f8cf142837d06bc43bca54952d00dd5c3ffdc5fb9a2ff8a68801811",
+  "jpeg_display_continuation_commit": "360bd85",
+  "image_transfer_timeout_seconds": 180,
+  "original_rgb_input_unchanged": true
+}

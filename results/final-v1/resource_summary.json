@@ -1,0 +1,17 @@
+{
+  "gpu_host_accounted_seconds": {
+    "m4_including_prior_once": 26172.42143335566,
+    "round3_including_inherited_once": 7195.958093000576,
+    "final_preflight": 50.34819181263447,
+    "final_test_and_carpk": 1225.4185962453485,
+    "final_demo": 3201.6017478257418
+  },
+  "scope_note": "Conservative GPU-host elapsed accounting, including host CPU audits and demo network waits. Selected ledgers only; not the entire project or cloud bill. No double-counting of inherited entries.",
+  "platform_charges": {
+    "actual_total_rmb": null,
+    "reason": "Historical invoice totals not verified; do not infer charges from active experiment seconds."
+  },
+  "gpu": "NVIDIA vGPU-48GB",
+  "final_demo_cap_seconds": 3600,
+  "selected_ledger_subtotal_seconds": 37845.74806223996
+}

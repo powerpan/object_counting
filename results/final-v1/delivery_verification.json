@@ -1,0 +1,40 @@
+{
+  "document_formats": [
+    "html",
+    "pdf",
+    "markdown"
+  ],
+  "pdf_pages": 15,
+  "embedded_html_images": 17,
+  "video_seconds": 94,
+  "video_mode": "edited actual UI captures; not continuous real-time recording",
+  "checks": {
+    "pdf_all_pages_rendered_and_visually_reviewed": true,
+    "html_media_base64_decoded_and_verified": true,
+    "html_browser_preview": "not performed: local file navigation blocked by browser policy",
+    "pdf_layout_repaired_caption_image_separation": true,
+    "video_codec": "h264",
+    "video_resolution": [
+      1080,
+      1920
+    ]
+  },
+  "artifact_hashes": {
+    "交付報告.html": {
+      "bytes": 5267958,
+      "sha256": "fe96f0bd6c1ccca114f2c489904eab1d37fdd78a32f959987a4078dd565cfe59"
+    },
+    "交付報告.pdf": {
+      "bytes": 3939379,
+      "sha256": "96e83f905b53e24f84ffab0f886adb5749ab9eb48059a666abcb3f308dc2fe7c"
+    },
+    "交付報告.md": {
+      "bytes": 20936,
+      "sha256": "0ef995dd8f523b02e9942211f591a2f4784d2e20705599773ddd5270cc230f0b"
+    },
+    "demo.mp4": {
+      "bytes": 1028773,
+      "sha256": "c3e6af099f3e8d39ef9bd142ea820d0feec6718ccb4ddb366a76c1e6981c2186"
+    }
+  }
+}

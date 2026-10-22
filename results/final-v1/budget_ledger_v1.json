@@ -1,0 +1,112 @@
+{
+  "version": "round3-ledger-v1",
+  "caps": {
+    "test_and_carpk": 7200,
+    "preflight": 1800,
+    "demo": 3600
+  },
+  "total_cap": 12600,
+  "entries": [
+    {
+      "id": "fsc147-test-controller",
+      "stage": "preflight",
+      "limit": 120.0,
+      "started_utc": "2026-10-22T14:54:45.347295+00:00",
+      "seconds": 1.8554588556289673,
+      "passed": true,
+      "finished_utc": "2026-10-22T14:54:45.347455+00:00"
+    },
+    {
+      "id": "cpu-tests",
+      "stage": "preflight",
+      "limit": 180.0,
+      "started_utc": "2026-10-22T14:54:45.347580+00:00",
+      "seconds": 3.4698794819414616,
+      "passed": true,
+      "finished_utc": "2026-10-22T14:54:48.817584+00:00"
+    },
+    {
+      "id": "gate",
+      "stage": "preflight",
+      "limit": 1200.0,
+      "started_utc": "2026-10-22T14:54:48.818588+00:00",
+      "seconds": 39.281777553260326,
+      "passed": true,
+      "finished_utc": "2026-10-22T14:55:28.100496+00:00"
+    },
+    {
+      "id": "gate-audit",
+      "stage": "preflight",
+      "limit": 300.0,
+      "started_utc": "2026-10-22T14:55:28.104714+00:00",
+      "seconds": 3.9715605936944485,
+      "passed": true,
+      "finished_utc": "2026-10-22T14:55:32.076759+00:00"
+    },
+    {
+      "id": "fsc147-test",
+      "stage": "test_and_carpk",
+      "limit": 6900.0,
+      "started_utc": "2026-10-22T14:55:32.078768+00:00",
+      "seconds": 702.7782738395035,
+      "passed": true,
+      "finished_utc": "2026-10-22T15:07:14.857565+00:00"
+    },
+    {
+      "id": "fsc147-test-audit",
+      "stage": "test_and_carpk",
+      "limit": 900.0,
+      "started_utc": "2026-10-22T15:07:14.859620+00:00",
+      "seconds": 45.58910530433059,
+      "passed": true,
+      "finished_utc": "2026-10-22T15:08:00.449271+00:00"
+    },
+    {
+      "id": "carpk-controller",
+      "stage": "preflight",
+      "limit": 120.0,
+      "started_utc": "2026-10-22T15:09:01.287068+00:00",
+      "seconds": 1.7695153281092644,
+      "passed": true,
+      "finished_utc": "2026-10-22T15:09:01.287412+00:00"
+    },
+    {
+      "id": "carpk",
+      "stage": "test_and_carpk",
+      "limit": 6451.632620856166,
+      "started_utc": "2026-10-22T15:09:01.287584+00:00",
+      "seconds": 428.7610174231231,
+      "passed": true,
+      "finished_utc": "2026-10-22T15:16:10.048771+00:00"
+    },
+    {
+      "id": "carpk-audit",
+      "stage": "test_and_carpk",
+      "limit": 900.0,
+      "started_utc": "2026-10-22T15:16:10.050490+00:00",
+      "seconds": 48.29019967839122,
+      "passed": true,
+      "finished_utc": "2026-10-22T15:16:58.341271+00:00"
+    },
+    {
+      "id": "gradio-demo",
+      "stage": "demo",
+      "limit": 3600.0,
+      "started_utc": "2026-10-22T15:22:36.055290+00:00",
+      "seconds": 2673.2557608410716,
+      "passed": true,
+      "finished_utc": "2026-10-22T16:07:09.310786+00:00"
+    },
+    {
+      "id": "gradio-demo-jpeg",
+      "stage": "demo",
+      "limit": 926.7442391589284,
+      "started_utc": "2026-10-22T16:12:41.984645+00:00",
+      "seconds": 528.3459869846702,
+      "passed": true,
+      "finished_utc": "2026-10-22T16:21:30.330269+00:00"
+    }
+  ],
+  "active": null,
+  "state": "open"
+}

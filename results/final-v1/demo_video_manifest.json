@@ -1,0 +1,80 @@
+{
+  "mode": "edited actual UI captures, network waits shortened, no synthetic UI",
+  "duration_seconds": 94,
+  "frames": [
+    {
+      "source": "001.png",
+      "seconds": 6,
+      "title": "一般圖：載入影像",
+      "source_sha256": "b41c0246b0ceded57df01d0cc299c357903ac9b747124377c7ba8c079b9b1ed6"
+    },
+    {
+      "source": "002.png",
+      "seconds": 6,
+      "title": "一般圖：手動框選",
+      "source_sha256": "34482bbfaad21129d1d922273f2038c061b4d4c5bd7cf8d3c09ffd3fa830b1b3"
+    },
+    {
+      "source": "004.png",
+      "seconds": 8,
+      "title": "一般圖：三框完成",
+      "source_sha256": "7959e8367eb86ff97f565c1aad14ed7dc7116f60fe3b159d6ea73898bd42b0a3"
+    },
+    {
+      "source": "005.png",
+      "seconds": 12,
+      "title": "一般圖：估計 10 個",
+      "source_sha256": "280f64e635438bc6923ad2f73ce6e2739a689ae78ff2320fd02eea0519c0cbc7"
+    },
+    {
+      "source": "010.png",
+      "seconds": 6,
+      "title": "密集圖：載入瓶蓋",
+      "source_sha256": "717b5130df981a8276e30f7c4a2ad4cc205a89237b1bf13d7631cdc69f5b26bd"
+    },
+    {
+      "source": "011.png",
+      "seconds": 6,
+      "title": "密集圖：第一框",
+      "source_sha256": "2808f68b106366fc5132fa9e97f9c1b6f44697b6b8d40d7910c59a8d79762222"
+    },
+    {
+      "source": "012.png",
+      "seconds": 6,
+      "title": "密集圖：第二框",
+      "source_sha256": "95a7fd3a0318afac46fbcfc66c4017e1abb06ef238309bcb4513c4b5d2faf492"
+    },
+    {
+      "source": "013.png",
+      "seconds": 6,
+      "title": "密集圖：三框就緒",
+      "source_sha256": "d2bebe88fcc1ad5151e7152119cfc2472d290574b2d169acc670b53e3fde7d34"
+    },
+    {
+      "source": "014.png",
+      "seconds": 10,
+      "title": "最終系統：321 個",
+      "source_sha256": "0a1e0d48de49798f8e311c335acce8385a9d0b8ecc0e538519f9602e3543f010"
+    },
+    {
+      "source": "015.png",
+      "seconds": 10,
+      "title": "密度與檢測框",
+      "source_sha256": "492dcdeec2a435f1708fc2a22e3d55a34d27fdad6d2234c2f2d5f411aa039aff"
+    },
+    {
+      "source": "016.png",
+      "seconds": 10,
+      "title": "切換 B0：323 個",
+      "source_sha256": "9a0846a3fa188d2acf2379e8894894743b632e41b39e5846442a8c997cdd0ac8"
+    },
+    {
+      "source": "017.png",
+      "seconds": 8,
+      "title": "比較保留，不挑好例子",
+      "source_sha256": "7314eec52a0bdbbd7cb17612016633bc0249d60843055d6068006ad6a708520e"
+    }
+  ],
+  "video_sha256": "c3e6af099f3e8d39ef9bd142ea820d0feec6718ccb4ddb366a76c1e6981c2186",
+  "video_bytes": 1028773
+}

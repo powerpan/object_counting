@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "archive_name": "final-evaluation-v1.tar.gz",
+  "archive_bytes": 3925285081,
+  "archive_sha256": "042f2a74d8c7da4d9eadd03ae6ac89b143288e02fadc859d94bbd3f16fda32ab",
+  "manifest_sha256": "a463599f22016b464c4016e6c75635fb58001d7f53dcdcab1591ecca08214a97",
+  "files_verified": 3456,
+  "logical_bytes": 3984647740,
+  "separate_filesystem_confirmed": true,
+  "prior_backup_bytes": 6370596924,
+  "free_capacity_bytes": 20000000000,
+  "storage_total_bytes": 10301570493,
+  "retained_raw_predictions_density_arrays_logs_demo": true,
+  "elapsed_seconds": 191.96911813691258
+}
