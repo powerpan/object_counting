@@ -21,20 +21,23 @@
   },
   "artifact_hashes": {
     "交付報告.html": {
-      "bytes": 5267958,
-      "sha256": "fe96f0bd6c1ccca114f2c489904eab1d37fdd78a32f959987a4078dd565cfe59"
+      "bytes": 5268118,
+      "sha256": "a377a4280337261dc45dc2d9803430ffd4699102ff3fd7e3b96d6c5a7eb08794"
     },
     "交付報告.pdf": {
-      "bytes": 3939379,
-      "sha256": "96e83f905b53e24f84ffab0f886adb5749ab9eb48059a666abcb3f308dc2fe7c"
+      "bytes": 3941190,
+      "sha256": "031452c1dbfda1e4d41fa6b2b32c0d610120e0efa4cb4c2ed5fbf257403cf6e0"
     },
     "交付報告.md": {
-      "bytes": 20936,
-      "sha256": "0ef995dd8f523b02e9942211f591a2f4784d2e20705599773ddd5270cc230f0b"
+      "bytes": 21096,
+      "sha256": "2e2cbb129045ca7811bb7afaf46e0824587ca533de0d3a9518bce395a3490742"
     },
     "demo.mp4": {
       "bytes": 1028773,
       "sha256": "c3e6af099f3e8d39ef9bd142ea820d0feec6718ccb4ddb366a76c1e6981c2186"
     }
-  }
+  },
+  "platform_power_off_confirmed": true,
+  "final_ui_state_receipt": "shutdown_verification.json",
+  "private_delivery_file_count": 57
 }

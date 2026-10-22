@@ -1,0 +1,18 @@
+{
+  "platform": "AutoDL",
+  "checked_utc": "2026-10-22T17:03:55Z",
+  "target": "existing finalization clone",
+  "platform_state": "已關機",
+  "power_off_confirmed": true,
+  "instance_retained": true,
+  "disk_and_data_retained": true,
+  "instance_released_or_deleted": false,
+  "other_existing_instance_also_off": true,
+  "gpu_work_absent_before_shutdown": true,
+  "frozen_sources_checked_before_shutdown": 142,
+  "last_preflight_utc": "2026-10-22T16:54:38.195945+00:00",
+  "raw_ui_evidence_kept_private": true,
+  "ui_text_sha256": "ea944edf8b6af5b5d4549548763b56000ca73cb83fa165f2e7f94e01f13fdf89",
+  "ui_screenshot_sha256": "30674a3833c0de1b7ab957702ba888263bc83ec80325e6c932bd031c038432bc",
+  "platform_retention_notice": "Instance automatically released after 15 consecutive days powered off; independent file storage subject to its own retention policy."
+}
