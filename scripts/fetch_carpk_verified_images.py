@@ -8,7 +8,7 @@ import requests
 from final_common import read,write,sha,utc
 
 REV='0845566dba8b9f5abf0a6c1ac00dc348c18a8189'
-URL='https://huggingface.co/datasets/ShantyCam/carpk/resolve/'+REV+'/carpk.zip?download=true'
+URL='https://hf-mirror.com/datasets/ShantyCam/carpk/resolve/'+REV+'/carpk.zip?download=true'
 ARCHIVE_SHA='b76234239f6a44c64adfef08b2ceddaecceb8ba670e966f952f9f1efd9eef08f'
 
 
