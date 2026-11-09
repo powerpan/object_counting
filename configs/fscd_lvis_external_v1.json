@@ -1,0 +1,29 @@
+{
+  "version": "fscd-lvis-external-v1",
+  "dataset": "FSCD-LVIS",
+  "split": "unseen_test",
+  "archive": {
+    "url": "https://huggingface.co/datasets/ChipmunkG4/FSCD-147_FSCD-LVIS_temp/resolve/48b4cb3daf6aedd266429c95d88f1d245202bf42/FSCD_LVIS.zip?download=true",
+    "bytes": 6257600910,
+    "sha256": "d664462611fc9d6e04b86d321570268dc07edfd000c9c3c79c7cb0f2bb33a1e3",
+    "mirror_revision": "48b4cb3daf6aedd266429c95d88f1d245202bf42",
+    "source_kind": "temporary research-author mirror, not original-author upload",
+    "mirror_notice": "https://github.com/Chipmunk-g4/Template-Matching-and-Regression/issues/7#issuecomment-4089176424"
+  },
+  "smoke": {"split": "unseen_train", "images": 20, "selection": "ascending numeric image_id, first 20", "gpu_seconds": 900},
+  "full_gpu_seconds": 7200,
+  "download_cpu_seconds": 2400,
+  "download_workers": 4,
+  "batch_size": 1,
+  "max_allocated_mib": 24576,
+  "training_enabled": false,
+  "tuning_enabled": false,
+  "baseline": "existing frozen B0",
+  "candidate": "existing frozen M3 3x3 / T2 route",
+  "count_truth": "official target point count; check against target instance count",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20261109,
+  "success_point_estimate": "both MAE and RMSE strictly below B0",
+  "confirmed_improvement": "paired 95 percent CI upper bounds below zero for both MAE and RMSE differences",
+  "automatic_retry": false
+}
