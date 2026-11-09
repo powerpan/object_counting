@@ -25,12 +25,32 @@
 
 兩份權重、三張 val 圖像及三份標註均由學校伺服器直接下載，8 份檔案共 670,663,370 bytes，逐檔 SHA-256 通過。來源與資產憑據見 [部署記錄](../results/hpc4-migration-v1/environment_setup.json)。
 
-GPU 短測已提交，但最後一次成功讀取（2026-11-09 10:35 香港時間）仍為 `PENDING / Resources`。10:37 登入節點因例行維護重啟，SSH 中斷；這是監控連線中斷，沒有取得 GPU 成功或失敗的結果。Slurm 批次作業不依賴登入連線，重新連線後須先查原作業，不能再次啟動同一測試。[學校批次作業說明](https://hkust-hpc-docs.readthedocs.io/latest/kb/slurm/slurm-how-to-submit-and-run-batch-jobs-G75o-i.html)
+GPU 短測於 **2026-11-09 11:22:11–11:22:45 香港時間**完成，Slurm 為 `COMPLETED / 0:0`，占用一張 NVIDIA L20 共 34 秒。登入節點 10:37 維護重啟並未中斷這份批次工作；重新連線後讀取原結果，沒有重跑或取消重交。[學校批次作業說明](https://hkust-hpc-docs.readthedocs.io/latest/kb/slurm/slurm-how-to-submit-and-run-batch-jobs-G75o-i.html)
 
-目前只能確認環境建置和資產核驗完成，CUDA 算子的實際 GPU 計算與三圖最終系統推論仍待核對。
+CUDA 算子與 PyTorch 參照的最大前向差為 `4.6566e-10`，雙精度梯度核對通過。三圖的原生／介面等價、原圖視圖一致、B0 計數、密度有限值與總量檢查全部通過：
+
+| val 圖像 | B0 計數 | 最終計數 | 路由 | allocated 峰值 |
+|---|---:|---:|---|---:|
+| 190.jpg | 9 | 9 | T2 | 1,872.01 MiB |
+| 809.jpg | 323 | 320 | M3 3×3 | 3,717.15 MiB |
+| 191.jpg | 14 | 14 | T2 | 1,872.01 MiB |
+
+B0 三個計數與已保存的 AutoDL 結果一致。兩種最終路由均已實際執行，最高 allocated 約 **3.63 GiB**，低於事前 12 GiB 上限。這些數字是部署核對，不把最終計數的變化直接視為精度改善。
+
+計時區段共 14.11 秒，與包含啟動和環境載入的 Slurm 34 秒分開記錄。SAM2 曾提示部分最佳化 attention kernel 不可用並使用原程式的 fallback；算子及推論核驗均通過，未修改模型或以此宣稱速度等價。
+
+回收後再次核對 136 份來源、8 份資產及結果檔 SHA；確認沒有遺留排隊或運行作業。原始 GPU 輸出見 [smoke](../results/hpc4-migration-v1/smoke.json)、[CUDA 核驗](../results/hpc4-migration-v1/cuda_ops.json)及[完成核對](../results/hpc4-migration-v1/completion_verification.json)。早先的 `environment_setup.json` 保留排隊時快照，最新狀態以完成核對為準。
 
 ## 主機記憶體提交修訂
 
 學校說明要求不要指定 `--mem` 或 `--mem-per-cpu`，由平台按 CPU／GPU 數量分配。本次 CPU 建置及最初 GPU 提交曾顯式申請記憶體；CPU 已完成，保留其原始記錄，不重做建置。[資源申請規則](https://hkust-hpc-docs.readthedocs.io/latest/kb/slurm/slurm-how-to-submit-and-run-batch-jobs-G75o-i.html)
 
 重新連線後，若原 GPU 作業仍在等待且尚未啟動，允許只取消該等待作業一次，再以相同單卡、4 核、10 分鐘、相同程式與輸出目錄提交，省略主機記憶體旗標。若已啟動或結束，先讀原結果，不中斷、不重跑。此修訂先推送，再作任何新的提交；不改模型、圖片、數值門檻或 GPU 顯存上限。排程預估不視為開始時間承諾。
+
+實際恢復時原作業已完成，因此沒有使用取消／重提分支。後續新作業直接採平台預設記憶體分配。
+
+## 後續使用與恢復
+
+學校端已具備獨立 `.venv`、固定版上游、兩份權重、三份 FSC 標註和三張 val 圖像；並未搬移全部資料集或歷史訓練檢查點。Mac 保留程式、文件、成果及私人恢復記錄。新資料仍由學校端下載，GPU 推論仍由 Slurm 分配。
+
+恢復工作時先讀私人 `RESUME.md` 與提交記錄，再查 `squeue`／`sacct` 和既有結果。已完成的 `hpc4_port.py --phase smoke` 不應再執行；它會拒絕覆寫證據。舊 `final_demo.py` 依賴 AutoDL 最終交付帳本，不能直接當成學校環境的通用入口，也不應為了滿足其前置條件重跑正式 test。後續資料集使用獨立入口與結果目錄，先登記範圍及提交來源，再申請 GPU。

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "captured_utc": "2026-11-09T08:06:04.989984+00:00",
+  "source_files_sha256_verified": 136,
+  "asset_files_sha256_verified": 8,
+  "all_original_sources_unchanged": true,
+  "slurm_jobs": [
+    {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:06:45",
+      "cpus": "8",
+      "requested_memory": "32G",
+      "start_hkt": "2026-11-09T10:25:46",
+      "end_hkt": "2026-11-09T10:32:31",
+      "max_rss": "",
+      "allocated_resources": "billing=8,cpu=8,mem=32G,node=1"
+    },
+    {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:34",
+      "cpus": "4",
+      "requested_memory": "24G",
+      "start_hkt": "2026-11-09T11:22:11",
+      "end_hkt": "2026-11-09T11:22:45",
+      "max_rss": "",
+      "allocated_resources": "billing=4,cpu=4,gres/gpu:l20=1,gres/gpu=1,mem=24G,node=1"
+    }
+  ],
+  "active_jobs_after_completion": 0,
+  "environment": {
+    "python": "3.12.2",
+    "packages": {
+      "torch": "2.7.1+cu118",
+      "torchvision": "0.22.1+cu118",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pillow": "13.0.0",
+      "hydra-core": "1.3.2"
+    }
+  },
+  "gpu_result_sha256": {
+    "smoke.json": "91a77e7a7ce586977e89355142d434beaa0f87d40e7718155e3691f3f3fd550b",
+    "cuda_ops.json": "9d95bb10a906e88b979ab8f24f6015ea36239d8e8f24ad28ea071863193fb07d"
+  },
+  "scope": "Deployment validation on 3 fixed val images, not a full benchmark",
+  "warning": "SAM2 reported unavailable optimized attention kernels and used its fallback; all deployment checks passed; no speed-equivalence claim"
+}
