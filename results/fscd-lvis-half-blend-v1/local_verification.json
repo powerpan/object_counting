@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "samples": 2242,
+  "source_receipt_verified": true,
+  "source_commit": "0914329e8bde623cfdfbe5b685f89921dd7a9a1b",
+  "old_private_projection_sha256": "bbf0b3e698266fbba4b5eb007fcc4991abbfbd57ddbf6920c5641af048c9633a",
+  "all_original_predictions_and_truth_unchanged": true,
+  "fixed_half_predictions_recomputed": true,
+  "count_metrics_independently_recomputed_with_math_fsum": true,
+  "bootstrap_replayed_with_same_fixed_implementation": true,
+  "game_aggregates_recomputed_from_remote_checked_rows": true,
+  "full_density_maps_not_downloaded": true,
+  "elapsed_seconds": 0.7488776249811053,
+  "gpu_used": false
+}

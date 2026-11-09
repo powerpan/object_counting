@@ -1,0 +1,12 @@
+{
+  "code_commit": "0914329e8bde623cfdfbe5b685f89921dd7a9a1b",
+  "remote_main_verified": true,
+  "files_sha256": {
+    "configs/fscd_lvis_half_blend_v1.json": "ce394c9d01eef711d0ef8ca235f566c8d84ae246be409dd25612516f54493c15",
+    "docs/FSCD_LVIS_HALF_BLEND_PROTOCOL.md": "a9e32a685b71f9a2282c7053015ba53f04f52a5c207702b0a2f7f0a6dd723782",
+    "planb/half_blend.py": "e34e4820400fa63cb91e26d0eb26aa069464337192aa242ac2f6bc8efac37743",
+    "scripts/hpc4_half_blend.sbatch": "a5a1a76c846465e7b76cf8cd1be502e8cc2753fa356aaece807cfd2b796035a3",
+    "scripts/run_half_blend_replay.py": "bfa8bd732e8c818b5e0016895c1337081cedcbf6d0ebb2663c3a753fa30c8045",
+    "tests/test_half_blend.py": "5e1701661f603f8a499f1290bfef91401883671b0d85be90d4818c6bce152c49"
+  }
+}

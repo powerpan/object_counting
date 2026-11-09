@@ -1,0 +1,67 @@
+{
+  "samples": 2242,
+  "unique_source_images": 2242,
+  "truth": {
+    "total": 84298,
+    "min": 21,
+    "max": 709,
+    "mean": 37.599464763603926,
+    "median": 29.0
+  },
+  "methods": {
+    "b0": {
+      "mae": 53.77609277430865,
+      "rmse": 143.54586929733742,
+      "game1_mean": 56.73469956182876,
+      "game2_mean": 60.33403929986054
+    },
+    "original_final": {
+      "mae": 44.23037466547725,
+      "rmse": 143.6155557542222,
+      "game1_mean": 47.4982895101338,
+      "game2_mean": 51.183513243352714
+    },
+    "half_blend": {
+      "mae": 48.58463425512935,
+      "rmse": 139.7514018168264,
+      "game1_mean": 51.53075624983711,
+      "game2_mean": 55.032422455898235
+    }
+  },
+  "paired_half_minus_b0": {
+    "unit": "source image SHA-256",
+    "units": 2242,
+    "replicates": 10000,
+    "seed": 20261109,
+    "mae_delta": -5.1914585191792995,
+    "rmse_delta": -3.794467480511031,
+    "mae_delta_95ci": [
+      -6.5541118421052635,
+      -3.8551488626226584
+    ],
+    "rmse_delta_95ci": [
+      -15.96359817770892,
+      10.235620002327842
+    ]
+  },
+  "both_point_estimates_not_worse": true,
+  "both_intervals_below_zero": false,
+  "status": "complete",
+  "source_commit": "0914329e8bde623cfdfbe5b685f89921dd7a9a1b",
+  "evidence_class": "post_hoc_exploration_on_previously_observed_test",
+  "test_was_previously_observed": true,
+  "routes": {
+    "T2": 1393,
+    "M3-v2-g3": 849
+  },
+  "weight_b0": 0.5,
+  "weight_original_final": 0.5,
+  "candidate_count": 1,
+  "gpu_used": false,
+  "gpu_hours": 0,
+  "elapsed_seconds": 58.91961849597283,
+  "timing_scope": "CPU saved-map replay, not live model inference",
+  "private_predictions_sha256": "2b56d878f84e91c58709a071f8ee8e603eacc9acb77532caf7b4c3e1f62b905a",
+  "original_predictions_sha256": "8aea9a1c123370ee95185fb100b4b8ac4228dadc9fb1ace2d5b3fd705d918ba9",
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222"
+}

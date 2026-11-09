@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "package_sha256": "177c93a975ae034d8838cf52a94052a3b3a88dba28121473fc7eec7e31d20c1b",
+  "package_bytes": 644890,
+  "files_sha256": {
+    "summary.json": "d4b0ac89cce609a411396d2b5ea0c7c73b4d8170ea59afaaa5af6c4df6bb3398",
+    "audit.json": "c3b091a98b3419206b5dd4d1725417cbaecd0cd55b7fd29fb86b52a6bab829e7",
+    "protocol.json": "b6c0b02b0526cc89b195165f2358b14f2f827c91bb19bbc42c2dece7614a3662",
+    "private-predictions.jsonl": "2b56d878f84e91c58709a071f8ee8e603eacc9acb77532caf7b4c3e1f62b905a"
+  },
+  "private_row_file_published": false,
+  "all_file_hashes_verified": true,
+  "local_verification": "passed",
+  "remote_audit": "passed"
+}

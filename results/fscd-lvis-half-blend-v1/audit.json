@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "samples": 2242,
+  "source_commit": "0914329e8bde623cfdfbe5b685f89921dd7a9a1b",
+  "source_receipts_verified": 7,
+  "source_density_files_verified": 4484,
+  "original_evidence_sha256": {
+    "predictions.jsonl": "8aea9a1c123370ee95185fb100b4b8ac4228dadc9fb1ace2d5b3fd705d918ba9",
+    "summary.json": "e7f11d3147b6219127eb11ce6b453c6bd4be9784e779cb91688333e010bc9198",
+    "audit.json": "d5ae0084347ba13ac5b5b462dbe4360d207436fc678593bff35097c88e6feaf9",
+    "protocol.json": "289364c3882d135a6a94121b029d7b23e7420cc50a05cff9d4c245e704f73567"
+  },
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222",
+  "summary_sha256": "d4b0ac89cce609a411396d2b5ea0c7c73b4d8170ea59afaaa5af6c4df6bb3398",
+  "predictions_sha256": "2b56d878f84e91c58709a071f8ee8e603eacc9acb77532caf7b4c3e1f62b905a",
+  "max_mass_error": 4.547473508864641e-13,
+  "max_independent_game_difference": 4.547473508864641e-13,
+  "count_metrics_independently_recomputed": true,
+  "spatial_metrics_independently_recomputed": true,
+  "no_images_excluded": true,
+  "no_ground_truth_input_to_blender": true,
+  "gpu_used": false,
+  "automatic_retry": false
+}
