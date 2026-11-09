@@ -1,0 +1,122 @@
+{
+  "files": 29004,
+  "image_files": 22791,
+  "metadata": [
+    {
+      "member": "FSCD_LVIS/annotations/count_test.json",
+      "bytes": 891287,
+      "sha256": "ac6e3ea3cae1865867aa460abd86d812dfdc09737a4e0a4d4af205294cc87192",
+      "keys": [
+        "images",
+        "annotations"
+      ],
+      "images": 1014,
+      "annotations": 1014
+    },
+    {
+      "member": "FSCD_LVIS/annotations/instances_train.json",
+      "bytes": 116121229,
+      "sha256": "70fb98a0f4df779d1e7108389ae6dacf3560cdeffe82c0fd178238899db737bf",
+      "keys": [
+        "categories",
+        "images",
+        "annotations"
+      ],
+      "images": 4000,
+      "annotations": 193148
+    },
+    {
+      "member": "FSCD_LVIS/annotations/instances_test.json",
+      "bytes": 28245514,
+      "sha256": "e4639f903f2da516b199d1c01b6804a44124f1093bc84de4f4569903723d9445",
+      "keys": [
+        "categories",
+        "images",
+        "annotations"
+      ],
+      "images": 2028,
+      "annotations": 48771
+    },
+    {
+      "member": "FSCD_LVIS/annotations/count_val.json",
+      "bytes": 1021866,
+      "sha256": "36f84af758db7b3f0d685e1d6426cf9a88f8b602e76420a921e721ba6d41a77f",
+      "keys": [
+        "images",
+        "annotations"
+      ],
+      "images": 1181,
+      "annotations": 1181
+    },
+    {
+      "member": "FSCD_LVIS/annotations/count_train.json",
+      "bytes": 3531773,
+      "sha256": "eecb4848d46a6a9216bffd2930f4b63bc639263036384605c1e24304fa371dbb",
+      "keys": [
+        "images",
+        "annotations"
+      ],
+      "images": 4000,
+      "annotations": 4000
+    },
+    {
+      "member": "FSCD_LVIS/annotations/instances_val.json",
+      "bytes": 34084308,
+      "sha256": "6710a1364a5678a7e850a6863467ffe3e7b6cdf4717f0690b087660c700004cd",
+      "keys": [
+        "categories",
+        "images",
+        "annotations"
+      ],
+      "images": 1181,
+      "annotations": 55424
+    },
+    {
+      "member": "FSCD_LVIS/annotations/unseen_instances_train.json",
+      "bytes": 126464850,
+      "sha256": "2aefa3a1a45a6c122acf125067e566a1b4078659f8f9df5e8e8fde56bda77be2",
+      "keys": [
+        "categories",
+        "images",
+        "annotations"
+      ],
+      "images": 3953,
+      "annotations": 213045
+    },
+    {
+      "member": "FSCD_LVIS/annotations/unseen_instances_test.json",
+      "bytes": 51999485,
+      "sha256": "f9966ce94b983ebd1b619738ea7fab5b8c2e225f58913df30160cd9d9bed6201",
+      "keys": [
+        "categories",
+        "images",
+        "annotations"
+      ],
+      "images": 2242,
+      "annotations": 84298
+    },
+    {
+      "member": "FSCD_LVIS/annotations/unseen_count_train.json",
+      "bytes": 3747923,
+      "sha256": "a55a859ac6996c85fca877e6984fd845fdf43d32b0476ffddc1211d47fd918af",
+      "keys": [
+        "images",
+        "annotations"
+      ],
+      "images": 3953,
+      "annotations": 3953
+    },
+    {
+      "member": "FSCD_LVIS/annotations/unseen_count_test.json",
+      "bytes": 1700295,
+      "sha256": "3532afb4220b8028d98dbeb04b2da42aa2b3890610fea63a7fce361eaa3ee948",
+      "keys": [
+        "images",
+        "annotations"
+      ],
+      "images": 2242,
+      "annotations": 2242
+    }
+  ],
+  "image_uncompressed_bytes": 4133945445
+}

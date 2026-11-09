@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "source_commit": "7e1cbc9c27bc811dab10b2181ae68cf9563104f9",
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222",
+  "metadata_sha256": {
+    "unseen_count_train.json": "a55a859ac6996c85fca877e6984fd845fdf43d32b0476ffddc1211d47fd918af",
+    "unseen_instances_train.json": "2aefa3a1a45a6c122acf125067e566a1b4078659f8f9df5e8e8fde56bda77be2",
+    "unseen_count_test.json": "3532afb4220b8028d98dbeb04b2da42aa2b3890610fea63a7fce361eaa3ee948",
+    "unseen_instances_test.json": "f9966ce94b983ebd1b619738ea7fab5b8c2e225f58913df30160cd9d9bed6201"
+  },
+  "train_records": 3953,
+  "test_records": 2242,
+  "smoke_records": 20,
+  "target_class_overlap_train_test": 0,
+  "same_filename_train_test": 0,
+  "unique_extracted_images": 2262,
+  "fsc_reference_hashes": 5960,
+  "test_exact_fsc_image_matches": 0,
+  "test_unique_source_images": 2242,
+  "test_objects": 84298,
+  "elapsed_seconds": 39.80804398498731,
+  "gpu_used": false,
+  "predictions_made": false,
+  "public_manifest_contains_annotations": false
+}

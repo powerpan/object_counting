@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "files_sha256": {
+    "assets_summary.json": "2de86b2dd4eaf1f5471b96e32d24240b2114b45f78c00233a98c21a809c018f7",
+    "archive_inventory.json": "1ebef0451af5a7d48d7485fa51ceb6435cf4cf1c2cc3949fb6950470984b56c3",
+    "summary.json": "a0cbf189b2c6dceca8d36b6f5940d41566dd15dc59c05b132d62a290d072773c"
+  },
+  "prepare_scheduler_state": "COMPLETED",
+  "prepare_scheduler_exit": "0:0",
+  "prepare_scheduler_seconds": 42,
+  "raw_images_or_annotations_republished": false,
+  "predictions_made": false
+}

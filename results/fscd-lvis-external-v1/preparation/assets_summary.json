@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "stage": "archive and metadata only",
+  "source_commit": "6f7f0a5178e2dd76a8e91998b9bd3af92b1537cf",
+  "base_code_commit": "d13e64e957959a65f0162fe0c0581d4d3215d201",
+  "archive_bytes": 6257600910,
+  "archive_sha256": "d664462611fc9d6e04b86d321570268dc07edfd000c9c3c79c7cb0f2bb33a1e3",
+  "mirror_revision": "48b4cb3daf6aedd266429c95d88f1d245202bf42",
+  "official_archive_equivalence_verified": false,
+  "metadata_files": 10,
+  "elapsed_seconds": 395.6834757250035,
+  "gpu_used": false,
+  "next": "validate annotation alignment and freeze evaluation manifest"
+}

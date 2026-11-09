@@ -21,3 +21,19 @@
 原圖、示例和點標註清單私人保存，清單 SHA、樣本數及選取規則在 GPU 開跑前另行公開凍結。如此保留事前承諾，又不把資料集原始標註再分發。另查完整 FSC train／val／test 的檔案 SHA 重複；不將完全相同檔案檢查誇大成近似圖或預訓練污染核驗。
 
 計數比較另有三項解析測試，涵蓋已知正／負差值、同圖分組 bootstrap、平手不算成功，以及重複／非有限值拒絕。此時只驗證程式，不存在 FSCD-LVIS 預測結果。
+
+## 清單核驗完成
+
+CPU 準備於 16:40:23–16:41:05 香港時間完成，`COMPLETED / 0:0`，牆鐘 42 秒；程式計時 39.81 秒。九項 CPU 測試及逐圖核驗均通過。已固定 20 張 train 技術短測和全部 2,242 張 test，共展開 2,262 張圖片；test 含 84,298 個目標、2,242 張互異來源圖。train／test 的目標類別沒有交集，點數與目標 instance 數逐筆一致。
+
+對照全部 FSC train／val／test 的檔案雜湊（合併去重後 5,960 個 SHA），沒有發現 test 的完全相同檔案；這不是類別、近似影像或基礎模型預訓練去污染證明。
+
+含示例與點標註的完整私人清單 SHA 為 `5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222`。公開 [凍結檔](../configs/fscd_lvis_manifest_freeze_v1.json) 記錄這個雜湊、四份原始標註雜湊與樣本數，且先於首次推論提交。[準備證據](../results/fscd-lvis-external-v1/preparation/summary.json) 和 [回收核驗](../results/fscd-lvis-external-v1/preparation/recovery_verification.json) 不含原圖、原始標註或個人資料。
+
+## 推論與核算入口
+
+`scripts/run_fscd_lvis_external.py` 只接入既有 `FinalEngine`，固定原上游版本、權重、參數、FP32、TF32 關閉及 batch 1。先驗證來源、資產與清單；每張只將 RGB 和前三個示例框交給模型，預測後才讀目標點計算誤差。短測另核對原生／適配器輸出；全部圖核對 B0 首遍、密度總量、顯存和最後參數雜湊。
+
+`scripts/audit_fscd_lvis_external.py` 在獨立 CPU 作業從原始標註重建 ID／真值對應，核對逐圖來源；從保存框重建 B0、M3 或 T2 密度，用另一格統計實作重算 GAME，再以 `math.fsum` 重算 MAE／RMSE。Bootstrap 是同一固定實作的重放核對，不宣稱使用獨立統計演算法。包含新核算拒絕測試後，共 12 項相關 CPU 測試。
+
+順序為 GPU 短測 → CPU 核算 → GPU 全集 → CPU 核算；CPU 核算各最多 10 分鐘，不占 GPU。完整作業的時間准入固定為 `1.5 × 短測牆鐘 / 20 × 2242 + 300 ≤ 7200 秒`，短測含載入與保存成本，預留係數亦固定。只按技術和時間准入，不以短測精度調整方法或選擇是否跑全集。首次 GPU 前，本節與全部新入口一併提交推送。
