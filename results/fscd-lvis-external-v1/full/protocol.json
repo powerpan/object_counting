@@ -1,0 +1,16 @@
+{
+  "phase": "full",
+  "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222",
+  "samples": 2242,
+  "model_state_sha256": "15b8d39cd27842a0fbc6666b261f2fdb2f6bdc92fc45c6f1bf8df0a37a45b72f",
+  "gpu": "NVIDIA L20",
+  "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "precision": "FP32",
+  "tf32": false,
+  "batch_size": 1,
+  "truth_supplied_to_model": false,
+  "time_limit_seconds": 7200
+}

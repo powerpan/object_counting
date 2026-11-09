@@ -1,0 +1,19 @@
+{
+  "post_hoc_descriptive_only": true,
+  "used_for_selection": false,
+  "lower_absolute_error_images": 1198,
+  "higher_absolute_error_images": 880,
+  "equal_absolute_error_images": 164,
+  "squared_error_concentration": {
+    "b0": {
+      "largest_abs_error": 2397.0,
+      "top_one_percent_images": 23,
+      "fraction_of_total_squared_error": 0.5848900967120534
+    },
+    "final": {
+      "largest_abs_error": 3839.0,
+      "top_one_percent_images": 23,
+      "fraction_of_total_squared_error": 0.7859039520262541
+    }
+  }
+}

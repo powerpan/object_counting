@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "phase": "smoke",
+  "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222",
+  "elapsed_seconds": 33.73252521303948,
+  "model_state_unchanged": true,
+  "deployment_gate_only": true,
+  "samples": 20,
+  "unique_source_images": 20,
+  "truth": {
+    "total": 941,
+    "min": 22,
+    "max": 89,
+    "mean": 47.05,
+    "median": 40.0
+  },
+  "b0": {
+    "mae": 38.1,
+    "rmse": 67.10588647801323,
+    "game1_mean": 40.421294582597724,
+    "game2_mean": 46.2905438781753,
+    "inference_seconds_mean": 0.22150139420991763,
+    "peak_allocated_mib": 3917.14501953125
+  },
+  "final": {
+    "mae": 23.9,
+    "rmse": 33.896902513356586,
+    "game1_mean": 28.053506312467647,
+    "game2_mean": 34.088248940441616,
+    "inference_seconds_mean": 0.5220608068979345,
+    "peak_allocated_mib": 3400.1240234375
+  },
+  "paired": {
+    "units": 20,
+    "unit": "source image SHA-256",
+    "replicates": 10000,
+    "seed": 20261109,
+    "mae_delta": -14.200000000000003,
+    "rmse_delta": -33.208983964656646,
+    "mae_delta_95ci": [
+      -33.375,
+      -1.075
+    ],
+    "rmse_delta_95ci": [
+      -62.7754133079827,
+      -1.5201133004253078
+    ]
+  },
+  "routes": {
+    "T2": 16,
+    "M3-v2-g3": 4
+  },
+  "both_count_point_estimates_improved": true,
+  "both_count_intervals_below_zero": true
+}

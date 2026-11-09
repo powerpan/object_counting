@@ -1,0 +1,14 @@
+{
+  "status": "admitted",
+  "source_commit": "7dbba1d43a45d8481896cacb1ae5bc69b76b9803",
+  "inference_source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+  "summary_sha256": "81effae98e6ae24e63edf8338e50b5319e0096790759a98b422e05cf785e6f48",
+  "audit_sha256": "c544ee22587aace611260a9b3bf6c345fae7b1e3d64dcd54aa5420ef1f4c419d",
+  "estimated_full_seconds": 5972.124114572588,
+  "full_limit_seconds": 7200,
+  "smoke_seconds": 33.73252521303948,
+  "smoke_samples": 20,
+  "full_samples": 2242,
+  "accuracy_used_for_admission": false,
+  "gpu_used": false
+}

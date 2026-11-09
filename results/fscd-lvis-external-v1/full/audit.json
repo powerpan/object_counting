@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "phase": "full",
+  "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+  "samples": 2242,
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222",
+  "predictions_sha256": "8aea9a1c123370ee95185fb100b4b8ac4228dadc9fb1ace2d5b3fd705d918ba9",
+  "summary_sha256": "e7f11d3147b6219127eb11ce6b453c6bd4be9784e779cb91688333e010bc9198",
+  "density_max_abs_reconstruction_difference": 0.0,
+  "count_metrics_independently_recomputed": true,
+  "bootstrap_replayed_with_same_fixed_implementation": true,
+  "elapsed_seconds": 92.1659127089988,
+  "gpu_used": false
+}

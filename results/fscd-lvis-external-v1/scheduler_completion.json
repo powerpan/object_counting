@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "timezone": "Asia/Hong_Kong",
+  "checked_at": "2026-11-09T18:45:46.162053+08:00",
+  "stages": {
+    "smoke_gpu": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 37,
+      "started_at_hkt": "2026-11-09T17:34:53+08:00",
+      "finished_at_hkt": "2026-11-09T17:35:30+08:00"
+    },
+    "smoke_audit": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 9,
+      "started_at_hkt": "2026-11-09T17:35:53+08:00",
+      "finished_at_hkt": "2026-11-09T17:36:02+08:00"
+    },
+    "full_gpu": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 2159,
+      "started_at_hkt": "2026-11-09T17:42:25+08:00",
+      "finished_at_hkt": "2026-11-09T18:18:24+08:00"
+    },
+    "full_audit": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 95,
+      "started_at_hkt": "2026-11-09T18:18:30+08:00",
+      "finished_at_hkt": "2026-11-09T18:20:05+08:00"
+    }
+  },
+  "gpu_allocated_seconds": 2196,
+  "audit_cpu_job_seconds": 104,
+  "active_project_jobs": 0,
+  "single_gpu_per_inference_job": true,
+  "scheduler_job_identifiers_omitted": true
+}

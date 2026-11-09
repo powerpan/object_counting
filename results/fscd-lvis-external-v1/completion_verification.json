@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-09T10:46:47.534575+00:00",
+  "source_receipts": {
+    "hpc4_source_receipt_v1.json": {
+      "source_commit": "d13e64e957959a65f0162fe0c0581d4d3215d201",
+      "files": 136,
+      "passed": true
+    },
+    "fscd_lvis_assets_receipt_v1.json": {
+      "source_commit": "6f7f0a5178e2dd76a8e91998b9bd3af92b1537cf",
+      "files": 4,
+      "passed": true
+    },
+    "fscd_lvis_prepare_receipt_v1.json": {
+      "source_commit": "7e1cbc9c27bc811dab10b2181ae68cf9563104f9",
+      "files": 6,
+      "passed": true
+    },
+    "fscd_lvis_eval_receipt_v1.json": {
+      "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+      "files": 5,
+      "passed": true
+    },
+    "fscd_lvis_freeze_receipt_v1.json": {
+      "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+      "files": 1,
+      "passed": true
+    },
+    "fscd_lvis_pipeline_receipt_v1.json": {
+      "source_commit": "7dbba1d43a45d8481896cacb1ae5bc69b76b9803",
+      "files": 3,
+      "passed": true
+    }
+  },
+  "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+  "upstream_tracked_changes": false,
+  "manifest_sha256": "5445e4ff779485f1a1f16e0dfe3bdff2e9dc4b8ca0ae621f74b4b109073cb222",
+  "active_project_jobs": 0,
+  "full_original_prediction_sha256_verified": true,
+  "new_inference_executed_for_recovery": false,
+  "public_files_sha256": {
+    "smoke/summary.json": "81effae98e6ae24e63edf8338e50b5319e0096790759a98b422e05cf785e6f48",
+    "smoke/protocol.json": "de9828ca8af5c1709142aa0000dd41c329309a6ef07fa0c7cd01b9f587656134",
+    "smoke/audit.json": "c544ee22587aace611260a9b3bf6c345fae7b1e3d64dcd54aa5420ef1f4c419d",
+    "smoke/admission.json": "67767886c2008d3e39208798c5c68989f62f25ba903a92349dad8ae0e9929135",
+    "full/summary.json": "e7f11d3147b6219127eb11ce6b453c6bd4be9784e779cb91688333e010bc9198",
+    "full/protocol.json": "289364c3882d135a6a94121b029d7b23e7420cc50a05cff9d4c245e704f73567",
+    "full/audit.json": "d5ae0084347ba13ac5b5b462dbe4360d207436fc678593bff35097c88e6feaf9"
+  },
+  "private_projection_sha256": {
+    "smoke": "1e7369343eb507a894494aef5a07caf4dcc4948c5b8ccc18fe202d2c02d4406c",
+    "full": "bbf0b3e698266fbba4b5eb007fcc4991abbfbd57ddbf6920c5641af048c9633a"
+  },
+  "recovery_payload_sha256": "6c1deb93ed5001166b0b52d2a0a87aa6e8f755b4a9d9da643698dc0f34171f26",
+  "recovery_payload_bytes": 1402615
+}
