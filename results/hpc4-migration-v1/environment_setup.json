@@ -1,0 +1,60 @@
+{
+  "version": "hpc4-environment-setup-v1",
+  "recorded_date": "2026-11-09",
+  "scope": "Frozen system deployment only; no training or full benchmark",
+  "source_commit": "d13e64e957959a65f0162fe0c0581d4d3215d201",
+  "source_archive_bytes": 880816,
+  "source_archive_sha256": "478e916a056b276d54ae21b630ab2109e6f838d9638ce07ca356a9a979abe1f2",
+  "source_files": 136,
+  "source_archive_verified_against_commit": true,
+  "cpu_build": {
+    "observed_state": "COMPLETED",
+    "observed_exit_code": "0:0",
+    "elapsed_seconds": 405,
+    "completion_marker_seen": true,
+    "pip_check_passed": true,
+    "gpu_requested": 0,
+    "cpus": 8,
+    "requested_host_ram_gib": 32,
+    "time_limit_seconds": 2700,
+    "raw_logs_public": false
+  },
+  "software": {
+    "python_series": "3.12",
+    "torch": "2.7.1+cu118",
+    "torchvision": "0.22.1+cu118",
+    "numpy": "1.26.4",
+    "cuda_toolkit": "11.8",
+    "compiler": "GCC 11.5",
+    "upstream_commit": "67d27e8a93f14226f94d1f2c5c6dab5b5dd7162b",
+    "cuda_extension_compiled": true,
+    "cuda_execution_verified": false
+  },
+  "assets": {
+    "status": "passed",
+    "files": 8,
+    "bytes": 670663370,
+    "download_location": "school server",
+    "verification": "SHA-256 against frozen original records"
+  },
+  "gpu_smoke": {
+    "last_observed_at_utc": "2026-11-09T02:35:38.341135+00:00",
+    "last_observed_state": "PENDING",
+    "reason": "Resources",
+    "requested_gpus": 1,
+    "requested_type": "L20",
+    "cpus": 4,
+    "original_requested_host_ram_gib": 24,
+    "time_limit_seconds": 600,
+    "output_available_at_last_read": false,
+    "current_state_verified": false,
+    "monitoring_interruption": "login-node maintenance reboot",
+    "automatic_retry": false
+  },
+  "remaining_checks": [
+    "CUDA forward and gradient checks",
+    "3 fixed validation images",
+    "Frozen final route and density mass"
+  ],
+  "connection_details_and_identity": "excluded"
+}

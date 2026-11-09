@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "path": "weights/GECO2FSCD.pth",
+      "sha256": "945c5d838a058aa970582291b12325e0819bbf445768f433162b2c8b608f512b",
+      "bytes": 301292745
+    },
+    {
+      "path": "cache/torch/hub/checkpoints/sam2_hiera_base_plus.pt",
+      "sha256": "d0bb7f236400a49669ffdd1be617959a8b1d1065081789d7bbff88eded3a8071",
+      "bytes": 323493298
+    },
+    {
+      "path": "data/fsc147/images_384_VarV2/190.jpg",
+      "sha256": "960d6dec3cc1475a0354494a1c1521d7b55ed4281b701d5531ab2ba7a89f1533",
+      "bytes": 13406
+    },
+    {
+      "path": "data/fsc147/images_384_VarV2/191.jpg",
+      "sha256": "f534ce4401270c98bc2fa901f8b3f8fb8478bfec2b56204ae955ec0094d6af37",
+      "bytes": 21605
+    },
+    {
+      "path": "data/fsc147/images_384_VarV2/809.jpg",
+      "sha256": "9a370b1e7877cba0c76313c110948dc4d618d956f22d10bc85b921595454eef7",
+      "bytes": 28330
+    },
+    {
+      "path": "data/fsc147/annotations/annotation_FSC147_384.json",
+      "sha256": "6a1d0f43d12274219a5307cb35b24c85fb275a34b3d5acf5b67f2066f9e0bfe1",
+      "bytes": 45572561
+    },
+    {
+      "path": "data/fsc147/annotations/Train_Test_Val_FSC_147.json",
+      "sha256": "e281e2d9118cd9ae6f5a2852006b6a24e7a7ea5605d9a6e0fa946dcf93308271",
+      "bytes": 133002
+    },
+    {
+      "path": "data/fsc147/annotations/ImageClasses_FSC147.txt",
+      "sha256": "ba1bc6c6a21875919625adb851eaee1aab0ad1f88ecf64d017bebda891b5815e",
+      "bytes": 108423
+    }
+  ],
+  "download_location": "school server"
+}
