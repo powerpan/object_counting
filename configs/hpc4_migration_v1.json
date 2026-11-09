@@ -1,0 +1,21 @@
+{
+  "version": "hpc4-migration-v1",
+  "purpose": "frozen-system deployment verification only",
+  "base_method_commit": "27212a092d76d76e062ebdf681ac7a25d9b7b928",
+  "val_images": [
+    "190.jpg",
+    "809.jpg",
+    "191.jpg"
+  ],
+  "b0_counts": {
+    "190.jpg": 9,
+    "809.jpg": 323,
+    "191.jpg": 14
+  },
+  "selection_rule": "Existing demo images 190 and 809, followed by the first other image in the official validation manifest",
+  "max_allocated_mib": 12288,
+  "cpu_setup_minutes": 45,
+  "gpu_smoke_minutes": 10,
+  "training_enabled": false,
+  "full_benchmark_enabled": false
+}
