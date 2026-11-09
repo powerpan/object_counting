@@ -1,0 +1,52 @@
+{
+  "version": "fsc147-quality-backup-v1",
+  "status": "design_fixed_implementation_pending",
+  "training_enabled": false,
+  "tuning_enabled": false,
+  "official_test_rerun": false,
+  "manifest": "manifests/fsc147_quality_backup_v1.json",
+  "manifest_sha256": "71110ec092e24f53f62681bc0eb1b34d0ec08043639eb11e590331c112fc7ff7",
+  "method_config": "configs/final_v1.json",
+  "method_config_sha256": "1ffaadaf04fb1cb27b4bf4fe037a1d4d0a09571b47bf485dfcd9bff7a8b290d1",
+  "conditions": [
+    {
+      "name": "clean",
+      "operation": "identity"
+    },
+    {
+      "name": "resolution_half",
+      "operation": "RGB downsample then restore original size",
+      "scale": 0.5,
+      "resize": "Pillow BILINEAR",
+      "rounding": "floor dimensions, minimum 1"
+    },
+    {
+      "name": "jpeg60",
+      "operation": "RGB JPEG round trip",
+      "quality": 60,
+      "subsampling": 2,
+      "optimize": false,
+      "progressive": false
+    },
+    {
+      "name": "brightness075",
+      "operation": "Pillow ImageEnhance.Brightness",
+      "factor": 0.75
+    }
+  ],
+  "prompts_and_point_coordinates": "unchanged; original output grid and count retained",
+  "image_condition_pairs": 512,
+  "smoke_source_images": 8,
+  "smoke_gpu_seconds": 600,
+  "full_gpu_seconds": 3600,
+  "audit_cpu_seconds": 600,
+  "gpu": "one school L20",
+  "max_allocated_mib": 24576,
+  "batch_size": 1,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20261109,
+  "bootstrap_group": "original source image SHA-256 shared across conditions",
+  "accuracy_filtering": false,
+  "automatic_retry": false,
+  "scope": "development-set image-quality sensitivity, not independent external generalization"
+}

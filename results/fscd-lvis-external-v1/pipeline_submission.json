@@ -1,0 +1,82 @@
+{
+  "status": "dependency_chain_verified",
+  "snapshot_at": "2026-11-09T17:14:59.609898+08:00",
+  "inference_source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5",
+  "pipeline_source_commit": "7dbba1d43a45d8481896cacb1ae5bc69b76b9803",
+  "stages": {
+    "smoke": {
+      "JobState": "PENDING",
+      "Reason": "Resources",
+      "Partition": "gpu-l20",
+      "QOS": "l20_qos",
+      "TimeLimit": "00:15:00",
+      "NumCPUs": "4",
+      "TresPerNode": "gres:gpu:1",
+      "correct_dependency": true
+    },
+    "smoke_cpu_audit_and_admission": {
+      "JobState": "PENDING",
+      "Reason": "Dependency",
+      "Partition": "amd",
+      "QOS": "amd_qos",
+      "TimeLimit": "00:10:00",
+      "NumCPUs": "4",
+      "TresPerNode": null,
+      "correct_dependency": true
+    },
+    "full": {
+      "JobState": "PENDING",
+      "Reason": "Dependency",
+      "Partition": "gpu-l20",
+      "QOS": "l20_qos",
+      "TimeLimit": "02:00:00",
+      "NumCPUs": "4",
+      "TresPerNode": "gres:gpu:1",
+      "correct_dependency": true
+    },
+    "full_cpu_audit": {
+      "JobState": "PENDING",
+      "Reason": "Dependency",
+      "Partition": "amd",
+      "QOS": "amd_qos",
+      "TimeLimit": "00:10:00",
+      "NumCPUs": "4",
+      "TresPerNode": null,
+      "correct_dependency": true
+    }
+  },
+  "source_receipts": {
+    "hpc4_source_receipt_v1.json": {
+      "files": 136,
+      "passed": true,
+      "source_commit": "d13e64e957959a65f0162fe0c0581d4d3215d201"
+    },
+    "fscd_lvis_assets_receipt_v1.json": {
+      "files": 4,
+      "passed": true,
+      "source_commit": "6f7f0a5178e2dd76a8e91998b9bd3af92b1537cf"
+    },
+    "fscd_lvis_prepare_receipt_v1.json": {
+      "files": 6,
+      "passed": true,
+      "source_commit": "7e1cbc9c27bc811dab10b2181ae68cf9563104f9"
+    },
+    "fscd_lvis_eval_receipt_v1.json": {
+      "files": 5,
+      "passed": true,
+      "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5"
+    },
+    "fscd_lvis_freeze_receipt_v1.json": {
+      "files": 1,
+      "passed": true,
+      "source_commit": "e6f4d792bac10652c74126c6724b2f4883f900f5"
+    },
+    "fscd_lvis_pipeline_receipt_v1.json": {
+      "files": 3,
+      "passed": true,
+      "source_commit": "7dbba1d43a45d8481896cacb1ae5bc69b76b9803"
+    }
+  },
+  "new_inference_results_available": false,
+  "backup_gpu_submitted": false
+}
